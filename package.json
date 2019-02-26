@@ -1,0 +1,36 @@
+{
+  "name": "running_signup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js --env development PORT=3000",
+    "migrate": "knex migrate:latest --env development",
+    "seed": "knex seed:run --env development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startprod": "node server.js --env production"
+  },
+  "engines": {
+    "node": "^11.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bookshelf": "^0.13.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "handlebars": "^4.1.0",
+    "knex": "^0.15.2",
+    "morgan": "^1.9.1",
+    "mustache": "^3.0.1",
+    "node": "^11.4.0",
+    "nodemon": "^1.18.8",
+    "pg": "^7.6.1",
+    "sqlite3": "^4.0.6"
+  }
+}

@@ -1,0 +1,9 @@
+applications:
+  - name: install_app
+    memory: 128M
+    instances: 1
+    random-route: false
+    buildpack: nodejs_buildpack
+    command: npm run startprod
+    env:
+      NODE_ENV: production
