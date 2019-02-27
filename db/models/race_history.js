@@ -1,4 +1,4 @@
-const bookshelf = require("../bookshelf");
+const Bookshelf = require("../../bookshelf");
 
 const RaceHistory = bookshelf.Model.extend({
   tableName: "race_history"
@@ -7,4 +7,4 @@ const RaceHistory = bookshelf.Model.extend({
   //   return this.hasMany(Install);
   // }
 });
-module.exports = bookshelf.model("RaceHistory", RaceHistory);
+module.exports = Bookshelf.model("RaceHistory", RaceHistory);

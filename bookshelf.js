@@ -1,6 +1,7 @@
 const knex = require('knex')(require('./knexfile')[process.env.NODE_ENV]);
-const bookshelf = require('bookshelf')(knex);
+const Bookshelf = require('bookshelf')(knex);
 
-bookshelf.plugin('registry');
+Bookshelf.plugin('registry');
 
-module.exports = bookshelf;
+
+module.exports = Bookshelf;
