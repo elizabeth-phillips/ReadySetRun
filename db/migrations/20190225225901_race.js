@@ -4,12 +4,9 @@ exports.up = function (knex, Promise) {
         return knex.schema
           .createTable("race", table => {
             table.increments("id").primary();
-            table.string("name");
-            table.integer("distance");
-            table.string("city");
-            table.string("state");
-            table.integer("zipcode");
-            table.string("phone");
+            table.string("time");
+            table.integer("ranking");
+            table.datetime("date");
           })
           .then(//() =>
             // knex.schema.table("install", table => {

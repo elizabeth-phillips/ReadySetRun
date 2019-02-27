@@ -1,10 +1,9 @@
-const bookshelf = require("../bookshelf");
+const Bookshelf = require("../../bookshelf");
 
-const User = bookshelf.Model.extend({
-  tableName: "user"
-  // ,
-  // install: function() {
-  //   return this.hasMany(Install);
-  // }
+const User = Bookshelf.Model.extend({
+  tableName: "user",
+  races: function() {
+    return this.hasMany(race).through(raceHistory);
+  }
 });
-module.exports = bookshelf.model("User", User);
+module.exports = Bookshelf.model("User", User);

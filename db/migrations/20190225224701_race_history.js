@@ -4,8 +4,6 @@ exports.up = function (knex, Promise) {
       return knex.schema
         .createTable("race_history", table => {
           table.increments("id").primary();
-          table.integer("user_id");
-          table.integer("race_id");
           table.string("pace");
           table.integer("ranking");
           table.datetime("date");
@@ -17,8 +15,18 @@ exports.up = function (knex, Promise) {
               .unsigned()
               .index();
             table.foreign("user_id").references("user.id"); 
+            
         })
-        );
+        ).then(()=>
+        knex.schema.table("race_history", table => {
+          table
+            .integer("race_id")
+            .unsigned()
+            .index();
+          table.foreign("race_id").references("race.id"); 
+          
+      })
+      )
     }
   });
 };

@@ -1,4 +1,4 @@
-const user = require("../models/user");
+const user = require("../db/models/user");
 
 exports.getForm = (req, res) => {
   res.render('viewform')
