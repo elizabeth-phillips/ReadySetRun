@@ -140,7 +140,6 @@ class User {
 
 
 // let user = new User(2, "John", "Smith", "js@gmail.com", "abcdefg", 20, 4, "Austin", "Texas", 78717, 5122843557);
-
 // console.log(user);
 
 
