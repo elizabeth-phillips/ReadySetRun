@@ -13,10 +13,10 @@ class RunningGroup {
         return this._id;
     }
     set id(value) {
-        // if(value < 0){
-        //     alert("Invalid ID");
-        //     return;
-        // }
+        if(value < 0){
+            alert("Invalid ID");
+            return;
+        }
         this._id = value;
     }
 
@@ -24,6 +24,10 @@ class RunningGroup {
         return this._name;
     }
     set name(value) {
+        if(value.length <= 0){
+            alert("Invalid Name");
+            return;
+        }
         this._name = value;
     }
 
@@ -31,20 +35,22 @@ class RunningGroup {
         return this._city;
     }
     set city(value){
+        if(value.length <= 0){
+            alert("Please Enter a City");
+            return;
+        }
       this._city = value;
     }
     
-    get ranking(){
-      return this._ranking;
-    }
-    set ranking(value) {
-        this._city = value;
-    }
 
     get state() {
         return this._state;
     }
     set state(value) {
+        if(value.length <= 0){
+            alert("Please Enter a City");
+            return;
+        }
         this._state = value;
     }
 
