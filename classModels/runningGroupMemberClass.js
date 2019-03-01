@@ -9,10 +9,10 @@ class RunningGroupMember {
         return this._id;
     }
     set id(value) {
-        // if(value < 0){
-        //     alert("Invalid ID");
-        //     return;
-        // }
+        if(value < 0){
+            alert("Invalid ID");
+            return;
+        }
         this._id = value;
     }
 
@@ -20,6 +20,10 @@ class RunningGroupMember {
         return this._run_group_id;
     }
     set run_group_id(value) {
+        if(value < 0){
+            alert("Invalid ID");
+            return;
+        }
         this._run_group_id = value;
     }
 
@@ -27,6 +31,10 @@ class RunningGroupMember {
         return this._user_id;
     }
     set user_id(value) {
+        if(value < 0){
+            alert("Invalid ID");
+            return;
+        }
         this._user_id = value;
     }
 

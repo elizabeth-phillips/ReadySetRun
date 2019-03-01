@@ -48,7 +48,7 @@ class RunningGroup {
     }
     set state(value) {
         if(value.length <= 0){
-            alert("Please Enter a City");
+            alert("Please Enter a State");
             return;
         }
         this._state = value;
@@ -57,15 +57,25 @@ class RunningGroup {
     get zipcode() {
         return this._zipcode;
     }
-    set zipcode(value) {
-        this._zipcode = value;
+    set zipcode(value){
+        if (/(^\d{5}$)|(^\d{5}-\d{4}$)/.test(value) == true) {
+            this._zipcode = value;
+        } else {
+            return;
+        }
     }
+
 
     get phone() {
         return this._phone;
     }
     set phone(value) {
-        this._phone = value;
+        if (/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(value) == true) {
+            this._phone = value;
+        } 
+        else {
+            return;
+        }
     }
 }
 

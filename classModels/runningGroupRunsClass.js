@@ -12,10 +12,10 @@ class RunningGroupRuns {
         return this._id;
     }
     set id(value) {
-        // if(value < 0){
-        //     alert("Invalid ID");
-        //     return;
-        // }
+        if(value < 0){
+            alert("Invalid ID");
+            return;
+        }
         this._id = value;
     }
 
@@ -23,6 +23,10 @@ class RunningGroupRuns {
         return this._run_group_id;
     }
     set run_group_id(value) {
+        if(value < 0){
+            alert("Invalid ID");
+            return;
+        }
         this._run_group_id = value;
     }
 
@@ -44,6 +48,10 @@ class RunningGroupRuns {
         return this._distance;
     }
     set distance(value) {
+        if(value < 0){
+            alert("Please enter a value more than 0");
+            return;
+        }
         this._distance = value;
     }
 

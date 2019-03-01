@@ -16,10 +16,10 @@ class User {
         return this._id;
     }
     set id(value) {
-        // if(value < 0){
-        //     alert("Invalid ID");
-        //     return;
-        // }
+        if(value < 0){
+            alert("Invalid ID");
+            return;
+        }
         this._id = value;
     }
 
@@ -134,8 +134,6 @@ class User {
         else {
             return;
         }
-
-        this._phone = value;
     }
 }
 
