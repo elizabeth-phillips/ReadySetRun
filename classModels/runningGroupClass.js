@@ -13,10 +13,10 @@ class RunningGroup {
         return this._id;
     }
     set id(value) {
-        // if(value < 0){
-        //     alert("Invalid ID");
-        //     return;
-        // }
+        if(value < 0){
+            alert("Invalid ID");
+            return;
+        }
         this._id = value;
     }
 
@@ -24,6 +24,10 @@ class RunningGroup {
         return this._name;
     }
     set name(value) {
+        if(value.length <= 0){
+            alert("Invalid Name");
+            return;
+        }
         this._name = value;
     }
 
@@ -31,35 +35,47 @@ class RunningGroup {
         return this._city;
     }
     set city(value){
+        if(value.length <= 0){
+            alert("Please Enter a City");
+            return;
+        }
       this._city = value;
     }
     
-    get ranking(){
-      return this._ranking;
-    }
-    set ranking(value) {
-        this._city = value;
-    }
 
     get state() {
         return this._state;
     }
     set state(value) {
+        if(value.length <= 0){
+            alert("Please Enter a State");
+            return;
+        }
         this._state = value;
     }
 
     get zipcode() {
         return this._zipcode;
     }
-    set zipcode(value) {
-        this._zipcode = value;
+    set zipcode(value){
+        if (/(^\d{5}$)|(^\d{5}-\d{4}$)/.test(value) == true) {
+            this._zipcode = value;
+        } else {
+            return;
+        }
     }
+
 
     get phone() {
         return this._phone;
     }
     set phone(value) {
-        this._phone = value;
+        if (/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(value) == true) {
+            this._phone = value;
+        } 
+        else {
+            return;
+        }
     }
 }
 

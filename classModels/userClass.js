@@ -16,10 +16,10 @@ class User {
         return this._id;
     }
     set id(value) {
-        // if(value < 0){
-        //     alert("Invalid ID");
-        //     return;
-        // }
+        if(value < 0){
+            alert("Invalid ID");
+            return;
+        }
         this._id = value;
     }
 
@@ -27,10 +27,10 @@ class User {
         return this._first_name;
     }
     set first_name(value) {
-        // if(value.length <= 0){
-        //     alert("Invalid First Name");
-        //     return;
-        // }
+        if(value.length <= 0){
+            alert("Invalid First Name");
+            return;
+        }
         this._first_name = value;
     }
 
@@ -38,10 +38,10 @@ class User {
         return this._last_name;
     }
     set last_name(value) {
-        // if(value.length <= 0){
-        //     alert("Invalid Last Name");
-        //     return;
-        // }
+        if(value.length <= 0){
+            alert("Invalid Last Name");
+            return;
+        }
         this._last_name = value;
     }
 
@@ -62,10 +62,10 @@ class User {
         return this._password;
     }
     set password(value) {
-        // if(value < 4){
-        //     alert("Password should be atleast 4 chars or long");
-        //     return;
-        // }
+        if(value < 4){
+            alert("Password should be atleast 4 chars or long");
+            return;
+        }
         this._password = value;
     }
 
@@ -73,10 +73,10 @@ class User {
         return this._age;
     }
     set age(value) {
-        // if(value < 10){
-        //     alert("You should be atleast 10 years of age to register");
-        //     return;
-        // }
+        if(value < 10){
+            alert("You should be atleast 10 years of age to register");
+            return;
+        }
         this._age = value;
     }
 
@@ -84,10 +84,10 @@ class User {
         return this._desired_pace;
     }
     set desired_pace(value) {
-        // if(value <= 0){
-        //     alert("Pace cannot be 0 or less");
-        //     return;
-        // }
+        if(value <= 0){
+            alert("Pace cannot be 0 or less");
+            return;
+        }
         this._desired_pace = value;
     }
 
@@ -95,10 +95,10 @@ class User {
         return this._city;
     }
     set city(value) {
-        // if(value = ""){
-        //     alert("Please Enter a City");
-        //     return;
-        // }
+        if(value = ""){
+            alert("Please Enter a City");
+            return;
+        }
         this._city = value;
     }
 
@@ -106,10 +106,10 @@ class User {
         return this._state;
     }
     set state(value) {
-        // if(value = ""){
-        //     alert("Please Enter a State");
-        //     return;
-        // }
+        if(value = ""){
+            alert("Please Enter a State");
+            return;
+        }
         this._state = value;
     }
 
@@ -134,15 +134,12 @@ class User {
         else {
             return;
         }
-
-        this._phone = value;
     }
 }
 
 
 
 // let user = new User(2, "John", "Smith", "js@gmail.com", "abcdefg", 20, 4, "Austin", "Texas", 78717, 5122843557);
-
 // console.log(user);
 
 

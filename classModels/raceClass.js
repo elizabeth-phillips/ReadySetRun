@@ -10,10 +10,10 @@ class Race {
         return this._id;
     }
     set id(value) {
-        // if(value < 0){
-        //     alert("Invalid ID");
-        //     return;
-        // }
+        if(value < 0){
+            alert("Invalid ID");
+            return;
+        }
         this._id = value;
     }
 
@@ -28,6 +28,10 @@ class Race {
         return this._ranking;
     }
     set ranking(value) {
+        if(value < 0){
+            alert("Invalid Rank");
+            return;
+        }
         this._ranking = value;
     }
 
