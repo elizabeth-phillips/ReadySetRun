@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const runningGroupController = require("../controllers/running_group");
+router.get("/", runningGroupController.getAll);
+router.get("/create/", runningGroupController.getForm);
+router.post("/create/", runningGroupController.create);
+router.post("/update/:id", runningGroupController.update);
+router.get("/showbyid/:id", runningGroupController.showById);
+router.post("/delete/:id", runningGroupController.delete);
+module.exports = router;
