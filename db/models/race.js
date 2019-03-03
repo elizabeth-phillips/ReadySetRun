@@ -1,10 +1,10 @@
 const Bookshelf = require("../../bookshelf");
-
-const Race = Bookshelf.model.extend({
-  tableName: "race"
-  // ,
-  // install: function() {
-  //   return this.hasMany(Install);
-  // }
+// console.log(Object.keys(Bookshelf.Model));
+require("./user");
+const Race = Bookshelf.Model.extend({
+  tableName: "race",
+  users: function() {
+    return this.hasMany(User);
+  }
 });
 module.exports = Bookshelf.model("Race", Race);

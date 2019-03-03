@@ -1,6 +1,6 @@
 const Bookshelf = require("../../bookshelf");
 
-const RaceHistory = bookshelf.Model.extend({
+const RaceHistory = Bookshelf.Model.extend({
   tableName: "race_history"
   // ,
   // install: function() {

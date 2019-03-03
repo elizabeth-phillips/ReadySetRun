@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const raceController = require("../controllers/race");
+router.get("/", raceController.getAll);
+router.get("/create/", raceController.getForm);
+router.post("/create/", raceController.create);
+router.post("/update/:id", raceController.update);
+router.get("/showbyid/:id", raceController.showById);
+router.post("/delete/:id", raceController.delete);
+module.exports = router;

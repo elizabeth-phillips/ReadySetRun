@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const raceHistoryController = require("../controllers/race_history");
+router.get("/", raceHistoryController.getAll);
+router.get("/create/", raceHistoryController.getForm);
+router.post("/create/", raceHistoryController.create);
+router.post("/update/:id", raceHistoryController.update);
+router.get("/showbyid/:id", raceHistoryController.showById);
+router.post("/delete/:id", raceHistoryController.delete);
+module.exports = router;
