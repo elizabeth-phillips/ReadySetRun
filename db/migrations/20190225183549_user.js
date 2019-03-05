@@ -14,25 +14,9 @@ exports.up = function (knex, Promise) {
             table.string("state");
             table.integer("zipcode");
             table.integer("phone");
-          })
-          .then(//() =>
-            // knex.schema.table("install", table => {
-            //   table
-            //     .integer("user_id")
-            //     .unsigned()
-            //     .index();
-            //   table.foreign("user_id").references("user.id"); 
-          // })
-          );
+          });
       }
     });
   };
   
-  exports.down = knex =>
-    // knex.schema
-    //   .table("install", table => {
-    //     table.dropColumn("user_id");
-    //   })
-    //   .then(() => 
-      knex.schema.dropTableIfExists("user");
-      // );
+  exports.down = knex => knex.schema.dropTableIfExists("user");

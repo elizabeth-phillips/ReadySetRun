@@ -1,13 +1,13 @@
 const user = require("../db/models/user");
 
 exports.getForm = (req, res) => {
-  res.render('users/viewform')
+  res.render('user/registration')
 }
 
 exports.getAll = (req, res) => {
   user.fetchAll()
     .then(user => {
-      res.status(200).render('users/viewusers', { data: JSON.parse(JSON.stringify(user)) });
+      res.status(200).render('user/viewusers', { data: JSON.parse(JSON.stringify(user)) });
     })
     .catch(err => {
       console.log(err);
@@ -19,7 +19,7 @@ exports.create = (req, res) => {
   user.forge(req.body)
     .save()
     .then(user => {
-      res.status(200).render('users/viewbyid', { data: JSON.parse(JSON.stringify(user)) });
+      res.status(200).render('user/profile', { data: JSON.parse(JSON.stringify(user)) });
     })
     .catch(err => {
       console.log(err);
@@ -31,7 +31,7 @@ exports.update = (req, res) => {
   user.forge({ id: req.params.id })
     .save(req.body)
     .then(user => {
-      res.status(200).render('users/viewbyid', { data: JSON.parse(JSON.stringify(user)) });
+      res.status(200).render('user/profile', { data: JSON.parse(JSON.stringify(user)) });
     })
     .catch(err => {
       console.log(err);
@@ -44,7 +44,7 @@ exports.showById = (req, res) => {
     .fetch()
     .then(user => {
       console.log(JSON.parse(JSON.stringify(user)))
-      res.status(200).render('users/viewbyid', { data: JSON.parse(JSON.stringify(user)) });
+      res.status(200).render('user/profile', { data: JSON.parse(JSON.stringify(user)) });
     })
     .catch(err => {
       console.log(err);
@@ -61,7 +61,7 @@ exports.delete = (req, res) => {
         user
           .destroy()
           .then(() => {
-            res.status(200).render('users/viewbyid', { data: JSON.parse(JSON.stringify(user)) });
+            res.status(200).render('user/profile', { data: JSON.parse(JSON.stringify(user)) });
           })
           .catch(err => {
             console.log(err);

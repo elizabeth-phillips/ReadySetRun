@@ -14,7 +14,7 @@ exports.up = function (knex, Promise) {
               .integer("user_id")
               .unsigned()
               .index();
-            table.foreign("user_id").references("user.id"); 
+            table.foreign("user_id").references("user.id").onUpdate("CASCADE"); 
             
         })
         ).then(()=>
@@ -23,7 +23,7 @@ exports.up = function (knex, Promise) {
             .integer("race_id")
             .unsigned()
             .index();
-          table.foreign("race_id").references("race.id"); 
+          table.foreign("race_id").references("race.id").onUpdate("CASCADE"); 
           
       })
       )
