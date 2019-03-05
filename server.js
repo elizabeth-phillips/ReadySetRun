@@ -9,7 +9,7 @@ const race = require("./routes/race");
 const raceHistory = require("./routes/race_history");
 const runningGroup = require("./routes/running_group");
 const runningGroupMember = require("./routes/running_group_member");
-
+console.log(user.stack)
 const exphbs = require("express-handlebars");
 
 const app = express();
