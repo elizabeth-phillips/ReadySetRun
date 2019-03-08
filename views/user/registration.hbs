@@ -1,29 +1,263 @@
-<h1>Registration</h1>
-<div class="sidenav">
-         <div class="login-main-text">
-            <h2>Application<br> Login Page</h2>
-            <p>Login or register from here to access.</p>
-         </div>
-      </div>
-      <div class="main">
-         <div class="col-md-6 col-sm-12">
-            <div class="login-form">
-               <form>
-                  <div class="form-group">
-                     <label>User Name</label>
-                     <input type="text" class="form-control" placeholder="User Name">
-                  </div>
-                  <div class="form-group">
-                     <label>Password</label>
-                     <input type="password" class="form-control" placeholder="Password">
-                  </div>
-                  <button type="submit" class="btn btn-black">Register</button>
-               </form>
+
+<section class="container-fluid " id="image">
+
+    <div class="text-block">
+        <h3>Lorem Ipsum </h3>
+        <p>This is test text.This is test text.</p>
+        <p>This is test text.This is test text.</p>
+    </div>
+</section>
+{{!-- ---------------------------------------------------- --}}
+
+
+<!-- Modal -->
+<div class="modal fade bs-modal-sm log-sign" id="myModal" tabindex="-1" role="dialog"
+    aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li id="tab1" class=" active tab-style login-shadow "><a href="#signin" data-toggle="tab">Log In</a>
+                    </li>
+                    <li id="tab2" class=" tab-style "><a href="#signup" data-toggle="tab">Sign Up</a></li>
+                </ul>
             </div>
-         </div>
-      </div>
+
+            <div class="modal-body">
+                <div id="myTabContent" class="tab-content">
+
+                    <div class="tab-pane fade active in" id="signin">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <!-- Sign In Form -->
+                                <!-- Text input-->
+                                <div class="group">
+                                    <input required="" class="input" type="text" placeholder="Username">
+                                    {{!-- <input required="" class="input" type="text" placeholder="Username"> --}}
+                                </div>
+                                <div class="group">
+
+                                    <input required="" class="input" type="password" placeholder="Password">
+                                </div>
+                                <em>minimum 6 characters</em>
+
+                                <div class="forgot-link">
+                                    <a href="#forgot" data-toggle="modal" data-target="#forgot-password"> I forgot my
+                                        password</a>
+                                </div>
+
+
+                                <!-- Button -->
+                                <div class="control-group">
+                                    <label class="control-label" for="signin"></label>
+                                    <div class="controls">
+                                        <button id="signin" name="signin" class="btn btn-primary btn-block">Log
+                                            In</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="signup">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <!-- Sign Up Form -->
+                                <!-- Text input-->
+                                <div class="group">
+                                    <div class="text-input-container">
+                                        <input required="" class="input" type="text" id="first_name" name="first_name"
+                                            title="First Name" value={{@first_name}}><span
+                                            class="highlight"></span><span class="bar"></span>
+                                        <label for="first_name">First Name</label>
+                                    </div>
+                                    <div class="text-input-container">
+                                        <input required="" class="input" type="text" id="last_name" name="last_name"
+                                            value={{@last_name}}><span class="highlight"></span><span
+                                            class="bar"></span>
+                                        <label for="last_name">Last Name</label>
+                                    </div>
+
+                                    <div class="text-input-container">
+                                        <input class="input" type="text" id="phone" name="phone" value={{@phone}}><span
+                                            class="highlight"></span><span class="bar"></span>
+                                        <label for="phone">Phone Number</label>
+                                    </div>
+                                    <div class="text-input-container">
+                                        <input required="" class="input" type="text" id="city" name="city"
+                                            value={{@city}}><span class="highlight"></span><span class="bar"></span>
+                                        <label for="city">City</label>
+                                    </div>
+                                    <div class="text-input-container">
+                                        <input required="" class="input" type="text" id="state" name="state"
+                                            value={{@state}}><span class="highlight"></span><span class="bar"></span>
+                                        <label for="state">State</label>
+                                    </div>
+                                    <div class="text-input-container">
+                                        <input required="" class="input" type="text" id="zipcode" name="zipcode"
+                                            value={{@zipcode}}><span class="highlight"></span><span class="bar"></span>
+                                        <label for="zipcode">Zipcode</label>
+                                    </div>
+                                    <div class="text-input-container">
+                                        <input required="" class="input" type="text" id="age" name="age"
+                                            value={{@age}}><span class="highlight"></span><span class="bar"></span>
+                                        <label for="age">Age</label>
+                                    </div>
+                                    <div class="text-input-container">
+                                        <input required="" class="input" type="text" id="desired_pace"
+                                            name="desired_pace" value={{@desired_pace}}><span
+                                            class="highlight"></span><span class="bar"></span>
+                                        <label for="desired_pace">Desired Pace</label>
+                                    </div>
+
+
+                                    <!-- Button -->
+                                    <div class="control-group">
+                                        <button class="btn btn-primary btn-block" type="submit"
+                                            onclick=alert("Congratulations, You are registered!!")>Sign up</button>
+                                        <button type="reset" class="btn btn-primary btn-block">Reset</button>
+                                    </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>-->
+        </div>
+    </div>
+</div>
+
+
+
+<!--modal2-->
+
+<div class="modal fade bs-modal-md" id="forgot-password" tabindex="0" role="dialog" aria-labelledby="mySmallModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title" id="myModalLabel">Please enter your email address and we will mail you the directions to recover your password.</h5>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="group">
+                            <input required="" class="input" type="text"><span class="highlight"></span><span
+                                class="bar"></span>
+                            <label class="label" for="date">Email address</label>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="forpassword"></label>
+                            <div class="controls">
+                                <button id="forpasswodr" name="forpassword"
+                                    class="btn btn-primary btn-block">Send</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="https://media.gettyimages.com/photos/running-is-a-way-of-life-picture-id499778717" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Find race groups in your area ..</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit
+                        iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione
+                        voluptatum molestiae adipisci, beatae obcaecati.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="https://media.gettyimages.com/photos/with-her-by-my-side-i-can-run-miles-picture-id869641280" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-4">Connect with people like you!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit
+                        iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione
+                        voluptatum molestiae adipisci, beatae obcaecati.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="https://media.gettyimages.com/photos/time-to-clock-another-personal-best-picture-id916060452" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Get recommendations!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit
+                        iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione
+                        voluptatum molestiae adipisci, beatae obcaecati.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{!-- --------------------------------------------------------- --}}
+{{!-- <div class="sidenav">
+    <div class="login-main-text">
+        <h2>Application<br> Login Page</h2>
+        <p>Login or register from here to access.</p>
+    </div>
+</div>
+<div class="main">
+    <div class="col-md-6 col-sm-12">
+        <div class="login-form">
+            <form>
+                <div class="form-group">
+                    <label>User Name</label>
+                    <input type="text" class="form-control" placeholder="User Name">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-black">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
 <form action="/user/create" method="post">
-<div class="text-input-container">
+    <div class="text-input-container">
         <input type="text" id="first_name" name="first_name" title="First Name" value={{@first_name}}>
         <label for="first_name">First Name</label>
     </div>
@@ -57,4 +291,4 @@
     </div>
     <button class="button primary" type="submit" onclick=alert("Created!")>Create</button>
     <button title="Large Button" type="reset" class="button primary">Reset</button>
-</form>
+</form> --}}
