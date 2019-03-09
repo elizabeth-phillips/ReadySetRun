@@ -19,7 +19,9 @@ $(window, document, undefined).ready(function() {
   
   $('#tab2').on('click' , function(){
       $('#tab2').addClass('signup-shadow');
-     $('#tab1').removeClass('login-shadow');
-  
-  
+     $('#tab1').removeClass('login-shadow'); 
+  });
+
+  $('#signedUp').on('click', function(){
+      alert("Congratulations, You are registered!!");
   });
