@@ -22,7 +22,7 @@
 
 /* registration.hbs */
 #image {
-    background-image: url("https://cdn.pixabay.com/photo/2016/11/14/03/38/achieve-1822503_1280.jpg");
+    background-image: url("/assets/images/images.jpg");
     height: 100vh;
     /* text-align: left; 
     background-size: cover;
@@ -36,9 +36,9 @@
     position: relative;
 }
 
-.carousel-item.active {
+/* .carousel-item.active {
     display: block;
-}
+} */
 
 .text-block {
     position: absolute;
@@ -61,59 +61,56 @@ body {
     width: 50%;
     background-color: #f2f2f2;
     text-align: center;
-
-
 }
 
 .nav-tabs>li>a {
     margin-right: 0px;
-    color: grey;
+    color: black;
 }
-
 
 .btn-block {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 18px;
+    background-color: black;
 }
 
-.nav-tabs>li.active>a,
+/* .nav-tabs>li.active> a,
 .nav-tabs>li.active>a:focus,
 .nav-tabs>li.active>a:hover {
-    background-color: #e5ecf4;
-    color: #4a89dc;
-}
-
-/* #tab2:hover{
-    background-color: grey;
+    background-color: #cfb583;
+    color: black;
 } */
+
+#tab1:hover,
+#tab2:hover {
+    background-color: #cfb583;
+    color: black;
+}
 
 .login-shadow {
     -webkit-box-shadow: 5px -5px 6px 0px rgba(82, 82, 82, 0.52);
     -moz-box-shadow: 5px -5px 6px 0px rgba(82, 82, 82, 0.52);
     box-shadow: 5px -5px 6px 0px rgba(82, 82, 82, 0.52);
     z-index: 1;
-
 }
 
 .signup-shadow {
     -webkit-box-shadow: -5px 0px 6px 0px rgba(82, 82, 82, 0.52);
     -moz-box-shadow: -5px -5px 6px 0px rgba(82, 82, 82, 0.52);
     box-shadow: -5px 0px 6px 0px rgba(82, 82, 82, 0.52);
-
-
+    z-index: 1;
 }
-
 
 .modal-header {
-    background-color: #e5ecf4;
+    background-color: #f0b278;
 }
+
 
 .group {
     position: relative;
     margin-top: 30px;
 }
-
 
 .input {
     font-size: 18px;
@@ -121,7 +118,7 @@ body {
     -webkit-appearance: none;
     display: block;
     background: none;
-    color: #636363;
+    color:white;
     width: 100%;
     border: none;
     border-radius: 0;
@@ -136,7 +133,7 @@ body {
 /* Label */
 
 .label {
-    color: #757575;
+    color: rgb(238, 221, 189);
     font-size: 18px;
     font-weight: normal;
     position: absolute;
@@ -211,10 +208,10 @@ body {
 /* ---------active----- */
 
 .modal-body {
-    /* background-image: url('https://media.gettyimages.com/photos/athlete-running-picture-id636887598'); */
-    /* background-size: cover;
-    opacity: 0.5; */
-    /* filter: alpha(opacity=70); */
+    background-image: url('https://media.gettyimages.com/photos/athlete-running-picture-id636887598');
+    background-size: cover;
+    /* opacity: 0.7; */
+    /* filter: alpha(opacity=40); */
 
 }
 
@@ -252,3 +249,111 @@ em {
 }
 
 /* -------------------------------------- */
+/* ------------Footer ---------------------- */
+#myFooter {
+    background-color: #373a48;
+    color: white;
+}
+
+#myFooter .footer-copyright {
+    background-color: #383737;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+#myFooter .footer-copyright p {
+    margin: 10px;
+    color: #ccc;
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+
+}
+
+#myFooter h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: white;
+}
+
+#myFooter .myCols {
+    text-align: center;
+}
+
+#myFooter .social-networks {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 38px;
+}
+
+#myFooter .social-networks a {
+    font-size: 32px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover {
+    text-decoration: none;
+
+}
+
+#myFooter .facebook:hover {
+    color: #0077e2;
+}
+
+#myFooter .google:hover {
+    color: #ef1a1a;
+}
+
+#myFooter .twitter:hover {
+    color: #00aced;
+}
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+}
+
+
+html {
+    height: 100% !important;
+}
+
+body {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    min-height: 200px;
+}
+
+#myFooter {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}
