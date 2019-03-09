@@ -1,8 +1,13 @@
 const express = require("express");
 const router = express.Router();
+const user = require("../db/models/user");
+
+
 
 router.get("/", (req, res) => {
-  res.status(200).json({ message: "Welcome to Running Race Sign Up" });
+  res.render('index', { data: {login: true} })
 });
+
+
 
 module.exports = router;

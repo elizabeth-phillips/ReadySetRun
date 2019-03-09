@@ -14,7 +14,7 @@ class RunningGroup {
     }
     set id(value) {
         if(value < 0){
-            alert("Invalid ID");
+           alert("Invalid ID");
             return;
         }
         this._id = value;
@@ -25,7 +25,7 @@ class RunningGroup {
     }
     set name(value) {
         if(value.length <= 0){
-            alert("Invalid Name");
+           alert("Invalid Name");
             return;
         }
         this._name = value;
@@ -36,7 +36,7 @@ class RunningGroup {
     }
     set city(value){
         if(value.length <= 0){
-            alert("Please Enter a City");
+           alert("Please Enter a City");
             return;
         }
       this._city = value;
@@ -48,7 +48,7 @@ class RunningGroup {
     }
     set state(value) {
         if(value.length <= 0){
-            alert("Please Enter a State");
+           alert("Please Enter a State");
             return;
         }
         this._state = value;

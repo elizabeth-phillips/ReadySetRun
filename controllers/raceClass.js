@@ -11,7 +11,7 @@ class Race {
     }
     set id(value) {
         if(value < 0){
-            alert("Invalid ID");
+           alert("Invalid ID");
             return;
         }
         this._id = value;
@@ -29,7 +29,7 @@ class Race {
     }
     set ranking(value) {
         if(value < 0){
-            alert("Invalid Rank");
+           alert("Invalid Rank");
             return;
         }
         this._ranking = value;
