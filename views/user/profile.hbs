@@ -38,13 +38,13 @@
         <input type="text" id="desired_pace" name="desired_pace" value={{@desired_pace}}>
         <label for="desired_pace">Desired Pace</label>
     </div>
-    <div class="text-input-container">
+   <div class="text-input-container">
         <input type="password" id="password" name="password" value={{@password}}>
         <label for="password">Password</label>
     </div>
     <div class="text-input-container">
         <input type="password" id="password" name="password" value={{@password}}>
-        <label for="password">Confirm Password</label>
+        <label for="password">Confirm Password</label> 
     </div>
     <button type="submit" class="button primary" onclick=alert("Updated!")>Update</button>
     <button class="button primary" formaction="/user/delete/{{@id}}" type="submit"

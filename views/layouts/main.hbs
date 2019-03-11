@@ -33,7 +33,8 @@
                         <a class="nav-link" href="/running_group">Running Group</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/user/create" data-toggle="modal" data-target=".log-sign">Login</a>
+                        <a class="nav-link" href="/user" data-toggle="modal" id="login-btn"
+                            data-target=".log-sign">Login</a>
                     </li>
                 </ul>
             </div>
@@ -42,12 +43,12 @@
 
     <!-- Modal -->
     <div class="modal fade bs-modal-sm log-sign" id="myModal" tabindex="-1" role="dialog"
-        aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        aria-labelledby="mySmallModalLabel">
         <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="bs-example bs-example-tabs">
                     <ul id="myTab" class="nav nav-tabs">
-                        <li id="tab1" class=" active tab-style login-shadow "><a href="#signin" data-toggle="tab">Log
+                        <li id="tab1" class=" active tab-style login-shadow "><a href="#login" data-toggle="tab">Log
                                 In</a>
                         </li>
                         <li id="tab2" class=" tab-style "><a href="#signup" data-toggle="tab">Sign Up</a></li>
@@ -57,7 +58,7 @@
                 <div class="modal-body">
                     <div id="myTabContent" class="tab-content">
 
-                        <div class="tab-pane fade active in" id="signin">
+                        <div class="tab-pane fade active in" id="login">
                             <form class="form-horizontal">
                                 <fieldset>
                                     <!-- Sign In Form -->
@@ -70,7 +71,7 @@
 
                                         <input required="" class="input" type="password" placeholder="Password">
                                     </div>
-                                    <em>minimum 6 characters</em>
+
 
                                     <div class="forgot-link">
                                         <a href="#forgot" data-toggle="modal" data-target="#forgot-password"> I forgot
@@ -110,6 +111,25 @@
                                                 class="bar"></span>
                                             <label for="last_name">Last Name</label>
                                         </div>
+                                        <div class="text-input-container">
+                                            <input required="" class="input" type="text" id="email_address"
+                                                name="email_address" value={{@username}}><span class="highlight"></span><span
+                                                class="bar"></span>
+                                            <label for="username">Email</label>
+                                        </div>
+
+                                        <div class="text-input-container">
+                                            <input required="" class="input" type="password" id="password"
+                                                name="password" value={{@password}}><span class="highlight"></span><span
+                                                class="bar"></span>
+                                            <label for="password">Password</label>
+                                        </div>
+                                        <div class="text-input-container">
+                                            <input required="" class="input" type="password" id="password"
+                                                name="password" value={{@password}}><span class="highlight"></span><span
+                                                class="bar"></span>
+                                            <label for="password">Confirm Password</label>
+                                        </div>
 
                                         <div class="text-input-container">
                                             <input class="input" type="text" id="phone" name="phone"
@@ -147,6 +167,7 @@
                                         </div>
 
 
+
                                         <!-- Button -->
                                         <div class="control-group">
                                             <button class="btn btn-primary btn-block" type="submit" id="signedUp">Sign
@@ -178,8 +199,8 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h5 class="modal-title" id="myModalLabel">Please enter your email address and we will mail you the
-                        directions to recover your password.</h5>
+                    <h6 class="modal-title" id="myModalLabel">Please enter your email address and we will send you the
+                        directions.</h6>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal">
