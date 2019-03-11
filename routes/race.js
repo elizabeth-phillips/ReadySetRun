@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const race = require("../db/models/race");
+
 router.get("/", (req, res) => {
     race.fetchAll()
     .then(race => {
@@ -11,26 +13,11 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/create/", (req, res) => {
-    res.render('race/viewform')
-});
-
-router.post("/create/", (req, res) => {
-    race.forge(req.body)
-      .save()
-      .then(race => {
-        res.status(200).render('race/viewbyid', { data: JSON.parse(JSON.stringify(race)) });
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  });
 router.post("/update/:id", (req, res) => {
     race.forge({ id: req.params.id })
       .save(req.body)
       .then(race => {
-        res.status(200).render('race/viewbyid', { data: JSON.parse(JSON.stringify(race)) });
+        res.status(200).render('race', { data: JSON.parse(JSON.stringify(race)) });
       })
       .catch(err => {
         console.log(err);
@@ -42,7 +29,7 @@ router.get("/showbyid/:id", (req, res) => {
       .fetch()
       .then(race => {
         console.log(JSON.parse(JSON.stringify(race)))
-        res.status(200).render('race/viewbyid', { data: JSON.parse(JSON.stringify(race)) });
+        res.status(200).render('race', { data: JSON.parse(JSON.stringify(race)) });
       })
       .catch(err => {
         console.log(err);
@@ -59,7 +46,7 @@ router.post("/delete/:id", (req, res) => {
           race
             .destroy()
             .then(() => {
-              res.status(200).render('race/viewbyid', { data: JSON.parse(JSON.stringify(race)) });
+              res.status(200).render('index', { data: JSON.parse(JSON.stringify(race)) });
             })
             .catch(err => {
               console.log(err);

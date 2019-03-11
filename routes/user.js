@@ -10,14 +10,13 @@ create = (req, res) => {
     user.forge( req.body )
     .save(req.body)
     .then(user => {
-        showById(req, res)
         res.status(200).render('profile', { data: JSON.parse(JSON.stringify(user)) });
       })
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
-      });
-  };
+    });
+};
 
 loginPage = (req, res) => {
     res.render('profile', { data: {login: false} })
@@ -40,7 +39,7 @@ findByEmail = (req, res) => {
     .fetch()
     .then((user) => {
         if (!user) {
-            res.status(404).json({ message: `user with email: ${email} not found` });
+            res.status(404).render('index', { data: JSON.parse(JSON.stringify(user)) });
         } else {
             res.status(200).render('profile', { data: JSON.parse(JSON.stringify(user)) });
         }
@@ -53,11 +52,12 @@ findByEmail = (req, res) => {
 
 findById = (req, res) => {
     user.forge().query({where:{ id: req.params.id}})
-    .fetch({withRelated: ['races']})
+    .fetch() //{withRelated: ['races']}
     .then((user) => {
         if (!user) {
             console.log("User info:", user)
-            res.status(404).json({ message: `user with id: ${req.params.id} not found` });
+            res.render('index', { data: {login: false} })
+            // res.status(404).json({ message: `user with id: ${req.params.id} not found` });
         } else {
             console.log("User info:", user)
             res.status(200).render('profile', { data: JSON.parse(JSON.stringify(user)) });
@@ -79,7 +79,6 @@ deleteUser = (req, res) => {
             user
             .destroy()
             .then(() => {
-                console.log(user)
                 res.status(200).render('index', { data: JSON.parse(JSON.stringify(user)) });
             })
             .catch(err => {
@@ -90,11 +89,10 @@ deleteUser = (req, res) => {
     });
 };
 
-// router.post("/create/", create);
 router.get("/register/", register);
-router.post("/create/", create);
+router.post("/", create);
 router.post("/:id", update);
-router.get("/profile/:id", findById);
+router.get("/:id", findById);
 router.get("/login/", findByEmail);
-router.delete("/:id", deleteUser);
+router.get("/delete/:id", deleteUser);
 module.exports = router;

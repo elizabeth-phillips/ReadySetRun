@@ -4,19 +4,16 @@ exports.up = function (knex, Promise) {
         return knex.schema
           .createTable("race", table => {
             table.increments("id").primary();
-            table.string("time");
-            table.integer("ranking");
+            table.string("name");
             table.datetime("date");
+            table.float("distance");
+            table.string("email");
+            table.string("phone");
+            table.string("city");
+            table.string("state");
+            table.integer("zipcode");
           })
-          .then(//() =>
-            // knex.schema.table("install", table => {
-            //   table
-            //     .integer("user_id")
-            //     .unsigned()
-            //     .index();
-            //   table.foreign("user_id").references("user.id"); 
-          // })
-          );
+          .then( );
       }
     });
   };

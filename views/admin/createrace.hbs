@@ -1,12 +1,18 @@
-<h1>Create Running Group</h1>
-<form action="../running_group/create" method="post">
+
+
+<h1>Create Race</h1>
+<form action="../admin/createrace/" method="post">
     <div class="text-input-container">
         <input type="text" id="name" name="name" title="Name" value={{@name}}>
         <label for="name">Name</label>
     </div>
     <div class="text-input-container">
-        <input type="text" id="pace" name="pace" value={{@pace}}>
-        <label for="pace">Pace</label>
+        <input type="text" id="distance" name="distance" value={{@distance}}>
+        <label for="distance">Distance</label>
+    </div>
+    <div class="text-input-container">
+        <input type="text" id="email" name="email" value={{@email}}>
+        <label for="email">Email</label>
     </div>
     <div class="text-input-container">
         <input type="text" id="phone" name="phone" value={{@phone}}>
