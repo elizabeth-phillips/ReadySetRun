@@ -4,16 +4,16 @@ exports.up = function (knex, Promise) {
         return knex.schema
           .createTable("user", table => {
             table.increments("id").primary();
-            table.string("first_name");
-            table.string("last_name");
-            table.string("email");
-            table.string("password");
-            table.integer("age");
-            table.string("desired_pace");
-            table.string("city");
-            table.string("state");
-            table.integer("zipcode");
-            table.integer("phone");
+            table.string("first_name").notNullable();
+            table.string("last_name").notNullable();
+            table.string("email").unique().notNullable();
+            table.string("password").notNullable();
+            table.integer("age").notNullable();
+            table.string("desired_pace").notNullable();
+            table.string("city").notNullable();
+            table.string("state").notNullable();
+            table.integer("zipcode").notNullable();
+            table.string("phone");
           });
       }
     });

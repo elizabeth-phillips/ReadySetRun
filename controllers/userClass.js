@@ -17,7 +17,7 @@ class User {
     }
     set id(value) {
         if(value < 0){
-            alert("Invalid ID");
+           alert("Invalid ID");
             return;
         }
         this._id = value;
@@ -28,7 +28,7 @@ class User {
     }
     set first_name(value) {
         if(value.length <= 0){
-            alert("Invalid First Name");
+           alert("Invalid First Name");
             return;
         }
         this._first_name = value;
@@ -39,7 +39,7 @@ class User {
     }
     set last_name(value) {
         if(value.length <= 0){
-            alert("Invalid Last Name");
+           alert("Invalid Last Name");
             return;
         }
         this._last_name = value;
@@ -53,7 +53,7 @@ class User {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value) == true) {
             this._email = value;
         } else {
-            // alert("You have entered an invalid email address!");
+            //alert("You have entered an invalid email address!");
             return;
         }
     }
@@ -63,7 +63,7 @@ class User {
     }
     set password(value) {
         if(value < 4){
-            alert("Password should be atleast 4 chars or long");
+           alert("Password should be atleast 4 chars or long");
             return;
         }
         this._password = value;
@@ -74,7 +74,7 @@ class User {
     }
     set age(value) {
         if(value < 10){
-            alert("You should be atleast 10 years of age to register");
+           alert("You should be atleast 10 years of age to register");
             return;
         }
         this._age = value;
@@ -85,7 +85,7 @@ class User {
     }
     set desired_pace(value) {
         if(value <= 0){
-            alert("Pace cannot be 0 or less");
+           alert("Pace cannot be 0 or less");
             return;
         }
         this._desired_pace = value;
@@ -96,7 +96,7 @@ class User {
     }
     set city(value) {
         if(value = ""){
-            alert("Please Enter a City");
+           alert("Please Enter a City");
             return;
         }
         this._city = value;
@@ -107,7 +107,7 @@ class User {
     }
     set state(value) {
         if(value = ""){
-            alert("Please Enter a State");
+           alert("Please Enter a State");
             return;
         }
         this._state = value;

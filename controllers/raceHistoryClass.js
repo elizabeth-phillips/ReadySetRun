@@ -10,7 +10,7 @@ class RaceHistory {
     }
     set id(value) {
         // if(value < 0){
-        //     alert("Invalid ID");
+        //    alert("Invalid ID");
         //     return;
         // }
         this._id = value;
