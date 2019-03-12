@@ -4,8 +4,16 @@ const user = require("../db/models/user");
 const runningGroup = require("../db/models/running_group");
 const race = require("../db/models/race");
 
+let currUser = null
+
+router.get("/register", (req, res) => {
+    res.render('index', { login: false,
+                            data: JSON.parse(JSON.stringify(currUser))})
+});
+
 router.get("/", (req, res) => {
-  res.render('index', { data: {login: true} })
+  res.render('index', { login: true,
+                        data: JSON.parse(JSON.stringify(currUser))})
 });
 
 router.get("/admin/createrunninggroup", (req, res) => {
@@ -27,7 +35,7 @@ router.post("/admin/createrace/", (req, res) => {
     });
 });
 
-getPanel = (req, res) => {
+router.get("/admin/", (req, res) => {
   user.fetchAll()
   .then(users => {
       res.status(200).render('admin/panel', { data: JSON.parse(JSON.stringify(users)) });
@@ -36,9 +44,9 @@ getPanel = (req, res) => {
       console.log(err);
       res.status(500).json(err);
   });
-};
+});
 
-getAllUsers = (req, res) => {
+router.get("/admin/users", (req, res) => {
   user.fetchAll()
   .then(users => {
       res.status(200).render('admin/viewusers', { data: JSON.parse(JSON.stringify(users)) });
@@ -47,11 +55,7 @@ getAllUsers = (req, res) => {
       console.log(err);
       res.status(500).json(err);
   });
-};
+});
 
-
-
-router.get("/admin/", getPanel);
-router.get("/admin/users", getAllUsers);
 
 module.exports = router;
