@@ -1,32 +1,22 @@
-<table class="standard-table alternating-rows">
-    <thead>
-        <tr>
-            <th>
-                <span>ID</span>
-            </th>
-            <th>
-                <span>Name</span>
-            </th>
-            <th>
-                <span>Pace</span>
-            </th>
-            <th>
-                <span>City, State Zipcode</span>
-            </th>
-            <th>
-                <span>Phone</span>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each data}}
-        <tr>
-            <td><a href="running_group/{{id}}"> {{id}}</a></td>
-            <td>{{name}}</td>
-            <td>{{pace}}</td>
-            <td>{{city}}, {{state}} {{zipcode}}</td>
-            <td>{{phone}}</td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+<div class="container">
+{{#grouped_each 3 data}}
+    <div class="row">
+    {{#each this }}
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                <b>{{name}}</b>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <b>Average Pace:</b> <br>{{pace}}<br>
+                    <b>Location:</b> <br>{{city}}, {{state}} {{zipcode}}<br>
+                    <b>Phone:</b> <br>{{phone}}<br>
+                </p>
+                 <a href="running_group/{{id}}" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+{{/grouped_each}}
+</div>

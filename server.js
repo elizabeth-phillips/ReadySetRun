@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 3000;
 app.engine('hbs', exphbs({
   defaultLayout: '../main',
   partialsDir: __dirname + '/views/partials/',
+  helpers: require("./helpers.js").helpers,
   extname: 'hbs'
 }));
 

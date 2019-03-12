@@ -5,22 +5,12 @@
             <h1>{{@name}} Info</h1>
         </div>
         <div class="col-md-6 mb-5">
-
-            <form action="/race/update/{{@id}}" method="post">
-                <div class="text-input-container">
-                    <input type="text" class="form-control" placeholder="Name" id="name" name="name" title="Name" value={{@name}}>
-                    <input type="text" class="form-control" placeholder="Date" id="date" name="date" title="Date" value={{@date}}>
-                    <input type="text" class="form-control" placeholder="Distance" id="distance" name="distance" title="Distance" value={{@distance}}>
-                    <input type="text" class="form-control" placeholder="Phone Number" id="phone" name="phone" value={{@phone}}>
-                    <input type="text" class="form-control" placeholder="Email" id="email" name="email" value={{@email}}>
-                    <input type="text" class="form-control" placeholder="City" id="city" name="city" value={{@city}}>
-                    <input type="text" class="form-control" placeholder="State" id="state" name="state" value={{@state}}>
-                    <input type="text" class="form-control" placeholder="Zipcode" id="zipcode" name="zipcode" value={{@zipcode}}>
-                </div>
-                <button type="submit" class="button primary">Update</button>
-                <button class="button primary" formaction="/race/delete/{{@id}}" type="submit" onclick=alert("Deleted")>Delete</button>
-
-            </form>
+            {{@name}} <br>
+            {{@date}} <br>
+            {{@distance}} Miles <br>
+            Location: {{@city}}, {{@state}} {{@zipcode}}<br>
+            Phone: {{@phone}}<br>
+            Email: {{@email}}
         </div>
     </div>
 </div>
