@@ -5,39 +5,334 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <title>Ready, Set, Run!</title>
+     <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="screen, projection" />
+
+        <title>Running Race Sign Up</title>
 </head>
 
 <body>
-    <nav class="navbar-static-top navbar navbar-expand-lg navbar-light bg-dark navbar-dark">
-        <a class="navbar-brand" href="/"><i class="fas fa-running"></i>&nbsp;Ready, Set, Run!</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/"><i class="fas fa-running"></i>&nbsp;Ready, Set, Run!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/race">Races</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/running_group">Running Group</a>
+                    </li>
+                    <li class="nav-item">
+                        {{#if data}}
+                        <a class="nav-link" href="/" data-toggle="modal" id="login-btn"
+                            data-target=".log-sign">Login</a>
+                        {{else}}
+                        <a class="nav-link" href="/register" data-toggle="modal" id="login-btn"
+                            data-target=".log-sign">Register</a>
+                        {{/if}}
+                        {{!-- <a class="nav-link" href="/user" data-toggle="modal" id="login-btn"
+                            data-target=".log-sign">Login</a> --}}
+                    </li>
+                </ul>
+            </div>
+           
+                    </div>
+                </nav>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/race">Races</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/running_group">Running Group</a>
-                </li>
-                <li class="nav-item">
-                    {{#if data}}
-                        <a class="nav-link" href="/">Login</a>
-                    {{else}}
-                        <a class="nav-link" href="/register">Register</a>
-                    {{/if}}
-                </li>
-            </ul>
+                <!-- Modal -->
+                <div class="modal fade bs-modal-sm log-sign" id="myModal" tabindex="-1" role="dialog"
+                    aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="bs-example bs-example-tabs">
+                                <ul id="myTab" class="nav nav-tabs">
+                                    <li id="tab1" class=" active tab-style login-shadow "><a href="#login"
+                                            data-toggle="tab">Log
+                                            In</a>
+                                    </li>
+                                    <li id="tab2" class=" tab-style "><a href="#signup" data-toggle="tab">Sign Up</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="modal-body">
+                                <div id="myTabContent" class="tab-content">
+
+                                    <div class="tab-pane fade active in" id="login">
+                                        <form class="form-horizontal">
+                                            <fieldset>
+                                                <!-- Sign In Form -->
+                                                <!-- Text input-->
+                                                <div class="group">
+                                                    <input required="" class="input" type="text" placeholder="Username">
+                                                    {{!-- <input required="" class="input" type="text" placeholder="Username"> --}}
+                                                </div>
+                                                <div class="group">
+
+                                                    <input required="" class="input" type="password"
+                                                        placeholder="Password">
+                                                </div>
+
+
+                                                <div class="forgot-link">
+                                                    <a href="#forgot" data-toggle="modal"
+                                                        data-target="#forgot-password"> I forgot
+                                                        my
+                                                        password</a>
+                                                </div>
+
+
+                                                <!-- Button -->
+                                                <div class="control-group">
+                                                    <label class="control-label" for="signin"></label>
+                                                    <div class="controls ">
+                                                        <button id="signin" name="signin"
+                                                            class="btn btn-primary btn-block">Log
+                                                            In</button>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+
+
+                                    <div class="tab-pane fade" id="signup">
+                                        <form class="form-horizontal">
+                                            <fieldset>
+                                                <!-- Sign Up Form -->
+                                                <!-- Text input-->
+                                                <div class="group">
+                                                    <div class="text-input-container">
+                                                        <input required="" class="input" type="text" id="first_name"
+                                                            name="first_name" title="First Name"
+                                                            value={{@first_name}}><span class="highlight"></span><span
+                                                            class="bar"></span>
+                                                        <label for="first_name">First Name</label>
+                                                    </div>
+                                                    <div class="text-input-container">
+                                                        <input required="" class="input" type="text" id="last_name"
+                                                            name="last_name" value={{@last_name}}><span
+                                                            class="highlight"></span><span class="bar"></span>
+                                                        <label for="last_name">Last Name</label>
+                                                    </div>
+                                                    <div class="text-input-container">
+                                                        <input required="" class="input" type="text" id="email_address"
+                                                            name="email_address" value={{@username}}><span
+                                                            class="highlight"></span><span class="bar"></span>
+                                                        <label for="username">Email</label>
+                                                    </div>
+
+                                                    <div class="text-input-container">
+                                                        <input required="" class="input" type="password" id="password"
+                                                            name="password" value={{@password}}><span
+                                                            class="highlight"></span><span class="bar"></span>
+                                                        <label for="password">Password</label>
+                                                    </div>
+                                                    <div class="text-input-container">
+                                                        <input required="" class="input" type="password" id="password"
+                                                            name="password" value={{@password}}><span
+                                                            class="highlight"></span><span class="bar"></span>
+                                                        <label for="password">Confirm Password</label>
+                                                    </div>
+
+                                                    <div class="text-input-container">
+                                                        <input class="input" type="text" id="phone" name="phone"
+                                                            value={{@phone}}><span class="highlight"></span><span
+                                                            class="bar"></span>
+                                                        <label for="phone">Phone Number</label>
+                                                    </div>
+                                                    <div class="text-input-container">
+                                                        <input required="" class="input" type="text" id="city"
+                                                            name="city" value={{@city}}><span
+                                                            class="highlight"></span><span class="bar"></span>
+                                                        <label for="city">City</label>
+                                                    </div>
+                                                    <div class="text-input-container">
+                                                        <input required="" class="input" type="text" id="state"
+                                                            name="state" value={{@state}}><span
+                                                            class="highlight"></span><span class="bar"></span>
+                                                        <label for="state">State</label>
+                                                    </div>
+                                                    <div class="text-input-container">
+                                                        <input required="" class="input" type="text" id="zipcode"
+                                                            name="zipcode" value={{@zipcode}}><span
+                                                            class="highlight"></span><span class="bar"></span>
+                                                        <label for="zipcode">Zipcode</label>
+                                                    </div>
+                                                    <div class="text-input-container">
+                                                        <input required="" class="input" type="text" id="age" name="age"
+                                                            value={{@age}}><span class="highlight"></span><span
+                                                            class="bar"></span>
+                                                        <label for="age">Age</label>
+                                                    </div>
+                                                    <div class="text-input-container">
+                                                        <input required="" class="input" type="text" id="desired_pace"
+                                                            name="desired_pace" value={{@desired_pace}}><span
+                                                            class="highlight"></span><span class="bar"></span>
+                                                        <label for="desired_pace">Desired Pace</label>
+                                                    </div>
+
+
+
+                                                    <!-- Button -->
+                                                    <div class="control-group">
+                                                        <button class="btn btn-primary btn-block" type="submit"
+                                                            id="signedUp">Sign
+                                                            up</button>
+                                                        <button type="reset"
+                                                            class="btn btn-primary btn-block">Reset</button>
+                                                    </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            {{!-- <div class="">
+                    <center>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </center>
+                </div> --}}
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!--modal2-->
+
+                <div class="modal fade bs-modal-md" id="forgot-password" tabindex="0" role="dialog"
+                    aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h6 class="modal-title" id="myModalLabel">Please enter your email address and we will
+                                    send you the
+                                    directions.</h6>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <fieldset>
+                                        <div class="group">
+                                            <input required="" class="input" type="text"><span
+                                                class="highlight"></span><span class="bar"></span>
+                                            <label class="label" for="date">Email address</label>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="forpassword"></label>
+                                            <div class="controls">
+                                                <button id="forpasswodr" name="forpassword"
+                                                    class="btn btn-primary btn-block">Send</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="content">
+                    {{{body}}}
+                </div>
+                 <script src="/javascript/user.js">
+                    </script>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                        crossorigin="anonymous"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                        crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                        crossorigin="anonymous"></script>
+            </body>
+            <footer id="myFooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 myCols">
+                            <h5>Get started</h5>
+                            <ul>
+                                <li><a href="/user/create">Home</a></li>
+                                <li><a href="/race">Races</a></li>
+                                <li><a href="/running_group">Running Groups</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 myCols">
+                            <h5>About us</h5>
+                            <ul>
+                                <li><a target="_blank" href="https://github.com/elizabeth-phillips">Elizabeth
+                                        Phillips</a></li>
+                                <li><a target="_blank" href="https://github.com/shwetarane">Shweta Rane</a></li>
+                                <li><a target="_blank" href="https://www.txstate.edu/">Texas State University</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 myCols">
+                            <h5>Support</h5>
+                            <ul>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Help desk</a></li>
+                                <li><a href="#">Forums</a></li>
+                            </ul>
+                        </div>
+                        {{!-- <div class="col-sm-3 myCols">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div> --}}
+                    </div>
+                </div>
+                <div class="social-networks">
+                    <a target="_blank" href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/" class="facebook"><i
+                            class="fab fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/" class="google"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    <p>©Copyright 2019-2020 </p>
+                </div>
+            </footer>
+
+            {{!-- 
+<footer class="page-footer font-small pt-4 bg-dark navbar-dark footer-below">
+    <div class="container-fluid text-center text-md-left text-white">
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <div class="row mb-md-0 mb-3">
+            <div class="col-md-3"></div>
+            <div class="col-md-3" align="center">
+                <h6 class="text-uppercase">About Us</h6>
+            </div>
+            <div class="col-md-3">
+                <h6 class="text-uppercase">Navigation</h6>
+            </div>
+            <div class="col-md-3"></div>
         </div>
-    </nav>
-    <div class="content">
-        {{{body}}}
-    </div>
+        <div class="row mb-md-0 mb-3">
+            <div class="col-md-3"></div>
+            <div class="col-md-3" align="center">Elizabeth Phillips</div>
+            <div class="col-md-3">
+                <a href="/">Home</a>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -49,7 +344,27 @@
             </div>
             <div class="row mb-md-0 mb-3">
                 <a href="/">Home</a>&nbsp; &nbsp; &nbsp; <a href="/running_group">Running Groups</a>&nbsp; &nbsp; &nbsp; <a href="/race">Races</a>
+
             </div>
+            <div class="col-md-3"></div>
         </div>
-    </footer>
+        <div class="row mb-md-0 mb-3">
+            <div class="col-md-3"></div>
+            <div class="col-md-3" align="center">Shweta Rane</div>
+            <div class="col-md-3">
+                <a href="/running_group">Running Groups</a>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row mb-md-0 mb-3">
+            <div class="col-md-3"></div>
+            <div class="col-md-3" align="center">Texas State University</div>
+            <div class="col-md-3">
+                <a href="/race">Races</a>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</footer> --}}
+
 </html>

@@ -23,7 +23,7 @@ app.set('view engine', 'hbs');
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
+app.use(express.static(process.cwd() + "/views/public"));
 app.use("/", index);
 app.use("/user", user);
 app.use("/race", race);
