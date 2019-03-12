@@ -5,35 +5,27 @@
                 <span>ID</span>
             </th>
             <th>
-                <span>First Name</span>
+                <span>Name</span>
             </th>
             <th>
-                <span>Last Name</span>
-            </th>
-            <th>
-                <span>Phone Number</span>
+                <span>Pace</span>
             </th>
             <th>
                 <span>City, State Zipcode</span>
             </th>
             <th>
-                <span>Age</span>
-            </th>
-            <th>
-                <span>Desired Pace</span>
+                <span>Phone</span>
             </th>
         </tr>
     </thead>
     <tbody>
         {{#each data}}
         <tr>
-            <td><a href="user/showbyid/{{id}}"> {{id}}</a></td>
-            <td>{{first_name}}</td>
-            <td>{{last_name}}</td>
-            <td>{{phone}}</td>
+            <td><a href="running_group/{{id}}"> {{id}}</a></td>
+            <td>{{name}}</td>
+            <td>{{pace}}</td>
             <td>{{city}}, {{state}} {{zipcode}}</td>
-            <td>{{age}}</td>
-            <td>{{desired_pace}}</td>
+            <td>{{phone}}</td>
         </tr>
         {{/each}}
     </tbody>

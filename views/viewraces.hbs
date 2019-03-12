@@ -1,0 +1,26 @@
+<table class="standard-table alternating-rows">
+    <thead>
+        <tr>
+            <th><span>ID</span></th>
+            <th><span>Name</span></th>
+            <th><span>Date</span></th>
+            <th><span>Distance</span></th>
+            <th><span>Phone</span></th>
+            <th><span>Email</span></th>
+            <th><span>City, State Zipcode</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td><a href="race/showbyid/{{id}}"> {{id}}</a></td>
+            <td>{{name}}</td>
+            <td>{{date}}</td>
+            <td>{{distance}}</td>
+            <td>{{phone}}</td>
+            <td>{{email}}</td>
+            <td>{{city}}, {{state}} {{zipcode}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

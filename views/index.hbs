@@ -1,10 +1,50 @@
 
+  <header class="bg-primary py-5 mb-5" style="background-image: 'running-banner.jpg'; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">Ready, Race, Run!</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6 mb-5">
+        <h2>What We Do</h2>
+        <hr>
+        <p>Running races are growing in popularity every year. Whether your goal is to run a 5k, 10k, half marathon or marathon, there are several choices out there. With all these choices, finding the right race for you becomes difficult. Our goal is to construct a website that will help a user find a future race and view all previous races.    </p>
+      </div>
+      <div class="col-md-6 mb-5">
+          {{#if data.login}}
+            <div class="sidenav">
+                <div class="login-main-text">
+                    <h2>Login</h2>
+                    <hr>
+                    <p>Login or register from here to access.</p>
+                </div>
+            </div>
+            {{>login}}
+          {{else}}
+            <div class="sidenav">
+                <div class="login-main-text">
+                <h2>Create an Account</h2>
+                </div>
+            </div>
+            {{>register}}
+          {{/if}}
+      </div>
+    </div>
+  </div> 
+{{!-- 
+
 <section class="container-fluid " id="image">
 
-    <div class="text-block">
-        <h3>Lorem Ipsum </h3>
-        <p>This is test text.This is test text.</p>
-        <p>This is test text.This is test text.</p>
+    <div class="col-lg-6 text-block">
+        <h3>What We Do </h3>
+        <p>Running races are growing in popularity every year. Whether your goal is to run a 5k, 10k, half marathon or marathon, there are several choices out there. With all these choices, finding the right race for you becomes difficult. Our goal is to construct a website that will help a user find a future race and view all previous races.</p>
+        
     </div>
 </section>
 
@@ -67,65 +107,4 @@
             </div>
         </div>
     </div>
-</section>
-
-{{!-- --------------------------------------------------------- --}}
-{{!-- <div class="sidenav">
-    <div class="login-main-text">
-        <h2>Application<br> Login Page</h2>
-        <p>Login or register from here to access.</p>
-    </div>
-</div>
-<div class="main">
-    <div class="col-md-6 col-sm-12">
-        <div class="login-form">
-            <form>
-                <div class="form-group">
-                    <label>User Name</label>
-                    <input type="text" class="form-control" placeholder="User Name">
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-black">Register</button>
-            </form>
-        </div>
-    </div>
-</div>
-<form action="/user/create" method="post">
-    <div class="text-input-container">
-        <input type="text" id="first_name" name="first_name" title="First Name" value={{@first_name}}>
-        <label for="first_name">First Name</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="last_name" name="last_name" value={{@last_name}}>
-        <label for="last_name">Last Name</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="phone" name="phone" value={{@phone}}>
-        <label for="phone">Phone Number</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="city" name="city" value={{@city}}>
-        <label for="city">City</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="state" name="state" value={{@state}}>
-        <label for="state">State</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="zipcode" name="zipcode" value={{@zipcode}}>
-        <label for="zipcode">Zipcode</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="age" name="age" value={{@age}}>
-        <label for="age">Age</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="desired_pace" name="desired_pace" value={{@desired_pace}}>
-        <label for="desired_pace">Desired Pace</label>
-    </div>
-    <button class="button primary" type="submit" onclick=alert("Created!")>Create</button>
-    <button title="Large Button" type="reset" class="button primary">Reset</button>
-</form> --}}
+</section>  --}}

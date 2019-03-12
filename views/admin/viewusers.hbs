@@ -1,0 +1,28 @@
+<table class="standard-table alternating-rows">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>City, State Zipcode</th>
+            <th>Age</th>
+            <th>Desired Pace</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td><a href="../user/{{id}}"> {{id}}</a></td>
+            <td>{{first_name}}</td>
+            <td>{{last_name}}</td>
+            <td>{{phone}}</td>
+            <td>{{email}}</td>
+            <td>{{city}}, {{state}} {{zipcode}}</td>
+            <td>{{age}}</td>
+            <td>{{desired_pace}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

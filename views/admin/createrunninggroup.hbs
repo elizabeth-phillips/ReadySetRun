@@ -1,13 +1,12 @@
-<h1>Create User</h1>
-
-<form action="/user/create" method="post">
-<div class="text-input-container">
-        <input type="text" id="first_name" name="first_name" title="First Name" value={{@first_name}}>
-        <label for="first_name">First Name</label>
+<h1>Create Running Group</h1>
+<form action="../running_group/create" method="post">
+    <div class="text-input-container">
+        <input type="text" id="name" name="name" title="Name" value={{@name}}>
+        <label for="name">Name</label>
     </div>
     <div class="text-input-container">
-        <input type="text" id="last_name" name="last_name" value={{@last_name}}>
-        <label for="last_name">Last Name</label>
+        <input type="text" id="pace" name="pace" value={{@pace}}>
+        <label for="pace">Pace</label>
     </div>
     <div class="text-input-container">
         <input type="text" id="phone" name="phone" value={{@phone}}>
@@ -24,14 +23,6 @@
     <div class="text-input-container">
         <input type="text" id="zipcode" name="zipcode" value={{@zipcode}}>
         <label for="zipcode">Zipcode</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="age" name="age" value={{@age}}>
-        <label for="age">Age</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="desired_pace" name="desired_pace" value={{@desired_pace}}>
-        <label for="desired_pace">Desired Pace</label>
     </div>
     <button class="button primary" type="submit" onclick=alert("Created!")>Create</button>
     <button title="Large Button" type="reset" class="button primary">Reset</button>
