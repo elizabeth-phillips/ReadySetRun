@@ -2,34 +2,20 @@
 
 <h1>Create Race</h1>
 <form action="../admin/createrace/" method="post">
-    <div class="text-input-container">
-        <input type="text" id="name" name="name" title="Name" value={{@name}}>
-        <label for="name">Name</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="distance" name="distance" value={{@distance}}>
-        <label for="distance">Distance</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="email" name="email" value={{@email}}>
-        <label for="email">Email</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="phone" name="phone" value={{@phone}}>
-        <label for="phone">Phone Number</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="city" name="city" value={{@city}}>
-        <label for="city">City</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="state" name="state" value={{@state}}>
-        <label for="state">State</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="zipcode" name="zipcode" value={{@zipcode}}>
-        <label for="zipcode">Zipcode</label>
-    </div>
+    {{!-- <form action="/race/update/{{@id}}" method="post"> --}}
+        <div class="text-input-container">
+            <input type="text" class="form-control" placeholder="Name" id="name" name="name" title="Name" value={{@name}}>
+            <input type="text" class="form-control" placeholder="Date" id="date" name="date" title="Date" value={{@date}}>
+            <input type="text" class="form-control" placeholder="Distance" id="distance" name="distance" title="Distance" value={{@distance}}>
+            <input type="text" class="form-control" placeholder="Phone Number" id="phone" name="phone" value={{@phone}}>
+            <input type="text" class="form-control" placeholder="Email" id="email" name="email" value={{@email}}>
+            <input type="text" class="form-control" placeholder="City" id="city" name="city" value={{@city}}>
+            <input type="text" class="form-control" placeholder="State" id="state" name="state" value={{@state}}>
+            <input type="text" class="form-control" placeholder="Zipcode" id="zipcode" name="zipcode" value={{@zipcode}}>
+        </div>
+        {{!-- <button type="submit" class="button primary">Update</button>
+        <button class="button primary" formaction="/race/delete/{{@id}}" type="submit" onclick=alert("Deleted")>Delete</button>
+    </form> --}}
     <button class="button primary" type="submit" onclick=alert("Created!")>Create</button>
     <button title="Large Button" type="reset" class="button primary">Reset</button>
 </form>

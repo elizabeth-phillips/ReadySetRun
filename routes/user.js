@@ -2,15 +2,13 @@ const express = require("express");
 const router = express.Router();
 const user = require("../db/models/user");
 
-register = (req, res) => {
-    res.render('index', { data: {login: false} })
-}
+
   
 create = (req, res) => {
     user.forge( req.body )
     .save(req.body)
     .then(user => {
-        res.status(200).render('profile', { data: JSON.parse(JSON.stringify(user)) });
+        res.status(200).render('profile', { login: false, data: JSON.parse(JSON.stringify(user)) });
       })
       .catch(err => {
         console.log(err);
@@ -18,9 +16,9 @@ create = (req, res) => {
     });
 };
 
-loginPage = (req, res) => {
-    res.render('profile', { data: {login: false} })
-}
+// loginPage = (req, res) => {
+//     res.render('profile', { data: {login: true} })
+// }
 
 update = (req, res) => {
     user.forge({ id: req.params.id })
@@ -41,6 +39,7 @@ findByEmail = (req, res) => {
         if (!user) {
             res.status(404).render('index', { data: JSON.parse(JSON.stringify(user)) });
         } else {
+            console.log(user)
             res.status(200).render('profile', { data: JSON.parse(JSON.stringify(user)) });
         }
     })
@@ -55,11 +54,9 @@ findById = (req, res) => {
     .fetch() //{withRelated: ['races']}
     .then((user) => {
         if (!user) {
-            console.log("User info:", user)
             res.render('index', { data: {login: false} })
             // res.status(404).json({ message: `user with id: ${req.params.id} not found` });
         } else {
-            console.log("User info:", user)
             res.status(200).render('profile', { data: JSON.parse(JSON.stringify(user)) });
         }
     })
@@ -89,10 +86,9 @@ deleteUser = (req, res) => {
     });
 };
 
-router.get("/register/", register);
 router.post("/", create);
-router.post("/:id", update);
-router.get("/:id", findById);
+router.post("/profile/:id", update);
+router.get("/profile/:id", findById);
 router.get("/login/", findByEmail);
 router.get("/delete/:id", deleteUser);
 module.exports = router;
