@@ -6,26 +6,23 @@
     </div>
     </div>
     <br><br>
-    {{#grouped_each 3 data}}
     <div class="row">
-        {{#each this }}
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-header">
-                <b>{{name}}</b>
+        {{#each data }}
+            <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
+                <div class="card-header">
+                    <b>{{name}}</b>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{format_date date}}</h5>
+                    <p class="card-text">
+                        {{distance}} Miles <br>
+                        <b>Location:</b> {{city}}, {{state}} {{zipcode}}<br>
+                        <b>Phone:</b> {{phone}}<br>
+                        <b>Email:</b> {{email}}
+                    </p>
+                    <a href="race/showbyid/{{id}}" class="btn btn-primary">View Details</a>
+                </div>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">{{format_date date}}</h5>
-                <p class="card-text">
-                    {{distance}} Miles <br>
-                    <b>Location:</b> {{city}}, {{state}} {{zipcode}}<br>
-                    <b>Phone:</b> {{phone}}<br>
-                    <b>Email:</b> {{email}}
-                </p>
-                <a href="race/showbyid/{{id}}" class="btn btn-primary">View Details</a>
-            </div>
-        </div>
         {{/each}}
     </div>
-    {{/grouped_each}}
 </div>

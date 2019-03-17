@@ -8,3 +8,16 @@ exports.seed = function (knex, Promise) {
       return knex("race_history").insert(race_history);
     });
 };
+
+
+// [
+//   {
+//     'repeat(70)': {
+//       user_id: '{{integer(0, 53)}}',
+//       race_id: '{{integer(0, 7)}}',
+//       pace: '{{integer(4,14)}}:{{integer(0,9)}}{{integer(0,9)}}',
+//       ranking: '{{bool()}}',
+//       date: '{{date(new Date(2000, 1, 1), new Date())}}',
+//     }
+//   }
+// ]

@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const runningGroup = require("../db/models/running_group");
+const {RunningGroup} = require("../db/ready_race_run");
 
 router.get("/", (req, res) => {
-    runningGroup.fetchAll()
-    .then(runningGroup => {
-        res.status(200).render('allrunninggroups', { data: JSON.parse(JSON.stringify(runningGroup)) });
+    RunningGroup.fetchAll()
+    .then(RunningGroup => {
+        res.status(200).render('allrunninggroups', { data: JSON.parse(JSON.stringify(RunningGroup)) });
     })
     .catch(err => {
         console.log(err);
@@ -18,11 +18,11 @@ router.get("/create/", (req, res) => {
 });
 
 router.post("/create", (req, res) => {
-  runningGroup.forge(req.body)
+  RunningGroup.forge(req.body)
     .save()
-    .then(runningGroup => {
-      console.log("Running group info", runningGroup)
-      res.status(200).render('runninggroup', { data: JSON.parse(JSON.stringify(runningGroup)) });
+    .then(RunningGroup => {
+      console.log("Running group info", RunningGroup)
+      res.status(200).render('runninggroup', { data: JSON.parse(JSON.stringify(RunningGroup)) });
     })
     .catch(err => {
       console.log(err);
@@ -30,10 +30,10 @@ router.post("/create", (req, res) => {
     });
 });
 router.post("/update/:id", (req, res) => {
-    runningGroup.forge({ id: req.params.id })
+    RunningGroup.forge({ id: req.params.id })
       .save(req.body)
-      .then(runningGroup => {
-        res.status(200).render('allrunninggroups', { data: JSON.parse(JSON.stringify(runningGroup)) });
+      .then(RunningGroup => {
+        res.status(200).render('allrunninggroups', { data: JSON.parse(JSON.stringify(RunningGroup)) });
       })
       .catch(err => {
         console.log(err);
@@ -41,11 +41,11 @@ router.post("/update/:id", (req, res) => {
       });
   });
 router.get("/:id", (req, res) => {
-    runningGroup.where({ id: req.params.id })
+    RunningGroup.where({ id: req.params.id })
       .fetch()
-      .then(runningGroup => {
-        console.log(JSON.parse(JSON.stringify(runningGroup)))
-        res.status(200).render('runninggroup', { data: JSON.parse(JSON.stringify(runningGroup)) });
+      .then(RunningGroup => {
+        console.log(JSON.parse(JSON.stringify(RunningGroup)))
+        res.status(200).render('runninggroup', { data: JSON.parse(JSON.stringify(RunningGroup)) });
       })
       .catch(err => {
         console.log(err);
@@ -53,16 +53,16 @@ router.get("/:id", (req, res) => {
       });
   });
 router.post("/delete/:id", (req, res) => {
-    runningGroup.where({ id: req.params.id })
+    RunningGroup.where({ id: req.params.id })
       .fetch()
-      .then(runningGroup => {
-        if (!runningGroup) {
-          res.status(404).json({ message: "runningGroup not found" });
+      .then(RunningGroup => {
+        if (!RunningGroup) {
+          res.status(404).json({ message: "RunningGroup not found" });
         } else {
-          runningGroup
+          RunningGroup
             .destroy()
             .then(() => {
-              res.status(200).render('runninggroup', { data: JSON.parse(JSON.stringify(runningGroup)) });
+              res.status(200).render('runninggroup', { data: JSON.parse(JSON.stringify(RunningGroup)) });
             })
             .catch(err => {
               console.log(err);

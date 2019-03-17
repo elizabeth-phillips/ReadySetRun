@@ -1,9 +1,8 @@
 <div class="container">
-{{#grouped_each 3 data}}
     <div class="row">
-    {{#each this }}
+    {{#each data }}
 
-        <div class="card" style="width: 18rem;">
+        <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
             <div class="card-header">
                 <b>{{name}}</b>
             </div>
@@ -18,5 +17,4 @@
         </div>
     {{/each}}
     </div>
-{{/grouped_each}}
 </div>

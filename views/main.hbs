@@ -44,136 +44,41 @@
         aria-labelledby="mySmallModalLabel">
         <div class="modal-dialog modal-md">
             <div class="modal-content">
-                <div class="bs-example bs-example-tabs">
-                    <ul id="myTab" class="nav nav-tabs">
-                        <li id="tab1" class=" active tab-style login-shadow "><a href="#login" data-toggle="tab">Log
-                                In</a>
-                        </li>
-                        <li id="tab2" class=" tab-style "><a href="#signup" data-toggle="tab">Sign Up</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul id="myTab" class="nav nav-tabs">
+                    <li id="tab1" class="tab-style active"><a href="#login" data-toggle="tab">Log In</a>
+                    </li>
+                    <li id="tab2" class=" tab-style "><a href="#signup" data-toggle="tab">Sign Up</a>
+                    </li>
+                </ul>
 
                 <div class="modal-body">
                     <div id="myTabContent" class="tab-content">
 
                         <div class="tab-pane fade active in" id="login">
-                            <form class="form-horizontal">
-                                <fieldset>
-                                    <!-- Sign In Form -->
-                                    <!-- Text input-->
-                                    <div class="group">
-                                        <input required="" class="input" type="text" placeholder="Username">
-                                        {{!-- <input required="" class="input" type="text" placeholder="Username"> --}}
-                                    </div>
-                                    <div class="group">
-
-                                        <input required="" class="input" type="password" placeholder="Password">
-                                    </div>
-
-
-                                    <div class="forgot-link">
-                                        <a href="#forgot" data-toggle="modal" data-target="#forgot-password"> I forgot
-                                            my
-                                            password</a>
-                                    </div>
-
-
-                                    <!-- Button -->
-                                    <div class="control-group">
-                                        <label class="control-label" for="signin"></label>
-                                        <div class="controls ">
-                                            <button id="signin" name="signin" class="btn btn-primary btn-block">Log
-                                                In</button>
-                                        </div>
-                                    </div>
-                                </fieldset>
+                            <form action="user/login" method="post">
+                                <div class="text-input-container">
+                                    <input type="text" class="form-control" placeholder="Email" id="email" name="email" value={{@email}}>
+                                    <input type="password" class="form-control" placeholder="Password" id="password" name="password" value={{@password}}>
+                                </div>
+                                <button class="btn btn-secondary" type="submit">Login</button>
                             </form>
                         </div>
 
-
                         <div class="tab-pane fade" id="signup">
-                            <form class="form-horizontal">
-                                <fieldset>
-                                    <!-- Sign Up Form -->
-                                    <!-- Text input-->
-                                    <div class="group">
-                                        <div class="text-input-container">
-                                            <input required="" class="input" type="text" id="first_name"
-                                                name="first_name" title="First Name" value={{@first_name}}><span
-                                                class="highlight"></span><span class="bar"></span>
-                                            <label for="first_name">First Name</label>
-                                        </div>
-                                        <div class="text-input-container">
-                                            <input required="" class="input" type="text" id="last_name" name="last_name"
-                                                value={{@last_name}}><span class="highlight"></span><span
-                                                class="bar"></span>
-                                            <label for="last_name">Last Name</label>
-                                        </div>
-                                        <div class="text-input-container">
-                                            <input required="" class="input" type="text" id="email_address"
-                                                name="email_address" value={{@username}}><span
-                                                class="highlight"></span><span class="bar"></span>
-                                            <label for="username">Email</label>
-                                        </div>
-
-                                        <div class="text-input-container">
-                                            <input required="" class="input" type="password" id="password"
-                                                name="password" value={{@password}}><span class="highlight"></span><span
-                                                class="bar"></span>
-                                            <label for="password">Password</label>
-                                        </div>
-                                        <div class="text-input-container">
-                                            <input required="" class="input" type="password" id="password"
-                                                name="password" value={{@password}}><span class="highlight"></span><span
-                                                class="bar"></span>
-                                            <label for="password">Confirm Password</label>
-                                        </div>
-
-                                        <div class="text-input-container">
-                                            <input class="input" type="text" id="phone" name="phone"
-                                                value={{@phone}}><span class="highlight"></span><span
-                                                class="bar"></span>
-                                            <label for="phone">Phone Number</label>
-                                        </div>
-                                        <div class="text-input-container">
-                                            <input required="" class="input" type="text" id="city" name="city"
-                                                value={{@city}}><span class="highlight"></span><span class="bar"></span>
-                                            <label for="city">City</label>
-                                        </div>
-                                        <div class="text-input-container">
-                                            <input required="" class="input" type="text" id="state" name="state"
-                                                value={{@state}}><span class="highlight"></span><span
-                                                class="bar"></span>
-                                            <label for="state">State</label>
-                                        </div>
-                                        <div class="text-input-container">
-                                            <input required="" class="input" type="text" id="zipcode" name="zipcode"
-                                                value={{@zipcode}}><span class="highlight"></span><span
-                                                class="bar"></span>
-                                            <label for="zipcode">Zipcode</label>
-                                        </div>
-                                        <div class="text-input-container">
-                                            <input required="" class="input" type="text" id="age" name="age"
-                                                value={{@age}}><span class="highlight"></span><span class="bar"></span>
-                                            <label for="age">Age</label>
-                                        </div>
-                                        <div class="text-input-container">
-                                            <input required="" class="input" type="text" id="desired_pace"
-                                                name="desired_pace" value={{@desired_pace}}><span
-                                                class="highlight"></span><span class="bar"></span>
-                                            <label for="desired_pace">Desired Pace</label>
-                                        </div>
-
-
-
-                                        <!-- Button -->
-                                        <div class="control-group">
-                                            <button class="btn btn-primary btn-block" type="submit" id="signedUp">Sign
-                                                up</button>
-                                            <button type="reset" class="btn btn-primary btn-block">Reset</button>
-                                        </div>
-                                </fieldset>
+                            <form action="/user/" method="post">
+                                <div class="text-input-container">
+                                    <input type="text" class="form-control" placeholder="First name" id="first_name" name="first_name" title="First Name" value={{@first_name}}>
+                                    <input type="text" class="form-control" placeholder="Last Name" id="last_name" name="last_name" value={{@last_name}}>
+                                    <input type="text" class="form-control" placeholder="Email" id="email" name="email" value={{@email}}>
+                                    <input type="password" class="form-control" placeholder="Password" id="password" name="password" value={{@password}}>
+                                    <input type="text" class="form-control" placeholder="Phone Number" id="phone" name="phone" value={{@phone}}>
+                                    <input type="text" class="form-control" placeholder="City" id="city" name="city" value={{@city}}>
+                                    <input type="text" class="form-control" placeholder="State" id="state" name="state" value={{@state}}>
+                                    <input type="text" class="form-control" placeholder="Zipcode" id="zipcode" name="zipcode" value={{@zipcode}}>
+                                    <input type="text" class="form-control" placeholder="Age" id="age" name="age" value={{@age}}>
+                                    <input type="text" class="form-control" placeholder="Desired Pace" id="desired_pace" name="desired_pace" value={{@desired_pace}}>
+                                </div>
+                                <button class="btn btn-secondary" type="submit">Create</button>
                             </form>
                         </div>
                     </div>
@@ -263,23 +168,16 @@
                 </ul>
             </div>
             <div class="col-sm-4 myCols">
-                <h5>Support</h5>
+                <h5>Contact Us</h5>
                 <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Help desk</a></li>
-                    <li><a href="#">Forums</a></li>
+                    <li>Texas State University</li>
+                    <li>601 University Dr</li>
+                    <li>San Marcos, TX 78666</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="social-networks">
-        <a target="_blank" href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a>
-        <a target="_blank" href="https://www.facebook.com/" class="facebook"><i class="fab fa-facebook"></i></a>
-        <a target="_blank" href="https://www.instagram.com/" class="google"><i class="fab fa-instagram"></i></a>
-    </div>
-    <div class="footer-copyright">
-        <p>©Copyright 2019-2020 </p>
-    </div>
+
 </footer>
 
 
