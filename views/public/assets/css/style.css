@@ -40,6 +40,11 @@
     display: block;
 } */
 
+.row > div[class*='col-'] {
+    display: flex;
+    flex:1 0 auto;
+}
+
 .text-block {
     position: absolute;
     bottom: 20px;
@@ -75,22 +80,15 @@ body {
     background-color: black;
 }
 
-/* .nav-tabs>li.active> a,
-.nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:hover {
-    background-color: #cfb583;
-    color: black;
-} */
-
 #tab1:hover,
 #tab2:hover {
-    background-color: #cfb583;
+    background-color: gray;
     color: black;
 }
 
 .login-shadow {
     -webkit-box-shadow: 5px -5px 6px 0px rgba(82, 82, 82, 0.52);
-    -moz-box-shadow: 5px -5px 6px 0px rgba(82, 82, 82, 0.52);
+    -moz-box-shadow: 5px -5px 6px 0px rgba(56, 6, 6, 0.52);
     box-shadow: 5px -5px 6px 0px rgba(82, 82, 82, 0.52);
     z-index: 1;
 }
@@ -208,7 +206,7 @@ body {
 /* ---------active----- */
 
 .modal-body {
-    background-image: url('https://media.gettyimages.com/photos/athlete-running-picture-id636887598');
+    /*background-image: url('https://media.gettyimages.com/photos/athlete-running-picture-id636887598');*/
     background-size: cover;
     /* opacity: 0.7; */
     /* filter: alpha(opacity=40); */

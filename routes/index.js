@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const user = require("../db/models/user");
-const runningGroup = require("../db/models/running_group");
-const race = require("../db/models/race");
+const {User, Race} = require("../db/ready_race_run");
 
 let currUser = null
 
@@ -24,10 +22,10 @@ router.get("/admin/createrace", (req, res) => {
   res.render('admin/createrace')
 });
 router.post("/admin/createrace/", (req, res) => {
-  race.forge(req.body)
+   Race.forge(req.body)
     .save()
-    .then(race => {
-      res.status(200).render('race', { data: JSON.parse(JSON.stringify(race)) });
+    .then( Race => {
+      res.status(200).render('Race', { data: JSON.parse(JSON.stringify(Race)) });
     })
     .catch(err => {
       console.log(err);
@@ -36,9 +34,9 @@ router.post("/admin/createrace/", (req, res) => {
 });
 
 router.get("/admin/", (req, res) => {
-  user.fetchAll()
-  .then(users => {
-      res.status(200).render('admin/panel', { data: JSON.parse(JSON.stringify(users)) });
+   User.fetchAll()
+  .then( Users => {
+      res.status(200).render('admin/panel', { data: JSON.parse(JSON.stringify( Users)) });
   })
   .catch(err => {
       console.log(err);
@@ -46,10 +44,10 @@ router.get("/admin/", (req, res) => {
   });
 });
 
-router.get("/admin/users", (req, res) => {
-  user.fetchAll()
-  .then(users => {
-      res.status(200).render('admin/viewusers', { data: JSON.parse(JSON.stringify(users)) });
+router.get("/admin/Users", (req, res) => {
+   User.fetchAll()
+  .then( Users => {
+      res.status(200).render('admin/viewUsers', { data: JSON.parse(JSON.stringify( Users)) });
   })
   .catch(err => {
       console.log(err);

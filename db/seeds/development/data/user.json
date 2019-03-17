@@ -9,8 +9,9 @@
       "city": "Choctaw",
       "state": "Utah",
       "zipcode": 14893,
-      "phone": "(837)463-2366"
-    },
+      "phone": "(837)463-2366",
+			"admin": true
+		},
     {
       "first_name": "Roberson",
       "last_name": "Michael",
@@ -21,8 +22,9 @@
       "city": "Tilleda",
       "state": "North Carolina",
       "zipcode": 48044,
-      "phone": "(965)401-3027"
-    },
+      "phone": "(965)401-3027",
+			"admin": true
+		},
     {
       "first_name": "Everett",
       "last_name": "Velazquez",
@@ -33,8 +35,9 @@
       "city": "Chamberino",
       "state": "Washington",
       "zipcode": 23291,
-      "phone": "(835)556-3547"
-    },
+      "phone": "(835)556-3547",
+			"admin": true
+		},
     {
       "first_name": "Jacqueline",
       "last_name": "Marshall",
@@ -45,8 +48,9 @@
       "city": "Berlin",
       "state": "Minnesota",
       "zipcode": 13990,
-      "phone": "(933)583-2820"
-    },
+      "phone": "(933)583-2820",
+			"admin": true
+		},
     {
       "first_name": "Stefanie",
       "last_name": "Hester",
@@ -57,8 +61,9 @@
       "city": "Enlow",
       "state": "Colorado",
       "zipcode": 35056,
-      "phone": "(921)514-2261"
-    },
+      "phone": "(921)514-2261",
+			"admin": true
+		},
     {
       "first_name": "Hickman",
       "last_name": "Wagner",
@@ -69,8 +74,9 @@
       "city": "Noblestown",
       "state": "Virginia",
       "zipcode": 96572,
-      "phone": "(842)535-3524"
-    },
+      "phone": "(842)535-3524",
+			"admin": true
+		},
     {
       "first_name": "Conner",
       "last_name": "Davis",
@@ -81,8 +87,9 @@
       "city": "Hachita",
       "state": "Arkansas",
       "zipcode": 28803,
-      "phone": "(940)537-2477"
-    },
+      "phone": "(940)537-2477",
+			"admin": true
+		},
     {
       "first_name": "Robertson",
       "last_name": "Workman",
@@ -93,8 +100,9 @@
       "city": "Foscoe",
       "state": "Virgin Islands",
       "zipcode": 64602,
-      "phone": "(951)465-3120"
-    },
+      "phone": "(951)465-3120",
+			"admin": true
+		},
     {
       "first_name": "Helen",
       "last_name": "Anderson",
@@ -105,8 +113,9 @@
       "city": "Tuttle",
       "state": "Mississippi",
       "zipcode": 93318,
-      "phone": "(846)556-2419"
-    },
+      "phone": "(846)556-2419",
+			"admin": true
+		},
     {
       "first_name": "Marissa",
       "last_name": "Carr",
@@ -117,8 +126,9 @@
       "city": "Hailesboro",
       "state": "Delaware",
       "zipcode": 13918,
-      "phone": "(914)421-3734"
-    },
+      "phone": "(914)421-3734",
+			"admin": true
+		},
     {
       "first_name": "Suzanne",
       "last_name": "Pate",
@@ -129,8 +139,9 @@
       "city": "Wilsonia",
       "state": "Illinois",
       "zipcode": 49554,
-      "phone": "(845)441-3232"
-    },
+      "phone": "(845)441-3232",
+			"admin": true
+		},
     {
       "first_name": "Coleen",
       "last_name": "Kim",
@@ -141,8 +152,9 @@
       "city": "Roland",
       "state": "Kansas",
       "zipcode": 23597,
-      "phone": "(985)542-3817"
-    },
+      "phone": "(985)542-3817",
+			"admin": true
+		},
     {
       "first_name": "Griffin",
       "last_name": "Guy",
@@ -153,8 +165,9 @@
       "city": "Baker",
       "state": "Michigan",
       "zipcode": 32511,
-      "phone": "(915)597-2641"
-    },
+      "phone": "(915)597-2641",
+			"admin": true
+		},
     {
       "first_name": "Pierce",
       "last_name": "Vincent",
@@ -165,8 +178,9 @@
       "city": "Crown",
       "state": "Florida",
       "zipcode": 37938,
-      "phone": "(961)465-2894"
-    },
+      "phone": "(961)465-2894",
+			"admin": true
+		},
     {
       "first_name": "Joyner",
       "last_name": "Petty",
@@ -177,8 +191,9 @@
       "city": "Cetronia",
       "state": "Kentucky",
       "zipcode": 77221,
-      "phone": "(944)457-2915"
-    },
+      "phone": "(944)457-2915",
+			"admin": true
+		},
     {
       "first_name": "Cannon",
       "last_name": "Delacruz",
@@ -189,8 +204,9 @@
       "city": "Derwood",
       "state": "Arizona",
       "zipcode": 75109,
-      "phone": "(893)474-2523"
-    },
+      "phone": "(893)474-2523",
+			"admin": true
+		},
     {
       "first_name": "Tanner",
       "last_name": "Blankenship",
@@ -201,8 +217,9 @@
       "city": "Cade",
       "state": "South Carolina",
       "zipcode": 72073,
-      "phone": "(893)559-3063"
-    },
+      "phone": "(893)559-3063",
+			"admin": true
+		},
     {
       "first_name": "Lizzie",
       "last_name": "Lancaster",
@@ -213,8 +230,9 @@
       "city": "Zarephath",
       "state": "West Virginia",
       "zipcode": 99736,
-      "phone": "(900)432-2447"
-    },
+      "phone": "(900)432-2447",
+			"admin": true
+		},
     {
       "first_name": "Erin",
       "last_name": "Madden",
@@ -225,8 +243,9 @@
       "city": "Romeville",
       "state": "Alaska",
       "zipcode": 71970,
-      "phone": "(808)527-3224"
-    },
+      "phone": "(808)527-3224",
+			"admin": false
+		},
     {
       "first_name": "Luella",
       "last_name": "Huffman",
@@ -237,8 +256,9 @@
       "city": "Roeville",
       "state": "New Jersey",
       "zipcode": 77780,
-      "phone": "(947)571-2114"
-    },
+      "phone": "(947)571-2114",
+			"admin": false
+		},
     {
       "first_name": "Kristin",
       "last_name": "Stone",
@@ -249,8 +269,9 @@
       "city": "Bowden",
       "state": "New Mexico",
       "zipcode": 11482,
-      "phone": "(852)509-2184"
-    },
+      "phone": "(852)509-2184",
+			"admin": false
+		},
     {
       "first_name": "Velma",
       "last_name": "Weaver",
@@ -261,8 +282,9 @@
       "city": "Wildwood",
       "state": "Massachusetts",
       "zipcode": 51465,
-      "phone": "(995)480-2170"
-    },
+      "phone": "(995)480-2170",
+			"admin": false
+		},
     {
       "first_name": "Guerra",
       "last_name": "Guzman",
@@ -273,8 +295,9 @@
       "city": "Ola",
       "state": "Rhode Island",
       "zipcode": 25841,
-      "phone": "(814)554-3494"
-    },
+      "phone": "(814)554-3494",
+			"admin": false
+		},
     {
       "first_name": "Bass",
       "last_name": "Jennings",
@@ -285,8 +308,9 @@
       "city": "Kenwood",
       "state": "North Dakota",
       "zipcode": 50178,
-      "phone": "(910)592-3104"
-    },
+      "phone": "(910)592-3104",
+			"admin": false
+		},
     {
       "first_name": "Holman",
       "last_name": "Whitley",
@@ -297,8 +321,9 @@
       "city": "Coultervillle",
       "state": "Palau",
       "zipcode": 11941,
-      "phone": "(996)543-3155"
-    },
+      "phone": "(996)543-3155",
+			"admin": false
+		},
     {
       "first_name": "Downs",
       "last_name": "Shepherd",
@@ -309,8 +334,9 @@
       "city": "Jennings",
       "state": "Nevada",
       "zipcode": 26312,
-      "phone": "(984)499-2306"
-    },
+      "phone": "(984)499-2306",
+			"admin": false
+		},
     {
       "first_name": "Navarro",
       "last_name": "Espinoza",
@@ -321,8 +347,9 @@
       "city": "Smock",
       "state": "New York",
       "zipcode": 44892,
-      "phone": "(885)467-2467"
-    },
+      "phone": "(885)467-2467",
+			"admin": false
+		},
     {
       "first_name": "Mckinney",
       "last_name": "Dixon",
@@ -333,8 +360,9 @@
       "city": "Emerald",
       "state": "Vermont",
       "zipcode": 69464,
-      "phone": "(960)525-3604"
-    },
+      "phone": "(960)525-3604",
+			"admin": false
+		},
     {
       "first_name": "Vincent",
       "last_name": "Spencer",
@@ -345,8 +373,9 @@
       "city": "Defiance",
       "state": "Wisconsin",
       "zipcode": 84837,
-      "phone": "(802)430-3422"
-    },
+      "phone": "(802)430-3422",
+			"admin": false
+		},
     {
       "first_name": "Ellison",
       "last_name": "Wong",
@@ -357,8 +386,9 @@
       "city": "Reno",
       "state": "South Dakota",
       "zipcode": 38280,
-      "phone": "(859)402-3306"
-    },
+      "phone": "(859)402-3306",
+			"admin": false
+		},
     {
       "first_name": "Gwen",
       "last_name": "Nunez",
@@ -369,8 +399,9 @@
       "city": "Farmers",
       "state": "Texas",
       "zipcode": 99201,
-      "phone": "(921)496-3046"
-    },
+      "phone": "(921)496-3046",
+			"admin": false
+		},
     {
       "first_name": "Jeannine",
       "last_name": "Mckenzie",
@@ -381,8 +412,9 @@
       "city": "Helen",
       "state": "Puerto Rico",
       "zipcode": 48465,
-      "phone": "(804)477-3692"
-    },
+      "phone": "(804)477-3692",
+			"admin": false
+		},
     {
       "first_name": "Meredith",
       "last_name": "Burnett",
@@ -393,8 +425,9 @@
       "city": "Monument",
       "state": "Ohio",
       "zipcode": 47053,
-      "phone": "(857)460-3658"
-    },
+      "phone": "(857)460-3658",
+			"admin": false
+		},
     {
       "first_name": "Compton",
       "last_name": "Fischer",
@@ -405,8 +438,9 @@
       "city": "Cazadero",
       "state": "Oklahoma",
       "zipcode": 18198,
-      "phone": "(960)503-2086"
-    },
+      "phone": "(960)503-2086",
+			"admin": false
+		},
     {
       "first_name": "Horne",
       "last_name": "Cabrera",
@@ -417,8 +451,9 @@
       "city": "Longoria",
       "state": "American Samoa",
       "zipcode": 50935,
-      "phone": "(912)561-2807"
-    },
+      "phone": "(912)561-2807",
+			"admin": false
+		},
     {
       "first_name": "Higgins",
       "last_name": "Morton",
@@ -429,8 +464,9 @@
       "city": "Abrams",
       "state": "Alabama",
       "zipcode": 24710,
-      "phone": "(909)505-2597"
-    },
+      "phone": "(909)505-2597",
+			"admin": false
+		},
     {
       "first_name": "Tara",
       "last_name": "Soto",
@@ -441,8 +477,9 @@
       "city": "Trona",
       "state": "Georgia",
       "zipcode": 32194,
-      "phone": "(813)525-3957"
-    },
+      "phone": "(813)525-3957",
+			"admin": false
+		},
     {
       "first_name": "Bernadine",
       "last_name": "Cote",
@@ -453,8 +490,9 @@
       "city": "Caberfae",
       "state": "Guam",
       "zipcode": 44248,
-      "phone": "(825)597-2348"
-    },
+      "phone": "(825)597-2348",
+			"admin": false
+		},
     {
       "first_name": "Verna",
       "last_name": "Whitfield",
@@ -465,8 +503,9 @@
       "city": "Websterville",
       "state": "Maine",
       "zipcode": 80038,
-      "phone": "(801)531-3769"
-    },
+      "phone": "(801)531-3769",
+			"admin": false
+		},
     {
       "first_name": "Barnes",
       "last_name": "White",
@@ -477,8 +516,9 @@
       "city": "Cotopaxi",
       "state": "Federated States Of Micronesia",
       "zipcode": 46595,
-      "phone": "(977)488-3418"
-    },
+      "phone": "(977)488-3418",
+			"admin": false
+		},
     {
       "first_name": "Tracy",
       "last_name": "Ratliff",
@@ -489,8 +529,9 @@
       "city": "Cornfields",
       "state": "Missouri",
       "zipcode": 58020,
-      "phone": "(941)467-2718"
-    },
+      "phone": "(941)467-2718",
+			"admin": false
+		},
     {
       "first_name": "Kellie",
       "last_name": "Finch",
@@ -501,8 +542,9 @@
       "city": "Tetherow",
       "state": "Connecticut",
       "zipcode": 87610,
-      "phone": "(883)416-3889"
-    },
+      "phone": "(883)416-3889",
+			"admin": false
+		},
     {
       "first_name": "Wright",
       "last_name": "Cantu",
@@ -513,8 +555,9 @@
       "city": "Brookfield",
       "state": "Indiana",
       "zipcode": 28129,
-      "phone": "(965)444-3423"
-    },
+      "phone": "(965)444-3423",
+			"admin": false
+		},
     {
       "first_name": "Key",
       "last_name": "Bryan",
@@ -525,8 +568,9 @@
       "city": "Diaperville",
       "state": "Maryland",
       "zipcode": 26593,
-      "phone": "(878)491-3053"
-    },
+      "phone": "(878)491-3053",
+			"admin": false
+		},
     {
       "first_name": "Esther",
       "last_name": "Becker",
@@ -537,8 +581,9 @@
       "city": "Yogaville",
       "state": "Hawaii",
       "zipcode": 63590,
-      "phone": "(841)417-2162"
-    },
+      "phone": "(841)417-2162",
+			"admin": false
+		},
     {
       "first_name": "Randi",
       "last_name": "Watts",
@@ -549,8 +594,9 @@
       "city": "Walland",
       "state": "California",
       "zipcode": 96162,
-      "phone": "(998)507-2569"
-    },
+      "phone": "(998)507-2569",
+			"admin": false
+		},
     {
       "first_name": "Foreman",
       "last_name": "Hardy",
@@ -561,8 +607,9 @@
       "city": "Vandiver",
       "state": "Tennessee",
       "zipcode": 61594,
-      "phone": "(815)565-3591"
-    },
+      "phone": "(815)565-3591",
+			"admin": false
+		},
     {
       "first_name": "Kathy",
       "last_name": "Miller",
@@ -573,8 +620,9 @@
       "city": "Kiskimere",
       "state": "Iowa",
       "zipcode": 34845,
-      "phone": "(886)598-3869"
-    },
+      "phone": "(886)598-3869",
+			"admin": false
+		},
     {
       "first_name": "Roxanne",
       "last_name": "Pope",
@@ -585,8 +633,9 @@
       "city": "Eagletown",
       "state": "District Of Columbia",
       "zipcode": 93764,
-      "phone": "(907)402-3448"
-    },
+      "phone": "(907)402-3448",
+			"admin": false
+		},
     {
       "first_name": "Beach",
       "last_name": "Stanton",
@@ -597,8 +646,9 @@
       "city": "Jacksonwald",
       "state": "Marshall Islands",
       "zipcode": 24513,
-      "phone": "(837)550-2195"
-    },
+      "phone": "(837)550-2195",
+			"admin": false
+		},
     {
       "first_name": "Mcbride",
       "last_name": "Rojas",
@@ -609,8 +659,9 @@
       "city": "Sims",
       "state": "Nebraska",
       "zipcode": 22257,
-      "phone": "(945)422-2956"
-    },
+      "phone": "(945)422-2956",
+			"admin": false
+		},
     {
       "first_name": "Patti",
       "last_name": "Charles",
@@ -621,8 +672,9 @@
       "city": "Murillo",
       "state": "Pennsylvania",
       "zipcode": 66683,
-      "phone": "(932)469-3079"
-    },
+      "phone": "(932)469-3079",
+			"admin": false
+		},
     {
       "first_name": "Georgette",
       "last_name": "Palmer",
@@ -633,8 +685,9 @@
       "city": "Bannock",
       "state": "Wyoming",
       "zipcode": 42181,
-      "phone": "(822)523-3597"
-    },
+      "phone": "(822)523-3597",
+			"admin": false
+		},
     {
       "first_name": "Lola",
       "last_name": "Jenkins",
