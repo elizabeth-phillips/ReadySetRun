@@ -22,7 +22,16 @@ var register = function(Handlebars) {
             options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             // new Date(races[i].date).toLocaleDateString('en-US', options)
             return new Date(datetime).toLocaleDateString('en-US', options);
-        }
+        },
+        select: function (value, options) {
+            return options.fn()
+              .split('\n')
+              .map(function (v) {
+                var t = 'value="' + value + '"';
+                return RegExp(t).test(v) ? v.replace(t, t + ' selected="selected"') : v;
+              })
+              .join('\n');
+          }
     };
   
     if (Handlebars && typeof Handlebars.registerHelper === "function") {
