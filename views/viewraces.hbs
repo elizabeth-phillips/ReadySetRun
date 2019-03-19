@@ -1,9 +1,17 @@
 <div class="container">
-    <div class = "row">
-    <div class="input-group col-md-8">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary">Search</button>
-    </div>
+    <div class="row">
+        <form action="../race/" method="post" id="search_results" class="col-sm-10 col-md-8 col-lg-6 mx-20">
+            <div class="text-input-container">
+                <input name="query" type="text" class="form-control" placeholder="Keywords" value={{@query}}>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <select name="selectpicker" class="selectpicker col-sm-2 mx-20" form="search_results">
+            <option value="All">All States</option>
+            {{#each states}}
+                <option value="{{s}}">{{s}}</option>
+            {{/each}}
+        </select>
     </div>
     <br><br>
     <div class="row">
