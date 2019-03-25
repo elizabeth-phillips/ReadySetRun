@@ -21,28 +21,33 @@
         </form>
     </div>
     <br>
-    <h2 class="row mx-10">Races</h2>
+    <hr>
+    <h2 class="row mx-10">Your Running Groups</h2>
+    {{#if running_groups}}
     <div class="row">
-        {{#each races }}
+        {{#each running_groups }}
             <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
                 <div class="card-header">
                     <b>{{name}}</b>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{format_date date}}</h5>
+                    <h5 class="card-title">{{city}}, {{state}} {{zipcode}}</h5>
                     <p class="card-text">
-                        {{distance}} Miles <br>
-                        <b>Ranking:</b> {{ranking}}<br>
                         <b>Pace:</b> {{pace}}<br>
-                        <b>Location:</b> {{city}}, {{state}} {{zipcode}}
+                        <b>Phone:</b> {{phone}}<br>
                     </p>
-                    <a href="../../race/showbyid/{{race_id}}" class="btn btn-primary">View Details</a>
+                    <a href="../../running_group/{{rg_id}}" class="btn btn-primary">View Details</a>
                 </div>
             </div>
         {{/each}}
     </div>
+    {{else}}
+    <h4>Currently you are not a part of any running groups!</h4>
+    <h5>Let's change that by looking at all of the options <a href="../../running_group">here</a>!</h5>
+    {{/if}}
     <hr>
-    <h2 class="row mx-10">Running Groups</h2>
+    <h2 class="row mx-10">Your Races</h2>
+    {{#if races}}
     <div class="row">
         {{#each races }}
             <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
@@ -60,4 +65,8 @@
             </div>
         {{/each}}
     </div>
+{{else}}
+    <h4>Currently, you have not participated in a race or have any future races!</h4>
+    <h5>Let's change that by looking at all of the options <a href="../../race">here</a>!</h5>
+    {{/if}}
 </div>

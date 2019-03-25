@@ -22,23 +22,13 @@
 
 /* registration.hbs */
 #image {
-    background-image: url("/assets/images/images.jpg");
-    height: 100vh;
-    /* text-align: left; 
-    background-size: cover;
-    position: relative;
-    font-family: Arial;
-    max-width: 100%;
-    height: 500px; */
+    background-image: url("/assets/images/running-banner.jpg");
+    height: 40vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
-
-/* .carousel-item.active {
-    display: block;
-} */
 
 .row > div[class*='col-'] {
     display: flex;

@@ -6,14 +6,24 @@
             </div>
             <button type="submit" class="btn btn-primary">Search</button>
         </form>
-        <select name="selectpicker" class="selectpicker col-sm-2 mx-20" form="search_results">
+        <select name="selectpicker" class="selectpicker col-sm-2 mx-20" data-size="5" form="search_results">
             <option value="All">All States</option>
             {{#each states}}
-                <option value="{{s}}">{{s}}</option>
+                <option value="{{this}}">{{this}}</option>
             {{/each}}
         </select>
     </div>
     <br><br>
+    <h2>
+    {{#if query}}
+        Search Results for: {{query}}
+    {{else}}
+        <h2>All running groups
+    {{/if}}
+    {{#if state}}
+        in {{state}}
+    {{/if}}
+    </h2>
     <div class="row">
     {{#each data }}
         <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
