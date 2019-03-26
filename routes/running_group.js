@@ -64,6 +64,7 @@ router.post("/update/:id", (req, res) => {
       });
   });
 router.get("/:id", (req, res) => {
+  console.log(req.params.id)
     RunningGroup.where({ id: req.params.id })
       .fetch()
       .then(RunningGroup => {

@@ -32,12 +32,17 @@
                         <a class="nav-link" href="/running_group">Running Group</a>
                     </li>
                     <li class="nav-item">
-                        {{#if data}}
-                            <a class="nav-link" href="/user/profile/{{data.id}}">{{data.first_name}} {{data.last_name}}</a>
+                        {{#if user}}
+                            <a class="nav-link" href="/user/{{data.id}}">{{data.first_name}} {{data.last_name}}</a>
                         {{else}}
                             <a class="nav-link" href="/user/create" data-toggle="modal" data-target=".log-sign">Login</a>
                         {{/if}}
                     </li>
+                    {{#if data.admin}}
+                    <li class="nav-item">
+                            <a class="nav-link" href="/admin/">Admin Panel</a>
+                    </li>
+                    {{/if}}
                 </ul>
             </div>
         </div>

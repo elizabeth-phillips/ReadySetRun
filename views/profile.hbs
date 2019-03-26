@@ -4,18 +4,18 @@
     <hr>
     <h2 class="row">User Info</h2>
     <div class="row">
-        <form action="../profile/{{@id}}" method="post" class="col-sm-12 col-md-10 col-lg-8 mx-20">
+        <form action="/user/{{@id}}" method="post" id="user_update" class="col-sm-12 col-md-10 col-lg-8 mx-20">
             <div class="text-input-container">
-                <input type="text" class="form-control" placeholder="First name" value={{@first_name}}>
-                <input type="text" class="form-control" placeholder="Last Name"  value={{@last_name}}>
-                <input type="text" class="form-control" placeholder="Email"  value={{@email}}>
-                <input type="password" class="form-control" placeholder="Password"  value={{@password}}>
-                <input type="text" class="form-control" placeholder="Phone Number"  value={{@phone}}>
-                <input type="text" class="form-control" placeholder="City"  value={{@city}}>
-                <input type="text" class="form-control" placeholder="State"  value={{@state}}>
-                <input type="text" class="form-control" placeholder="Zipcode"  value={{@zipcode}}>
-                <input type="text" class="form-control" placeholder="Age"  value={{@age}}>
-                <input type="text" class="form-control" placeholder="Desired Pace"  value={{@desired_pace}}>
+                <input name= "first_name" type="text" class="form-control" placeholder="First name" value={{@first_name}}>
+                <input name= "last_name" type="text" class="form-control" placeholder="Last Name"  value={{@last_name}}>
+                <input name= "email" type="text" class="form-control" placeholder="Email"  value={{@email}}>
+                <input name= "password" type="password" class="form-control" placeholder="Password"  value={{@password}}>
+                <input name= "phone" type="text" class="form-control" placeholder="Phone Number"  value={{@phone}}>
+                <input name= "city" type="text" class="form-control" placeholder="City"  value={{@city}}>
+                <input name= "state" type="text" class="form-control" placeholder="State"  value={{@state}}>
+                <input name= "zipcode" type="text" class="form-control" placeholder="Zipcode"  value={{@zipcode}}>
+                <input name= "age" type="text" class="form-control" placeholder="Age"  value={{@age}}>
+                <input name= "desired_pace" type="text" class="form-control" placeholder="Desired Pace"  value={{@desired_pace}}>
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
@@ -36,7 +36,7 @@
                         <b>Pace:</b> {{pace}}<br>
                         <b>Phone:</b> {{phone}}<br>
                     </p>
-                    <a href="../../running_group/{{rg_id}}" class="btn btn-primary">View Details</a>
+                    <a href="../../running_group/{{id}}" class="btn btn-primary">View Details</a>
                 </div>
             </div>
         {{/each}}
@@ -60,7 +60,7 @@
                         <b>Phone:</b> {{phone}}<br>
                         <b>Location:</b> {{city}}, {{state}} {{zipcode}}
                     </p>
-                    <a href="../../running_group/{{rg_id}}" class="btn btn-primary">View Details</a>
+                    <a href="../../race/{{id}}" class="btn btn-primary">View Details</a>
                 </div>
             </div>
         {{/each}}

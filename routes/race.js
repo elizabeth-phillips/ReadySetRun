@@ -27,7 +27,7 @@ router.post("/", (req, res) => {
   });
 });
 
-router.post("/update/:id", (req, res) => {
+router.post("/:id", (req, res) => {
      Race.forge({ id: req.params.id })
       .save(req.body)
       .then( Race => {
@@ -38,7 +38,8 @@ router.post("/update/:id", (req, res) => {
         res.status(500).json(err);
       });
   });
-router.get("/showbyid/:id", (req, res) => {
+router.get("/:id", (req, res) => {
+  console.log(req.params.id)
      Race.where({ id: req.params.id })
       .fetch()
       .then( Race => {

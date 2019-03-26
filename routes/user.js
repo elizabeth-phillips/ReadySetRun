@@ -1,14 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const {User, RaceHistory, Race, RunningGroup, RunningGroupMember} = require("../db/ready_race_run");
-const {Login} = require("./data/userData");
-const fs = require('fs');
+const {User} = require("../db/ready_race_run");
+const {UserInfo, getUserLoggedIn, getUserInfo} = require("./data/userData");
 
 create = (req, res) => {
     User.forge( req.body )
     .save(req.body)
-    .then(User => {
-        res.status(200).render('profile', { login: false, data: JSON.parse(JSON.stringify(User)), loggedIn: true });
+    .then(async User => {
+        await UserInfo(User.id, true)
+        user = await getUserLoggedIn();
+        res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn() });
       })
       .catch(err => {
         console.log(err);
@@ -17,10 +18,12 @@ create = (req, res) => {
 };
 
 update = (req, res) => {
-    User.forge({ id: req.params.id })
+    User.forge({id: req.params.id})
     .save(req.body)
-    .then(User => {
-        res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), loggedIn: true });
+    .then(async function(User)  {
+        await UserInfo(User.id, false)
+        user = await getUserInfo();
+        res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn() });
     })
     .catch(err => {
         console.log(err);
@@ -31,15 +34,13 @@ update = (req, res) => {
 findByEmail = (req, res) => {
     User.forge().query({where:{ email: req.body.email, password: req.body.password}})
     .fetch()
-    .then((User) => {
+    .then(async function(User)  {
         if (!User) {
-            res.status(200).render('index', { });
+            res.render('index', {data: {}, races: [], rgs: [], user:getUserLoggedIn() })
         } else {
-            if (!User) {
-                res.render('index', {data:{}})
-            } else {
-                res.status(200).render('profile', { data: Login(User), races: User.races, rgs: User.running_groups});
-            }
+            await UserInfo(User.id, true)
+            user = await getUserLoggedIn();
+            res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn()});
         }
     })
     .catch(err => {
@@ -53,9 +54,11 @@ findById = (req, res) => {
     .fetch()
     .then(async function(User)  {
         if (!User) {
-            res.render('index', {data:{}})
+            res.render('index', {data: {}, races: [], rgs: [], user:getUserLoggedIn() })
         } else {
-            Login(res, User)
+            await UserInfo(User.id, false)
+            user = await getUserInfo();
+            res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn() });
         }
     })
     .catch(err => {
@@ -67,14 +70,14 @@ findById = (req, res) => {
 deleteUser = (req, res) => {
     User.where({ id: req.params.id })
     .fetch()
-    .then(User => {
+    .then(async function(User)  {
         if (!User) {
             res.status(404).json({ message: "User not found" });
         } else {
             User
             .destroy()
             .then(() => {
-                res.status(200).render('index', { data: JSON.parse(JSON.stringify(User)), loggedIn: true});
+                res.status(200).render('index', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn()});
             })
             .catch(err => {
                 console.log(err);
@@ -86,7 +89,7 @@ deleteUser = (req, res) => {
 
 router.post("/", create);
 router.post("/login/", findByEmail);
-router.post("/profile/:id", update);
-router.get("/profile/:id", findById);
+router.post("/:id", update);
+router.get("/:id", findById);
 router.get("/delete/:id", deleteUser);
 module.exports = router;
