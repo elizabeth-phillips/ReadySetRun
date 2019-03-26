@@ -1,6 +1,10 @@
 const knex = require('knex')(require('../../knexfile')[process.env.NODE_ENV]);
 const fs = require('fs');
 
+function clearUserLoggedIn(){
+    loginFile = './routes/data/login.json'
+    return fs.readFileSync(loginFile, {});
+}
 
 function getUserLoggedIn(){
     loginFile = './routes/data/login.json'
@@ -43,5 +47,6 @@ function UserInfo(id, login){
 module.exports = {
     UserInfo: UserInfo,
     getUserLoggedIn: getUserLoggedIn,
+    clearUserLoggedIn: clearUserLoggedIn,
     getUserInfo: getUserInfo
 };
