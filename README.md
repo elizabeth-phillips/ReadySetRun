@@ -8,7 +8,7 @@
 * `/admin/createrunninggroup` creates a running group
 * `/race/` shows all of the races 
 * `/race/{id}` shows the details of a race
-* `/user/profile/{id}` shows the details of a person
+* `/user/{id}` shows the details of a person
 * `/running_group` shows all running groups
 * `/running_group/{id}` shows the details of the running group
   
