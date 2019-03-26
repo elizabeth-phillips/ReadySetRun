@@ -9,6 +9,7 @@ const race = require("./routes/race");
 const runningGroup = require("./routes/running_group");
 const exphbs = require("express-handlebars");
 
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
