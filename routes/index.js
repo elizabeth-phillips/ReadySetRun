@@ -1,31 +1,24 @@
 const express = require("express");
 const router = express.Router();
 const {User, Race} = require("../db/ready_race_run");
+const {getUserLoggedIn} = require("./data/userData");
 
-let currUser = null
-
-router.get("/register", (req, res) => {
-    res.render('index', { login: false,
-                            data: JSON.parse(JSON.stringify(currUser))})
+router.get("/", async (req, res) => {
+  user = await getUserLoggedIn();
+  res.status(200).render('index', { data: JSON.parse(JSON.stringify(user)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn()});
 });
 
-router.get("/", (req, res) => {
-  res.render('index', { login: true,
-                        data: JSON.parse(JSON.stringify(currUser))})
+router.get("/admin/createrunninggroup", async(req, res) => {
+  user = await getUserLoggedIn();
+  res.render('admin/createrunninggroup', { data: JSON.parse(JSON.stringify(user)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn()});
 });
 
-router.get("/admin/createrunninggroup", (req, res) => {
-  res.render('admin/createrunninggroup')
-});
-
-router.get("/admin/createrace", (req, res) => {
-  res.render('admin/createrace')
-});
 router.post("/admin/createrace/", (req, res) => {
    Race.forge(req.body)
     .save()
-    .then( Race => {
-      res.status(200).render('Race', { data: JSON.parse(JSON.stringify(Race)) });
+    .then( async Race => {
+      user = await getUserLoggedIn();
+      res.status(200).render('Race', { data: JSON.parse(JSON.stringify(Race)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn()});
     })
     .catch(err => {
       console.log(err);
@@ -35,8 +28,9 @@ router.post("/admin/createrace/", (req, res) => {
 
 router.get("/admin/", (req, res) => {
    User.fetchAll()
-  .then( Users => {
-      res.status(200).render('admin/panel', { data: JSON.parse(JSON.stringify( Users)) });
+  .then( async Users => {
+      user = await getUserLoggedIn();
+      res.status(200).render('admin/panel', { data: JSON.parse(JSON.stringify(Users)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn()});
   })
   .catch(err => {
       console.log(err);
@@ -46,8 +40,9 @@ router.get("/admin/", (req, res) => {
 
 router.get("/admin/Users", (req, res) => {
    User.fetchAll()
-  .then( Users => {
-      res.status(200).render('admin/viewUsers', { data: JSON.parse(JSON.stringify( Users)) });
+  .then( async Users => {
+      user = await getUserLoggedIn();
+      res.status(200).render('admin/viewUsers', { data: JSON.parse(JSON.stringify(Users)) , races: user.races, running_groups: user.running_groups, user:getUserLoggedIn()});
   })
   .catch(err => {
       console.log(err);

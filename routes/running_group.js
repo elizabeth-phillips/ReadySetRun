@@ -67,9 +67,9 @@ router.get("/:id", (req, res) => {
   console.log(req.params.id)
     RunningGroup.where({ id: req.params.id })
       .fetch()
-      .then(RunningGroup => {
-        console.log(JSON.parse(JSON.stringify(RunningGroup)))
-        res.status(200).render('runninggroup', { data: JSON.parse(JSON.stringify(RunningGroup)) });
+      .then(async function(RunningGroup) {
+        user = await getUserLoggedIn();
+        res.status(200).render('runninggroup', { data: JSON.parse(JSON.stringify(RunningGroup)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn() });
       })
       .catch(err => {
         console.log(err);

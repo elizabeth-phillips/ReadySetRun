@@ -1,53 +1,40 @@
 {
-    "id": 10,
-    "first_name": "Marissa",
-    "last_name": "Carr",
-    "email": "marissacarr@cinaster.com",
-    "password": "pariaturquiamet",
-    "age": 13,
-    "desired_pace": "8:3",
-    "city": "Hailesboro",
-    "state": "Delaware",
-    "zipcode": 13918,
-    "phone": "(914)421-3734",
+    "id": 1,
+    "first_name": "Allison",
+    "last_name": "Melendezs",
+    "email": "allisonmelendez@cinaster.com",
+    "password": "doquisesse",
+    "age": 20,
+    "desired_pace": "14:16",
+    "city": "Choctaw",
+    "state": "Utah",
+    "zipcode": 14893,
+    "phone": "(837)463-2366",
     "admin": 1,
     "races": [
         {
-            "id": 7,
-            "name": "Manglo",
-            "date": "Thu Jan 04 2007 06:07:17 GMT-0600 (Central Standard Time)",
-            "distance": 7.9816,
-            "email": "hermanjones@manglo.com",
-            "phone": "(954)421-2382",
-            "city": "Osmond",
-            "state": "Tennessee",
-            "zipcode": 99536,
-            "pace": "6:27",
-            "ranking": 109
-        },
-        {
-            "id": 7,
-            "name": "Manglo",
-            "date": "Thu Jan 04 2007 06:07:17 GMT-0600 (Central Standard Time)",
-            "distance": 7.9816,
-            "email": "hermanjones@manglo.com",
-            "phone": "(954)421-2382",
-            "city": "Osmond",
-            "state": "Tennessee",
-            "zipcode": 99536,
-            "pace": "14:64",
-            "ranking": 170
+            "id": 6,
+            "name": "Avenetro",
+            "date": "Wed May 14 2003 14:00:57 GMT-0500 (Central Daylight Time)",
+            "distance": 6.0065,
+            "email": "hermanjones@avenetro.com",
+            "phone": "(825)529-3057",
+            "city": "Waukeenah",
+            "state": "Hawaii",
+            "zipcode": 91366,
+            "pace": "12:30",
+            "ranking": 558
         }
     ],
     "running_groups": [
         {
-            "id": 2,
-            "name": "Prowaste",
-            "pace": "10:2",
-            "city": "Mammoth",
-            "state": "California",
-            "zipcode": 40660,
-            "phone": "(915) 517-3248"
+            "id": 11,
+            "name": "Freakin",
+            "pace": "11:53",
+            "city": "Fillmore",
+            "state": "Wisconsin",
+            "zipcode": 95005,
+            "phone": "(885) 407-2660"
         }
     ]
 }

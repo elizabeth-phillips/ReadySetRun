@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const {User} = require("../db/ready_race_run");
-const {UserInfo, getUserLoggedIn, getUserInfo} = require("./data/userData");
+const {UserInfo, getUserLoggedIn, getUserInfo, clearUserLoggedIn} = require("./data/userData");
 
 create = (req, res) => {
     User.forge( req.body )
@@ -67,6 +67,12 @@ findById = (req, res) => {
     });
 };
 
+function logout(req, res) {
+    user = clearUserLoggedIn();
+    res.redirect('../')
+    //res.render('index', {data: {}, races: [], rgs: [], user:getUserLoggedIn() })
+};
+
 deleteUser = (req, res) => {
     User.where({ id: req.params.id })
     .fetch()
@@ -87,9 +93,12 @@ deleteUser = (req, res) => {
     });
 };
 
+
+
 router.post("/", create);
 router.post("/login/", findByEmail);
 router.post("/:id", update);
+router.post("/logout/", logout);
 router.get("/:id", findById);
 router.get("/delete/:id", deleteUser);
 module.exports = router;
