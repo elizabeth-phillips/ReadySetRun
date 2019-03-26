@@ -1,6 +1,7 @@
 const knex = require('knex')(require('../../knexfile')[process.env.NODE_ENV]);
 const fs = require('fs');
 
+
 function getUserLoggedIn(){
     loginFile = './routes/data/login.json'
     return JSON.parse(fs.readFileSync(loginFile));
@@ -29,10 +30,10 @@ function UserInfo(id, login){
             WHERE ? = rgm.user_id AND rg.id = rgm.running_group_id`, user.id)
         .then(rgs => {
             user['running_groups'] = rgs
-            fs.writeFileSync(userFile, JSON.stringify(user)); 
+            fs.writeFileSync(userFile, JSON.stringify(user, null, 4)); 
             if (login){
                 loginFile = './routes/data/login.json';
-                fs.writeFileSync(loginFile, JSON.stringify(user)); 
+                fs.writeFileSync(loginFile, JSON.stringify(user, null, 4)); 
             }
             })
         })

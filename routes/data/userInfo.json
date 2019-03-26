@@ -1,1 +1,53 @@
-{"id":20,"first_name":"Luella","last_name":"Huffman","email":"luellahuffman@cinaster.com","password":"nulladoullamco","age":61,"desired_pace":"17:48","city":"Roeville","state":"New Jersey","zipcode":77780,"phone":"(947)571-2114","admin":0,"races":[{"id":5,"name":"Olucore","date":"Sun Jan 21 2001 02:41:42 GMT-0600 (Central Standard Time)","distance":9.8274,"email":"hermanjones@olucore.com","phone":"(974)468-3966","city":"Neahkahnie","state":"Iowa","zipcode":68320,"pace":"6:11","ranking":39},{"id":7,"name":"Manglo","date":"Thu Jan 04 2007 06:07:17 GMT-0600 (Central Standard Time)","distance":7.9816,"email":"hermanjones@manglo.com","phone":"(954)421-2382","city":"Osmond","state":"Tennessee","zipcode":99536,"pace":"10:17","ranking":76},{"id":3,"name":"Snowpoke","date":"Sun Oct 08 2006 12:59:08 GMT-0500 (Central Daylight Time)","distance":12.6114,"email":"hermanjones@snowpoke.com","phone":"(973)479-2501","city":"Beason","state":"Delaware","zipcode":14505,"pace":"14:42","ranking":37},{"id":2,"name":"Electonic","date":"Thu Aug 23 2007 20:53:04 GMT-0500 (Central Daylight Time)","distance":21.991,"email":"hermanjones@electonic.com","phone":"(824)407-3128","city":"Crenshaw","state":"North Dakota","zipcode":38742,"pace":"13:27","ranking":693}],"running_groups":[]}
+{
+    "id": 10,
+    "first_name": "Marissa",
+    "last_name": "Carr",
+    "email": "marissacarr@cinaster.com",
+    "password": "pariaturquiamet",
+    "age": 13,
+    "desired_pace": "8:3",
+    "city": "Hailesboro",
+    "state": "Delaware",
+    "zipcode": 13918,
+    "phone": "(914)421-3734",
+    "admin": 1,
+    "races": [
+        {
+            "id": 7,
+            "name": "Manglo",
+            "date": "Thu Jan 04 2007 06:07:17 GMT-0600 (Central Standard Time)",
+            "distance": 7.9816,
+            "email": "hermanjones@manglo.com",
+            "phone": "(954)421-2382",
+            "city": "Osmond",
+            "state": "Tennessee",
+            "zipcode": 99536,
+            "pace": "6:27",
+            "ranking": 109
+        },
+        {
+            "id": 7,
+            "name": "Manglo",
+            "date": "Thu Jan 04 2007 06:07:17 GMT-0600 (Central Standard Time)",
+            "distance": 7.9816,
+            "email": "hermanjones@manglo.com",
+            "phone": "(954)421-2382",
+            "city": "Osmond",
+            "state": "Tennessee",
+            "zipcode": 99536,
+            "pace": "14:64",
+            "ranking": 170
+        }
+    ],
+    "running_groups": [
+        {
+            "id": 2,
+            "name": "Prowaste",
+            "pace": "10:2",
+            "city": "Mammoth",
+            "state": "California",
+            "zipcode": 40660,
+            "phone": "(915) 517-3248"
+        }
+    ]
+}

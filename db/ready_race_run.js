@@ -1,4 +1,6 @@
 const Bookshelf = require("../bookshelf");
+const fs = require("fs")
+
 
 const User = Bookshelf.Model.extend({
   tableName: "user",

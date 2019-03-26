@@ -33,12 +33,15 @@
                     </li>
                     <li class="nav-item">
                         {{#if user}}
-                            <a class="nav-link" href="/user/{{data.id}}">{{data.first_name}} {{data.last_name}}</a>
+                            <a class="nav-link" href="/user/{{user.id}}">{{user.first_name}} {{user.last_name}}</a>
+                    </li>
+                    <li class="nav-item"></li>
+                            <a class="nav-link" href="/user/logout/{{user.id}}">Log Out</a>
                         {{else}}
                             <a class="nav-link" href="/user/create" data-toggle="modal" data-target=".log-sign">Login</a>
                         {{/if}}
                     </li>
-                    {{#if data.admin}}
+                    {{#if user.admin}}
                     <li class="nav-item">
                             <a class="nav-link" href="/admin/">Admin Panel</a>
                     </li>
