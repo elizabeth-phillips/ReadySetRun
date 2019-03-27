@@ -3,6 +3,7 @@ const router = express.Router();
 const {User, Race} = require("../db/ready_race_run");
 const {getUserLoggedIn} = require("./data/userData");
 
+
 router.get("/", async (req, res) => {
   user = await getUserLoggedIn();
   res.status(200).render('index', { data: JSON.parse(JSON.stringify(user)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn()});
