@@ -67,10 +67,9 @@ findById = (req, res) => {
     });
 };
 
-function logout(req, res) {
-    user = clearUserLoggedIn();
-    res.redirect('../')
-    //res.render('index', {data: {}, races: [], rgs: [], user:getUserLoggedIn() })
+logout = async (req, res) => {
+    user = await clearUserLoggedIn();
+    res.render('index', {data: {}, user:{} })
 };
 
 deleteUser = (req, res) => {
@@ -98,7 +97,7 @@ deleteUser = (req, res) => {
 router.post("/", create);
 router.post("/login/", findByEmail);
 router.post("/:id", update);
-router.post("/logout/", logout);
+router.get("/logout/", logout);
 router.get("/:id", findById);
 router.get("/delete/:id", deleteUser);
 module.exports = router;

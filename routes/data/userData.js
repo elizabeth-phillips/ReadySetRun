@@ -3,17 +3,20 @@ const fs = require('fs');
 
 function clearUserLoggedIn(){
     loginFile = './routes/data/login.json'
-    return fs.readFileSync(loginFile, {});
+    fs.writeFileSync(loginFile, JSON.stringify({}));
 }
 
 function getUserLoggedIn(){
     loginFile = './routes/data/login.json'
-    return JSON.parse(fs.readFileSync(loginFile));
+    user = JSON.parse(fs.readFileSync(loginFile))
+    return user;
 }
 
 function getUserInfo(){
     userFile = './routes/data/userInfo.json'
-    return JSON.parse(fs.readFileSync(userFile));
+    user = JSON.parse(fs.readFileSync(userFile))
+    console.log(typeof user)
+    return user;
 }
 
 function UserInfo(id, login){
