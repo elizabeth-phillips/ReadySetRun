@@ -1,40 +1,16 @@
 {
-    "id": 1,
-    "first_name": "Allison",
-    "last_name": "Melendezs",
-    "email": "allisonmelendez@cinaster.com",
-    "password": "doquisesse",
-    "age": 20,
-    "desired_pace": "14:16",
-    "city": "Choctaw",
-    "state": "Utah",
-    "zipcode": 14893,
-    "phone": "(837)463-2366",
-    "admin": 1,
-    "races": [
-        {
-            "id": 6,
-            "name": "Avenetro",
-            "date": "Wed May 14 2003 14:00:57 GMT-0500 (Central Daylight Time)",
-            "distance": 6.0065,
-            "email": "hermanjones@avenetro.com",
-            "phone": "(825)529-3057",
-            "city": "Waukeenah",
-            "state": "Hawaii",
-            "zipcode": 91366,
-            "pace": "12:30",
-            "ranking": 558
-        }
-    ],
-    "running_groups": [
-        {
-            "id": 11,
-            "name": "Freakin",
-            "pace": "11:53",
-            "city": "Fillmore",
-            "state": "Wisconsin",
-            "zipcode": 95005,
-            "phone": "(885) 407-2660"
-        }
-    ]
+    "id": 55,
+    "first_name": "Elizabeth",
+    "last_name": "Phillips",
+    "email": "elizabethcphillips63@gmail.com",
+    "password": "test",
+    "age": 12,
+    "desired_pace": "12",
+    "city": "Austin",
+    "state": "TX",
+    "zipcode": 78757,
+    "phone": "8179134242",
+    "admin": 0,
+    "races": [],
+    "running_groups": []
 }
