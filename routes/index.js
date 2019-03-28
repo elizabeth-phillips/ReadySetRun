@@ -13,12 +13,12 @@ router.get("/admin/createrunninggroup", async(req, res) => {
   res.render('admin/createrunninggroup', { data: user, user:user});
 });
 
-router.post("/admin/createrace/", (req, res) => {
+router.get("/admin/createrace/", (req, res) => {
    Race.forge(req.body)
     .save()
     .then( async Race => {
       user = await getUserLoggedIn();
-      res.status(200).render('Race', { data: JSON.parse(JSON.stringify(Race)), user:getUserLoggedIn()});
+      res.status(200).render('admin/createrace', { data: JSON.parse(JSON.stringify(Race)), user:user});
     })
     .catch(err => {
       console.log(err);
@@ -42,7 +42,7 @@ router.get("/admin/Users", (req, res) => {
    User.fetchAll()
   .then( async Users => {
       user = await getUserLoggedIn();
-      res.status(200).render('admin/viewUsers', { data: JSON.parse(JSON.stringify(Users)), user:getUserLoggedIn()});
+      res.status(200).render('admin/viewUsers', { data: JSON.parse(JSON.stringify(Users)), user:user});
   })
   .catch(err => {
       console.log(err);
