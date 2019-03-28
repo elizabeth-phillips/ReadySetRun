@@ -1,4 +1,17 @@
-[
+[    
+    {
+      "first_name": "Alice",
+      "last_name": "Melendez",
+      "email": "test@test.com",
+      "password": "test",
+      "age": 20,
+      "desired_pace": "14:16",
+      "city": "Choctaw",
+      "state": "Utah",
+      "zipcode": 14893,
+      "phone": "(837)463-2366",
+      "admin": true
+    },
     {
       "first_name": "Allison",
       "last_name": "Melendez",

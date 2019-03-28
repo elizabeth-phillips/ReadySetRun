@@ -1,19 +1,15 @@
-
-<div class="container"> 
-    
-    <div class="row">
-        <br><br><br>
+<div class="jumbotron">
+    <h1 class="display-4">{{@name}} Info</h1>
+    <div class="container"> 
         <div class="col-md-6 mb-5">
-            <h1>{{@name}} Info</h1>
+            <b>Distance:</b>{{@distance}} Miles <br>
+            <b>Location:</b> {{@city}}, {{@state}} {{@zipcode}}<br>
+            <b>Phone:</b> {{@phone}}<br>
+            <b>Email:</b> {{@email}}
         </div>
-        <div class="col-md-6 mb-5">
-            {{@name}} <br>
-            {{@date}} <br>
-            {{@distance}} Miles <br>
-            Location: {{@city}}, {{@state}} {{@zipcode}}<br>
-            Phone: {{@phone}}<br>
-            Email: {{@email}}
-        </div>
+        
+        <a href="/race/"><button class="btn btn-primary">View All Races</button></a>
+        <br><br>
+        <a href="/race/"><button class="btn btn-primary">View All Races</button></a>
     </div>
-    <a href="/race/"><button>View All Races</button></a>
 </div>
