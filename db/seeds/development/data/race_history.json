@@ -1,492 +1,702 @@
 [
   {
-    "user_id": 18,
-    "race_id": 3,
-    "pace": "12:10",
-    "ranking": 232,
-    "date": "Mon Sep 10 2018 15:33:39 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 41,
-    "race_id": 5,
-    "pace": "5:61",
-    "ranking": 909,
-    "date": "Thu Jan 29 2009 09:47:36 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 42,
-    "race_id": 0,
-    "pace": "5:24",
-    "ranking": 228,
-    "date": "Sat Nov 17 2018 01:07:32 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 51,
-    "race_id": 4,
-    "pace": "13:70",
-    "ranking": 880,
-    "date": "Mon Jan 05 2004 19:44:55 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 6,
-    "race_id": 4,
-    "pace": "9:91",
-    "ranking": 19,
-    "date": "Mon Feb 20 2012 18:11:04 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 14,
-    "race_id": 5,
-    "pace": "12:74",
-    "ranking": 804,
-    "date": "Fri Jun 20 2014 15:10:07 GMT+0000 (UTC)"
-  },
-  {
     "user_id": 32,
-    "race_id": 7,
-    "pace": "10:96",
-    "ranking": 514,
-    "date": "Mon Jul 31 2000 03:37:25 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 53,
-    "race_id": 1,
-    "pace": "8:21",
-    "ranking": 937,
-    "date": "Sun Jan 25 2004 18:37:58 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 44,
-    "race_id": 4,
-    "pace": "11:37",
-    "ranking": 188,
-    "date": "Fri Aug 17 2007 13:07:24 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 34,
-    "race_id": 0,
-    "pace": "14:57",
-    "ranking": 381,
-    "date": "Wed Feb 25 2015 17:05:20 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 13,
-    "race_id": 5,
-    "pace": "5:96",
-    "ranking": 426,
-    "date": "Mon May 28 2012 16:58:06 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 53,
-    "race_id": 2,
-    "pace": "6:89",
-    "ranking": 43,
-    "date": "Fri Apr 28 2017 20:21:57 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 19,
-    "race_id": 4,
-    "pace": "12:75",
-    "ranking": 508,
-    "date": "Sun Dec 05 2004 20:14:06 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 51,
-    "race_id": 3,
-    "pace": "13:02",
-    "ranking": 437,
-    "date": "Wed Nov 03 2004 02:45:08 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 20,
-    "race_id": 5,
-    "pace": "6:11",
-    "ranking": 39,
-    "date": "Sat Jun 15 2002 13:40:34 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 1,
-    "race_id": 6,
-    "pace": "12:30",
-    "ranking": 558,
-    "date": "Thu Apr 26 2007 10:04:51 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 45,
-    "race_id": 4,
-    "pace": "14:80",
-    "ranking": 103,
-    "date": "Wed Mar 12 2003 21:39:41 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 19,
-    "race_id": 7,
-    "pace": "13:45",
-    "ranking": 273,
-    "date": "Sat Sep 03 2016 22:53:33 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 23,
-    "race_id": 2,
-    "pace": "11:86",
-    "ranking": 872,
-    "date": "Thu Jul 18 2013 19:45:48 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 25,
-    "race_id": 4,
-    "pace": "9:19",
-    "ranking": 860,
-    "date": "Thu Mar 10 2016 02:49:46 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 27,
-    "race_id": 1,
-    "pace": "8:34",
-    "ranking": 410,
-    "date": "Wed Jan 07 2009 15:14:55 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 18,
-    "race_id": 5,
-    "pace": "9:94",
-    "ranking": 353,
-    "date": "Mon Oct 15 2001 07:51:05 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 9,
-    "race_id": 5,
-    "pace": "7:70",
-    "ranking": 77,
-    "date": "Wed Jan 22 2003 06:51:51 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 7,
-    "race_id": 0,
-    "pace": "8:25",
-    "ranking": 833,
-    "date": "Wed May 21 2008 13:30:19 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 39,
-    "race_id": 6,
-    "pace": "6:44",
-    "ranking": 119,
-    "date": "Wed Mar 23 2005 03:41:02 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 28,
-    "race_id": 4,
-    "pace": "11:73",
-    "ranking": 372,
-    "date": "Wed Oct 09 2013 01:23:30 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 46,
-    "race_id": 0,
-    "pace": "4:69",
-    "ranking": 691,
-    "date": "Tue Jul 11 2017 17:38:23 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 20,
-    "race_id": 7,
-    "pace": "10:17",
-    "ranking": 76,
-    "date": "Fri Mar 30 2007 09:08:04 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 16,
-    "race_id": 4,
-    "pace": "4:97",
-    "ranking": 668,
-    "date": "Sat Jan 22 2005 06:59:51 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 34,
-    "race_id": 3,
-    "pace": "11:25",
-    "ranking": 970,
-    "date": "Sat Oct 13 2018 21:54:48 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 15,
-    "race_id": 6,
-    "pace": "4:14",
-    "ranking": 101,
-    "date": "Mon Apr 01 2013 05:40:12 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 22,
-    "race_id": 4,
-    "pace": "6:79",
-    "ranking": 503,
-    "date": "Wed Jul 07 2010 13:32:29 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 13,
-    "race_id": 0,
-    "pace": "7:36",
-    "ranking": 829,
-    "date": "Sat Dec 29 2018 17:19:35 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 3,
-    "race_id": 0,
-    "pace": "11:67",
-    "ranking": 282,
-    "date": "Wed Nov 14 2007 05:40:20 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 32,
-    "race_id": 4,
-    "pace": "12:89",
-    "ranking": 677,
-    "date": "Sun Aug 23 2015 09:33:57 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 23,
-    "race_id": 4,
-    "pace": "8:88",
-    "ranking": 81,
-    "date": "Wed May 08 2013 13:31:55 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 29,
-    "race_id": 0,
-    "pace": "11:42",
-    "ranking": 240,
-    "date": "Tue Sep 01 2009 10:05:06 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 50,
-    "race_id": 4,
-    "pace": "14:50",
-    "ranking": 978,
-    "date": "Wed Mar 01 2006 07:36:30 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 31,
-    "race_id": 0,
-    "pace": "10:47",
-    "ranking": 597,
-    "date": "Sat Sep 21 2002 12:58:18 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 8,
-    "race_id": 6,
-    "pace": "4:79",
-    "ranking": 802,
-    "date": "Sun Jun 05 2011 16:37:13 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 33,
-    "race_id": 1,
-    "pace": "5:62",
-    "ranking": 472,
-    "date": "Fri Feb 12 2016 08:45:27 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 53,
-    "race_id": 1,
-    "pace": "13:66",
-    "ranking": 928,
-    "date": "Wed Aug 22 2018 15:36:18 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 38,
-    "race_id": 6,
-    "pace": "13:66",
-    "ranking": 760,
-    "date": "Fri May 03 2002 23:31:34 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 20,
-    "race_id": 3,
-    "pace": "14:42",
-    "ranking": 37,
-    "date": "Fri Mar 04 2016 17:38:41 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 21,
-    "race_id": 1,
-    "pace": "7:23",
-    "ranking": 70,
-    "date": "Sat Jun 30 2012 08:51:45 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 53,
-    "race_id": 6,
-    "pace": "14:08",
-    "ranking": 99,
-    "date": "Thu Jul 21 2005 22:00:26 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 13,
-    "race_id": 6,
-    "pace": "12:95",
-    "ranking": 739,
-    "date": "Tue Nov 17 2009 13:32:46 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 46,
-    "race_id": 4,
-    "pace": "11:70",
-    "ranking": 476,
-    "date": "Sun Sep 16 2001 10:45:00 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 29,
-    "race_id": 4,
-    "pace": "9:85",
-    "ranking": 889,
-    "date": "Sun Mar 16 2014 14:29:26 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 21,
-    "race_id": 3,
-    "pace": "5:29",
-    "ranking": 312,
-    "date": "Sat Mar 10 2001 00:31:17 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 44,
-    "race_id": 4,
-    "pace": "6:53",
-    "ranking": 883,
-    "date": "Mon Jul 04 2011 23:05:23 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 19,
-    "race_id": 6,
-    "pace": "11:04",
-    "ranking": 982,
-    "date": "Thu Sep 11 2014 15:10:25 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 43,
-    "race_id": 4,
-    "pace": "14:92",
-    "ranking": 209,
-    "date": "Thu Dec 11 2014 22:54:17 GMT+0000 (UTC)"
+    "race_id": 19,
+    "pace": "4:24",
+    "ranking": 148,
+    "date": "Tue Nov 01 2005 16:06:49 GMT+0000 (UTC)"
   },
   {
     "user_id": 5,
     "race_id": 5,
-    "pace": "7:53",
-    "ranking": 753,
-    "date": "Wed Nov 04 2009 16:14:13 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 12,
-    "race_id": 4,
-    "pace": "11:36",
-    "ranking": 285,
-    "date": "Sat Jun 11 2016 21:29:43 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 4,
-    "race_id": 0,
-    "pace": "14:42",
-    "ranking": 197,
-    "date": "Sun Oct 10 2004 02:01:12 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 39,
-    "race_id": 6,
-    "pace": "5:40",
-    "ranking": 124,
-    "date": "Mon Jul 04 2016 02:52:53 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 35,
-    "race_id": 5,
-    "pace": "10:70",
-    "ranking": 659,
-    "date": "Tue Oct 30 2007 21:27:30 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 43,
-    "race_id": 0,
-    "pace": "7:89",
-    "ranking": 676,
-    "date": "Thu Sep 06 2012 16:30:58 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 40,
-    "race_id": 4,
-    "pace": "13:61",
-    "ranking": 765,
-    "date": "Tue Feb 17 2015 16:20:14 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 33,
-    "race_id": 6,
-    "pace": "11:88",
-    "ranking": 166,
-    "date": "Thu Jan 24 2013 15:57:50 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 10,
-    "race_id": 7,
-    "pace": "6:27",
-    "ranking": 109,
-    "date": "Wed Oct 14 2015 17:53:56 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 29,
-    "race_id": 2,
-    "pace": "8:44",
-    "ranking": 375,
-    "date": "Tue Dec 05 2000 11:07:21 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 20,
-    "race_id": 2,
-    "pace": "13:27",
-    "ranking": 693,
-    "date": "Tue Mar 04 2014 01:58:14 GMT+0000 (UTC)"
-  },
-  {
-    "user_id": 10,
-    "race_id": 7,
-    "pace": "14:64",
-    "ranking": 170,
-    "date": "Tue Nov 23 2010 07:55:41 GMT+0000 (UTC)"
+    "pace": "12:46",
+    "ranking": 208,
+    "date": "Sat Apr 21 2007 20:57:14 GMT+0000 (UTC)"
   },
   {
     "user_id": 50,
-    "race_id": 6,
-    "pace": "9:36",
-    "ranking": 318,
-    "date": "Sun Apr 23 2017 15:37:55 GMT+0000 (UTC)"
+    "race_id": 93,
+    "pace": "6:53",
+    "ranking": 379,
+    "date": "Sat May 22 2010 03:59:58 GMT+0000 (UTC)"
   },
   {
-    "user_id": 10,
-    "race_id": 0,
-    "pace": "5:61",
-    "ranking": 156,
-    "date": "Thu Dec 19 2013 09:54:30 GMT+0000 (UTC)"
+    "user_id": 30,
+    "race_id": 18,
+    "pace": "2:43",
+    "ranking": 99,
+    "date": "Sun May 25 2014 09:59:04 GMT+0000 (UTC)"
   },
   {
-    "user_id": 53,
-    "race_id": 7,
-    "pace": "7:46",
-    "ranking": 403,
-    "date": "Fri Jun 02 2000 00:44:05 GMT+0000 (UTC)"
+    "user_id": 17,
+    "race_id": 1,
+    "pace": "13:59",
+    "ranking": 46,
+    "date": "Fri Sep 28 2001 08:40:28 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 3,
+    "race_id": 14,
+    "pace": "12:92",
+    "ranking": 391,
+    "date": "Sat Jun 13 2015 19:18:46 GMT+0000 (UTC)"
   },
   {
     "user_id": 34,
-    "race_id": 3,
-    "pace": "13:98",
-    "ranking": 246,
-    "date": "Wed Dec 24 2008 23:12:11 GMT+0000 (UTC)"
+    "race_id": 41,
+    "pace": "12:99",
+    "ranking": 424,
+    "date": "Sat Jul 04 2015 08:10:25 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 4,
+    "race_id": 57,
+    "pace": "9:04",
+    "ranking": 58,
+    "date": "Thu Jul 16 2015 02:04:18 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 45,
+    "race_id": 84,
+    "pace": "6:73",
+    "ranking": 43,
+    "date": "Tue Dec 07 2004 14:08:59 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 12,
+    "race_id": 91,
+    "pace": "10:58",
+    "ranking": 12,
+    "date": "Wed Aug 02 2006 01:25:15 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 34,
+    "race_id": 65,
+    "pace": "12:03",
+    "ranking": 184,
+    "date": "Thu Aug 03 2017 11:53:25 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 33,
+    "race_id": 36,
+    "pace": "7:91",
+    "ranking": 337,
+    "date": "Sat Nov 23 2013 18:21:21 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 48,
+    "race_id": 75,
+    "pace": "4:11",
+    "ranking": 57,
+    "date": "Wed Oct 08 2008 15:58:58 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 48,
+    "race_id": 10,
+    "pace": "5:24",
+    "ranking": 240,
+    "date": "Wed Sep 22 2004 20:10:51 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 2,
+    "race_id": 8,
+    "pace": "14:33",
+    "ranking": 256,
+    "date": "Sat Jul 22 2006 09:27:25 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 8,
+    "race_id": 33,
+    "pace": "4:75",
+    "ranking": 482,
+    "date": "Fri Apr 26 2013 16:40:29 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 52,
+    "race_id": 95,
+    "pace": "5:05",
+    "ranking": 108,
+    "date": "Fri Feb 02 2007 20:48:28 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 47,
+    "race_id": 30,
+    "pace": "13:24",
+    "ranking": 136,
+    "date": "Sat Dec 17 2011 17:39:29 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 15,
+    "race_id": 90,
+    "pace": "9:47",
+    "ranking": 103,
+    "date": "Sat Oct 13 2012 17:00:13 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 39,
+    "race_id": 45,
+    "pace": "13:10",
+    "ranking": 51,
+    "date": "Fri Apr 07 2006 23:13:11 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 38,
+    "race_id": 55,
+    "pace": "6:82",
+    "ranking": 300,
+    "date": "Mon Sep 03 2018 12:22:03 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 14,
+    "race_id": 39,
+    "pace": "4:01",
+    "ranking": 54,
+    "date": "Fri Feb 13 2015 02:22:25 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 27,
+    "race_id": 68,
+    "pace": "6:42",
+    "ranking": 119,
+    "date": "Sat Jul 26 2003 19:30:48 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 54,
+    "race_id": 32,
+    "pace": "1:59",
+    "ranking": 195,
+    "date": "Mon Aug 08 2005 00:33:35 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 22,
+    "race_id": 41,
+    "pace": "2:24",
+    "ranking": 48,
+    "date": "Wed Oct 11 2017 02:19:25 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 14,
+    "race_id": 13,
+    "pace": "13:63",
+    "ranking": 93,
+    "date": "Tue Oct 25 2016 23:07:34 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 32,
+    "race_id": 58,
+    "pace": "6:70",
+    "ranking": 320,
+    "date": "Sat Jan 19 2019 11:27:55 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 5,
+    "race_id": 41,
+    "pace": "12:65",
+    "ranking": 37,
+    "date": "Thu Dec 07 2000 19:26:56 GMT+0000 (UTC)"
   },
   {
     "user_id": 44,
+    "race_id": 57,
+    "pace": "8:77",
+    "ranking": 325,
+    "date": "Wed Oct 31 2018 19:02:32 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 5,
+    "race_id": 100,
+    "pace": "2:12",
+    "ranking": 308,
+    "date": "Tue Jul 05 2016 07:43:47 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 16,
+    "race_id": 57,
+    "pace": "9:56",
+    "ranking": 256,
+    "date": "Wed Dec 12 2001 09:36:31 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 38,
     "race_id": 1,
-    "pace": "8:97",
-    "ranking": 769,
-    "date": "Wed Apr 29 2009 18:34:21 GMT+0000 (UTC)"
+    "pace": "5:34",
+    "ranking": 123,
+    "date": "Thu Oct 14 2010 21:46:06 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 22,
+    "race_id": 99,
+    "pace": "7:36",
+    "ranking": 339,
+    "date": "Wed Jul 12 2006 22:00:14 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 32,
+    "race_id": 20,
+    "pace": "11:31",
+    "ranking": 401,
+    "date": "Wed Jun 22 2011 17:23:01 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 31,
+    "race_id": 23,
+    "pace": "6:05",
+    "ranking": 348,
+    "date": "Sun Jun 18 2000 02:06:15 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 31,
+    "race_id": 96,
+    "pace": "1:48",
+    "ranking": 112,
+    "date": "Tue Jun 26 2012 22:41:31 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 20,
+    "race_id": 96,
+    "pace": "10:33",
+    "ranking": 52,
+    "date": "Sat Apr 13 2002 08:19:56 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 49,
+    "race_id": 12,
+    "pace": "6:61",
+    "ranking": 70,
+    "date": "Tue Apr 30 2013 03:49:38 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 41,
+    "race_id": 23,
+    "pace": "8:82",
+    "ranking": 249,
+    "date": "Fri Jan 07 2011 04:17:54 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 1,
+    "race_id": 27,
+    "pace": "8:84",
+    "ranking": 191,
+    "date": "Wed Jan 02 2013 18:37:01 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 5,
+    "race_id": 100,
+    "pace": "3:65",
+    "ranking": 25,
+    "date": "Mon Oct 14 2002 05:25:24 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 1,
+    "race_id": 29,
+    "pace": "7:43",
+    "ranking": 481,
+    "date": "Thu Jul 14 2011 23:38:57 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 28,
+    "race_id": 7,
+    "pace": "7:29",
+    "ranking": 224,
+    "date": "Fri Jan 04 2008 07:14:03 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 34,
+    "race_id": 64,
+    "pace": "6:60",
+    "ranking": 307,
+    "date": "Sun Jan 08 2006 13:29:37 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 22,
+    "race_id": 1,
+    "pace": "11:66",
+    "ranking": 334,
+    "date": "Sun Jan 27 2019 02:56:02 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 37,
+    "race_id": 82,
+    "pace": "6:85",
+    "ranking": 384,
+    "date": "Mon Nov 17 2014 05:39:42 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 53,
+    "race_id": 58,
+    "pace": "13:75",
+    "ranking": 260,
+    "date": "Sat Nov 25 2000 17:32:00 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 31,
+    "race_id": 45,
+    "pace": "2:22",
+    "ranking": 484,
+    "date": "Tue May 14 2002 11:37:31 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 6,
+    "race_id": 19,
+    "pace": "9:54",
+    "ranking": 38,
+    "date": "Thu Dec 21 2017 03:53:05 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 25,
+    "race_id": 9,
+    "pace": "3:96",
+    "ranking": 168,
+    "date": "Wed Mar 24 2004 13:59:28 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 16,
+    "race_id": 60,
+    "pace": "1:55",
+    "ranking": 312,
+    "date": "Sun Apr 08 2001 12:54:33 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 34,
+    "race_id": 49,
+    "pace": "8:86",
+    "ranking": 412,
+    "date": "Tue Jun 09 2015 13:38:27 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 49,
+    "race_id": 30,
+    "pace": "7:63",
+    "ranking": 183,
+    "date": "Thu Aug 10 2006 09:20:35 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 37,
+    "race_id": 54,
+    "pace": "11:40",
+    "ranking": 254,
+    "date": "Sun Nov 29 2015 23:21:50 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 50,
+    "race_id": 26,
+    "pace": "11:18",
+    "ranking": 317,
+    "date": "Sun Sep 05 2010 14:49:42 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 17,
+    "race_id": 17,
+    "pace": "6:06",
+    "ranking": 357,
+    "date": "Thu Dec 23 2010 05:43:05 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 49,
+    "race_id": 11,
+    "pace": "8:04",
+    "ranking": 411,
+    "date": "Wed Aug 04 2010 13:15:56 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 21,
+    "race_id": 32,
+    "pace": "13:30",
+    "ranking": 371,
+    "date": "Sun Jan 18 2015 18:53:18 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 48,
+    "race_id": 86,
+    "pace": "14:65",
+    "ranking": 436,
+    "date": "Sun Jul 08 2001 02:10:43 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 32,
+    "race_id": 44,
+    "pace": "8:17",
+    "ranking": 234,
+    "date": "Tue Sep 16 2014 07:04:22 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 17,
+    "race_id": 96,
+    "pace": "8:84",
+    "ranking": 333,
+    "date": "Tue Jul 04 2000 09:02:50 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 21,
+    "race_id": 87,
+    "pace": "2:39",
+    "ranking": 106,
+    "date": "Wed Jul 08 2015 23:50:38 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 16,
+    "race_id": 85,
+    "pace": "12:59",
+    "ranking": 112,
+    "date": "Fri Jul 28 2000 08:25:17 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 32,
+    "race_id": 48,
+    "pace": "5:97",
+    "ranking": 268,
+    "date": "Sun Nov 05 2006 02:37:33 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 52,
+    "race_id": 34,
+    "pace": "14:33",
+    "ranking": 310,
+    "date": "Fri Sep 28 2012 12:49:00 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 40,
+    "race_id": 95,
+    "pace": "10:28",
+    "ranking": 499,
+    "date": "Sun Sep 09 2018 12:52:23 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 1,
+    "race_id": 5,
+    "pace": "13:82",
+    "ranking": 468,
+    "date": "Sun Nov 14 2010 17:08:02 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 11,
+    "race_id": 72,
+    "pace": "6:23",
+    "ranking": 421,
+    "date": "Thu Nov 14 2013 23:06:04 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 26,
+    "race_id": 38,
+    "pace": "7:86",
+    "ranking": 412,
+    "date": "Sun Mar 12 2000 18:29:43 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 13,
+    "race_id": 23,
+    "pace": "11:76",
+    "ranking": 176,
+    "date": "Sun Jun 08 2003 16:43:37 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 3,
+    "race_id": 78,
+    "pace": "7:11",
+    "ranking": 34,
+    "date": "Wed Jan 02 2008 00:15:30 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 2,
+    "race_id": 21,
+    "pace": "9:82",
+    "ranking": 276,
+    "date": "Mon Dec 03 2018 22:21:32 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 28,
+    "race_id": 31,
+    "pace": "2:24",
+    "ranking": 240,
+    "date": "Thu Jan 03 2002 09:12:53 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 14,
+    "race_id": 65,
+    "pace": "7:15",
+    "ranking": 244,
+    "date": "Sun Jan 13 2002 07:03:59 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 20,
+    "race_id": 80,
+    "pace": "9:00",
+    "ranking": 346,
+    "date": "Wed Sep 05 2018 15:16:13 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 46,
+    "race_id": 67,
+    "pace": "6:06",
+    "ranking": 202,
+    "date": "Wed Jan 30 2008 20:19:10 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 5,
+    "race_id": 22,
+    "pace": "13:90",
+    "ranking": 40,
+    "date": "Wed Jun 27 2012 15:23:24 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 12,
+    "race_id": 8,
+    "pace": "7:99",
+    "ranking": 27,
+    "date": "Sun Jul 16 2006 05:52:46 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 8,
+    "race_id": 26,
+    "pace": "4:44",
+    "ranking": 250,
+    "date": "Thu Oct 30 2003 01:32:32 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 6,
+    "race_id": 51,
+    "pace": "6:43",
+    "ranking": 112,
+    "date": "Sat May 26 2012 17:32:10 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 32,
+    "race_id": 1,
+    "pace": "6:49",
+    "ranking": 58,
+    "date": "Tue Jan 03 2012 03:25:51 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 44,
+    "race_id": 54,
+    "pace": "6:20",
+    "ranking": 464,
+    "date": "Sat Aug 04 2007 13:02:08 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 46,
+    "race_id": 47,
+    "pace": "11:46",
+    "ranking": 272,
+    "date": "Sun Oct 26 2003 16:59:09 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 32,
+    "race_id": 4,
+    "pace": "3:62",
+    "ranking": 194,
+    "date": "Sun Jul 20 2014 08:05:07 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 32,
+    "race_id": 1,
+    "pace": "14:61",
+    "ranking": 102,
+    "date": "Sun Aug 12 2012 03:42:43 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 48,
+    "race_id": 86,
+    "pace": "8:68",
+    "ranking": 491,
+    "date": "Mon Feb 18 2019 17:58:05 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 10,
+    "race_id": 45,
+    "pace": "12:69",
+    "ranking": 338,
+    "date": "Sun Dec 09 2012 07:37:53 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 6,
+    "race_id": 42,
+    "pace": "12:16",
+    "ranking": 203,
+    "date": "Fri Feb 19 2016 18:55:06 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 4,
+    "race_id": 94,
+    "pace": "13:53",
+    "ranking": 19,
+    "date": "Tue Jan 27 2004 21:11:36 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 44,
+    "race_id": 56,
+    "pace": "13:01",
+    "ranking": 173,
+    "date": "Mon Nov 04 2013 15:08:50 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 51,
+    "race_id": 56,
+    "pace": "3:78",
+    "ranking": 240,
+    "date": "Thu Mar 11 2004 12:08:41 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 43,
+    "race_id": 65,
+    "pace": "4:17",
+    "ranking": 156,
+    "date": "Tue Dec 25 2018 03:43:15 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 32,
+    "race_id": 14,
+    "pace": "11:56",
+    "ranking": 245,
+    "date": "Wed Aug 28 2013 20:58:02 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 12,
+    "race_id": 95,
+    "pace": "10:14",
+    "ranking": 353,
+    "date": "Wed Dec 26 2007 10:20:02 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 54,
+    "race_id": 95,
+    "pace": "8:52",
+    "ranking": 249,
+    "date": "Thu Apr 03 2008 13:11:29 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 50,
+    "race_id": 95,
+    "pace": "9:95",
+    "ranking": 358,
+    "date": "Sat Sep 05 2009 11:21:46 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 14,
+    "race_id": 50,
+    "pace": "11:31",
+    "ranking": 364,
+    "date": "Sat Jul 29 2017 08:53:08 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 48,
+    "race_id": 8,
+    "pace": "2:31",
+    "ranking": 6,
+    "date": "Tue Dec 25 2018 10:03:56 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 5,
+    "race_id": 42,
+    "pace": "2:79",
+    "ranking": 442,
+    "date": "Fri Mar 31 2006 16:06:18 GMT+0000 (UTC)"
+  },
+  {
+    "user_id": 36,
+    "race_id": 3,
+    "pace": "9:18",
+    "ranking": 103,
+    "date": "Thu Feb 27 2003 08:34:32 GMT+0000 (UTC)"
   }
 ]

@@ -31,7 +31,7 @@ update = (req, res) => {
     });
 };
 
-findByEmail = (req, res) => {
+login = (req, res) => {
     User.forge().query({where:{ email: req.body.email, password: req.body.password}})
     .fetch()
     .then(async function(User)  {
@@ -39,8 +39,7 @@ findByEmail = (req, res) => {
             res.render('index', {data: {}, races: [], rgs: [], user:getUserLoggedIn() })
         } else {
             await UserInfo(User.id, true)
-            user = await getUserLoggedIn();
-            res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn()});
+            res.redirect(`/user/${User.id}`)
         }
     })
     .catch(err => {
@@ -58,7 +57,7 @@ findById = (req, res) => {
         } else {
             await UserInfo(User.id, false)
             user = await getUserInfo();
-            res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn() });
+            res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:user });
         }
     })
     .catch(err => {
@@ -67,10 +66,9 @@ findById = (req, res) => {
     });
 };
 
-function logout(req, res) {
-    user = clearUserLoggedIn();
-    res.redirect('../')
-    //res.render('index', {data: {}, races: [], rgs: [], user:getUserLoggedIn() })
+logout = async (req, res) => {
+    user = await clearUserLoggedIn();
+    res.redirect("/")
 };
 
 deleteUser = (req, res) => {
@@ -82,8 +80,10 @@ deleteUser = (req, res) => {
         } else {
             User
             .destroy()
-            .then(() => {
-                res.status(200).render('index', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn()});
+            .then(async () => {
+                await UserInfo(User.id, false)
+                user = await getUserInfo();
+                res.status(200).render('index', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:user});
             })
             .catch(err => {
                 console.log(err);
@@ -96,9 +96,9 @@ deleteUser = (req, res) => {
 
 
 router.post("/", create);
-router.post("/login/", findByEmail);
+router.post("/login/", login);
 router.post("/:id", update);
-router.post("/logout/", logout);
+router.get("/logout/", logout);
 router.get("/:id", findById);
 router.get("/delete/:id", deleteUser);
 module.exports = router;

@@ -8,3 +8,17 @@ exports.seed = function (knex, Promise) {
       return knex("race").insert(race);
     });
 };
+
+// [
+//   {
+//     'repeat(100)': {
+//       name: '{{company()}}',
+//       distance: '{{floating(1,100)}}',
+//       email: '{{lorem()}}@{{company}}.com',
+//       phone: '{{phone()}}',
+//       city: '{{city()}}',
+//       state: '{{state()}}',
+//       zipcode: '{{integer(10000, 99999)}}'
+//     }
+//   }
+// ]

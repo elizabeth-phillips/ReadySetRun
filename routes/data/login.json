@@ -1,9 +1,9 @@
 {
     "id": 1,
-    "first_name": "Allison",
-    "last_name": "Melendezs",
-    "email": "allisonmelendez@cinaster.com",
-    "password": "doquisesse",
+    "first_name": "Alice",
+    "last_name": "Melendez",
+    "email": "test@test.com",
+    "password": "test",
     "age": 20,
     "desired_pace": "14:16",
     "city": "Choctaw",
@@ -13,17 +13,43 @@
     "admin": 1,
     "races": [
         {
-            "id": 6,
-            "name": "Avenetro",
-            "date": "Wed May 14 2003 14:00:57 GMT-0500 (Central Daylight Time)",
-            "distance": 6.0065,
-            "email": "hermanjones@avenetro.com",
-            "phone": "(825)529-3057",
-            "city": "Waukeenah",
-            "state": "Hawaii",
-            "zipcode": 91366,
-            "pace": "12:30",
-            "ranking": 558
+            "id": 27,
+            "name": "Bolax",
+            "date": null,
+            "distance": 41.7661,
+            "email": "ea@Typhonica.com",
+            "phone": "(836) 600-2903",
+            "city": "Winchester",
+            "state": "Marshall Islands",
+            "zipcode": 20626,
+            "pace": "8:84",
+            "ranking": 191
+        },
+        {
+            "id": 29,
+            "name": "Lunchpad",
+            "date": null,
+            "distance": 86.1568,
+            "email": "veniam@Panzent.com",
+            "phone": "(976) 475-3958",
+            "city": "Salunga",
+            "state": "Iowa",
+            "zipcode": 65113,
+            "pace": "7:43",
+            "ranking": 481
+        },
+        {
+            "id": 5,
+            "name": "Kaggle",
+            "date": null,
+            "distance": 1.2631,
+            "email": "cupidatat@Cubicide.com",
+            "phone": "(923) 497-3800",
+            "city": "Shrewsbury",
+            "state": "Puerto Rico",
+            "zipcode": 96525,
+            "pace": "13:82",
+            "ranking": 468
         }
     ],
     "running_groups": [
