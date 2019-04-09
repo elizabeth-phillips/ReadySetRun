@@ -3,6 +3,7 @@ const router = express.Router();
 const {User, Race} = require("../db/ready_race_run");
 const {getUserLoggedIn} = require("./data/userData");
 
+
 router.get("/", async (req, res) => {
   user = await getUserLoggedIn();
   res.status(200).render('index', { data: {}, user:user});
