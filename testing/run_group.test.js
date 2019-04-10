@@ -1,17 +1,18 @@
 const request = require('supertest');
 const app = require('../routes/running_group');
 
-describe('Test the root path', function() {
-    test('It should response the GET method', function (done) {
-        request(app).get('/').then((response) => {
-            expect(response.statusCode).toBe(200);
-            done();
-        });
-    },10000);
-});
+describe('Test the paths for Race', () => {
+    test('It should response the GET / method', () => {
+        request(app).get('/').expect(200);
+    });
 
-// describe('Test the root path', function() {
-//     test('It should response the GET method', function (done) {
-//         request(app.use(app)).get('/').end()
-//         },10000);
-//     });
+    test('It should response the GET /:id', () => {
+        request(app).get('/1').expect(200);
+    });
+
+    test('It should response the GET /delete/:id method', () => {
+        request(app).get('/delete/1').expect(200);
+    });
+
+
+});
