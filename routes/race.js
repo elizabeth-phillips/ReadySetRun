@@ -30,6 +30,7 @@ router.get("/:id", (req, res) => {
         res.status(500).json(err);
       });
   });
+  
 router.post("/delete/:id", (req, res) => {
      Race.where({ id: req.params.id })
       .fetch()

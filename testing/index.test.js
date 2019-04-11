@@ -2,6 +2,7 @@ process.env.NODE_ENV = 'development'
 const request = require('supertest');
 const app = require('../routes/index');
 
+
 describe('Test the root path', () => {
     test('It should response the GET / method', async () => {
         request(app)

@@ -2,7 +2,7 @@ process.env.NODE_ENV = 'development'
 const request = require('supertest');
 const app = require('../routes/running_group');
 
-describe('Test the paths for Race', () => {
+describe('Test the paths for Running Group', () => {
     test('It should response the GET / method', () => {
         request(app)
         .get('/')
@@ -53,4 +53,18 @@ describe('Test the paths for Race', () => {
     });
 
 
+});
+
+describe('Test the paths for Running Group', () => {
+    test('post to running group', ()=>{
+        request(app).post("/")
+        .expect(302)
+    })
+});
+
+describe('Test the paths for Race', () => {
+    test('post to running group', ()=>{
+        request(app).post("/delete/4")
+        .expect(302)
+    })
 });

@@ -39,3 +39,10 @@ describe('Test the paths for Race', () => {
     });
 
 });
+
+describe('Test the paths for Race', () => {
+    test('post to running group', () => {
+        request(app).post("/delete/4")
+        .expect(302)
+    })
+});

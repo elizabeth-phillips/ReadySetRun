@@ -7,3 +7,10 @@ const app = require('../routes/user');
 //         request(app.create).expect('getUserLoggedIn').toBe(500);
 //     });
 // })
+
+// describe('Test User File', () => {
+//     test('It should test create method', function () {
+//         request(app.create)
+//         .expect('Function');
+//     });
+// });

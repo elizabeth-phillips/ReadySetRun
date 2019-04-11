@@ -46,6 +46,7 @@ router.get("/:id", (req, res) => {
         res.status(500).json(err);
       });
   });
+  
 router.post("/delete/:id", (req, res) => {
      RunningGroup.where({ id: req.params.id })
       .fetch()
