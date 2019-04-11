@@ -2,10 +2,13 @@
 <div class="container">
     <h1>{{@first_name}} {{@last_name}} Profile</h1>
     <hr>
-    <h2 class="row">User Info</h2>
+    <h2> User Info</h2>
     <div class="row">
-        <form action="/user/{{@id}}" method="post" id="user_update" class="col-sm-12 col-md-10 col-lg-8 mx-20">
+
+        <form action="/user/{{@id}}" method="post" id="user_update" class="col-md-6">
+            
             <div class="text-input-container">
+                
                 <input name= "first_name" type="text" class="form-control" placeholder="First name" value={{@first_name}}>
                 <input name= "last_name" type="text" class="form-control" placeholder="Last Name"  value={{@last_name}}>
                 <input name= "email" type="text" class="form-control" placeholder="Email"  value={{@email}}>
@@ -16,7 +19,7 @@
                 <input name= "zipcode" type="text" class="form-control" placeholder="Zipcode"  value={{@zipcode}}>
                 <input name= "age" type="text" class="form-control" placeholder="Age"  value={{@age}}>
                 <input name= "desired_pace" type="text" class="form-control" placeholder="Desired Pace"  value={{@desired_pace}}>
-            </div>
+            </div><br>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
