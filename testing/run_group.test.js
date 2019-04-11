@@ -4,15 +4,52 @@ const app = require('../routes/running_group');
 
 describe('Test the paths for Race', () => {
     test('It should response the GET / method', () => {
-        request(app).get('/').expect(200);
+        request(app)
+        .get('/')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(200);
     });
 
     test('It should response the GET /:id', () => {
-        request(app).get('/1').expect(200);
+        request(app)
+        .get('/1')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(200);
+    });
+
+    test('It should response the GET /:id', () => {
+        request(app)
+        .get('/250')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(500);
     });
 
     test('It should response the GET /delete/:id method', () => {
-        request(app).get('/delete/1').expect(200);
+        request(app)
+        .get('/delete/1')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(200);
+    });
+
+    test('It should response the GET /delete/:id method', () => {
+        request(app)
+        .get('/delete/400')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(500);
+    });
+
+    test('It should response the GET /delete/:id method', () => {
+        request(app)
+        .get('/delete/200')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(500)
+        
     });
 
 
