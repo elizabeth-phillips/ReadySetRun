@@ -26,10 +26,12 @@ app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(process.cwd() + "/views/public"));
+
 app.use("/", index);
 app.use("/user", user);
 app.use("/race", race);
 app.use("/running_group", runningGroup);
+
 app.listen(PORT, () => {
   console.log(`The server is running on ${PORT}`);
 });

@@ -4,14 +4,15 @@
             <div class="text-input-container">
                 <input name="query" type="text" class="form-control" placeholder="Keywords" value={{@query}}>
             </div>
-            <button type="submit" class="btn btn-primary">Search</button>
+            
         </form>
-        <select name="selectpicker" class="selectpicker col-sm-2 mx-20" form="search_results">
+        <select name="selectpicker" class="selectpicker col-sm-2 mx-3" form="search_results">
             <option value="All">All States</option>
             {{#each states}}
                 <option value="{{this}}">{{this}}</option>
             {{/each}}
         </select>
+        <button type="submit" class="btn btn-primary">Search</button>
     </div>
     <br><br>
     <h2>
@@ -26,7 +27,7 @@
     </h2>
     <div class="row">
         {{#each data }}
-            <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
+            <div class="card col-md-4" >
                 <div class="card-header">
                     <b>{{name}}</b>
                 </div>

@@ -16,6 +16,7 @@ function getStates(races){
     for (let i = 0; i < results.length; i++){
       if ((state != "All" && results[i].state == state)||results[i].name.includes(query)){
         output.push(results[i])
+        console.log(output);
       }
     }
     return output
