@@ -1,5 +1,5 @@
 {
-    "id": 1,
+    "id": 56,
     "first_name": "Alice",
     "last_name": "Melendez",
     "email": "test@test.com",
@@ -11,56 +11,6 @@
     "zipcode": 14893,
     "phone": "(837)463-2366",
     "admin": 1,
-    "races": [
-        {
-            "id": 27,
-            "name": "Bolax",
-            "date": null,
-            "distance": 41.7661,
-            "email": "ea@Typhonica.com",
-            "phone": "(836) 600-2903",
-            "city": "Winchester",
-            "state": "Marshall Islands",
-            "zipcode": 20626,
-            "pace": "8:84",
-            "ranking": 191
-        },
-        {
-            "id": 29,
-            "name": "Lunchpad",
-            "date": null,
-            "distance": 86.1568,
-            "email": "veniam@Panzent.com",
-            "phone": "(976) 475-3958",
-            "city": "Salunga",
-            "state": "Iowa",
-            "zipcode": 65113,
-            "pace": "7:43",
-            "ranking": 481
-        },
-        {
-            "id": 5,
-            "name": "Kaggle",
-            "date": null,
-            "distance": 1.2631,
-            "email": "cupidatat@Cubicide.com",
-            "phone": "(923) 497-3800",
-            "city": "Shrewsbury",
-            "state": "Puerto Rico",
-            "zipcode": 96525,
-            "pace": "13:82",
-            "ranking": 468
-        }
-    ],
-    "running_groups": [
-        {
-            "id": 11,
-            "name": "Freakin",
-            "pace": "11:53",
-            "city": "Fillmore",
-            "state": "Wisconsin",
-            "zipcode": 95005,
-            "phone": "(885) 407-2660"
-        }
-    ]
+    "races": [],
+    "running_groups": []
 }

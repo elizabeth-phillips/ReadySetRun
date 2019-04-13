@@ -9,13 +9,14 @@ function getStates(races){
   }
     
   function getFiltered(results, query, state){
-    if (state == "All" && query.trim() == ""){
+    if (state.includes("All") && query.trim() == ""){
       return results
     } 
     output = []
     for (let i = 0; i < results.length; i++){
-      if ((state != "All" && results[i].state == state)||results[i].name.includes(query)){
-        output.push(results[i])
+      if ((state.includes("All") && (results[i].state == state) )||
+          (query != "" && results[i].name.toUpperCase().includes(query.toUpperCase()))){
+          output.push(results[i])
       }
     }
     return output

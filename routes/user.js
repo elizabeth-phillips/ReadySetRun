@@ -36,9 +36,11 @@ login = (req, res) => {
     .fetch()
     .then(async function(User)  {
         if (!User) {
-            res.render('index', {data: {}, races: [], rgs: [], user:getUserLoggedIn() })
+            res.redirect('back')
+            // res.render('index', {data: {}, races: [], rgs: [], user:getUserLoggedIn() })
         } else {
             await UserInfo(User.id, true)
+            console.log("HERE", User.id)
             res.redirect(`/user/${User.id}`)
         }
     })
