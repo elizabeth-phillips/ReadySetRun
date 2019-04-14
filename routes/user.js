@@ -13,7 +13,7 @@ create = (req, res) => {
       })
       .catch(err => {
         console.log(err);
-        res.status(500).json(err);
+        res.redirect('back')
     });
 };
 
@@ -36,10 +36,10 @@ login = (req, res) => {
     .fetch()
     .then(async function(User)  {
         if (!User) {
-            res.render('index', {data: {}, races: [], rgs: [], user:getUserLoggedIn() })
+            res.redirect('back')
         } else {
             await UserInfo(User.id, true)
-            res.redirect(`/user/${User.id}`)
+            res.redirect(`../user/${User.id}`)
         }
     })
     .catch(err => {
@@ -68,7 +68,7 @@ findById = (req, res) => {
 
 logout = async (req, res) => {
     user = await clearUserLoggedIn();
-    res.redirect("/")
+    res.redirect("../")
 };
 
 deleteUser = (req, res) => {
