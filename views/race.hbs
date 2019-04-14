@@ -1,15 +1,23 @@
 <div class="jumbotron">
-    <h1 class="display-4">{{@name}} Info</h1>
-    <div class="container"> 
-        <div class="col-md-6 mb-5">
-            <b>Distance:</b>{{@distance}} Miles <br>
-            <b>Location:</b> {{@city}}, {{@state}} {{@zipcode}}<br>
-            <b>Phone:</b> {{@phone}}<br>
-            <b>Email:</b> {{@email}}
+    {{#if @logo}}
+        <div class="col-md-4 mb-5">
+            <img src="{{@logo}}">
         </div>
-        
-        <a href="/race/"><button class="btn btn-primary">View All Races</button></a>
-        <br><br>
-        <a href="/race/"><button class="btn btn-primary">View All Races</button></a>
+    {{/if}}
+    <h1 class="display-4">{{@name}} Info</h1>
+    <div class="row">
+        <div class="container"> 
+            <div class="col-md-6 mb-5">
+                <b>Distance:</b>{{@distance}} Miles <br>
+                <b>Location:</b> {{@city}}, {{@state}} {{@zipcode}}<br>
+                <b>Phone:</b> {{@phone}}<br>
+                <b>URL:</b> <a href="{{@url}}">{{@url}}</a>
+            </div>
+            {{#if user}}
+                <a href="/race/"><button class="btn btn-primary">Sign Up</button></a>
+            {{/if}}
+            <br><br>
+            <a href="/race/"><button class="btn btn-primary">View All Races</button></a>
+        </div>
     </div>
 </div>
