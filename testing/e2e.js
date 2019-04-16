@@ -2,8 +2,21 @@ process.env.NODE_ENV = 'development'
 
 
 const puppeteer = require('puppeteer');
-const user = require('../routes/user');
+const user = require('../routes/index');
 
+test ('Should browse through', async()=>{
+    const browser = await puppeteer.launch({
+        headless:false, 
+        slowMo: 10
+    });
+    const page = await browser.newPage();
+    await page.goto('http://localhost:3000');
+    await page.click('.navbar-toggler');
+    await page.click('.userLogin');
+    await page.type('#email', 'test@test.com');
+    await page.type("#password", 'test');
+    await page.click(".userLogsin");
+}, 50000);
 
 
 

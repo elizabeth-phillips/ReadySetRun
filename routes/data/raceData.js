@@ -92,7 +92,7 @@ async function getRaceDetails(state){
         for(let i = 0; i < response.data.results.length; i++){
             temp = resultFormat(response.data.results[i])
             if(Object.entries(temp).length !== 0){
-                console.log(temp)
+                // console.log(temp)
                 responses.push(temp);
             }
         }
@@ -131,7 +131,7 @@ async function RaceSignUpInfo(user, r){
                 pace: race.pace, 
                 ranking: race.ranking,  
                 date: new Date(race.date),
-                future: 'true',
+                future: true,
                 user_id: user.user_id, 
                 race_id: race.id})
                 .catch(output => {

@@ -1,62 +1,16 @@
 {
-    "id": 2,
-    "first_name": "Alice",
-    "last_name": "Melendez",
-    "email": "test@test.com",
-    "password": "test",
-    "age": 20,
-    "desired_pace": "14:16",
-    "city": "Choctaw",
-    "state": "Utah",
-    "zipcode": 14893,
-    "phone": "(837)463-2366",
-    "admin": 1,
-    "races": [
-        {
-            "id": 8,
-            "name": "Netility",
-            "date": null,
-            "distance": 80.7685,
-            "email": "ullamco@Zaj.com",
-            "phone": "(820) 489-3076",
-            "city": "Newkirk",
-            "state": "Kentucky",
-            "zipcode": 45598,
-            "pace": "14:33",
-            "ranking": 256
-        },
-        {
-            "id": 21,
-            "name": "Zidox",
-            "date": null,
-            "distance": 36.7934,
-            "email": "qui@Lotron.com",
-            "phone": "(862) 489-3869",
-            "city": "Saranap",
-            "state": "Guam",
-            "zipcode": 23318,
-            "pace": "9:82",
-            "ranking": 276
-        }
-    ],
-    "running_groups": [
-        {
-            "id": 6,
-            "name": "Savvy",
-            "pace": "7:24",
-            "city": "Deercroft",
-            "state": "American Samoa",
-            "zipcode": 80172,
-            "phone": "(955) 556-3632"
-        },
-        {
-            "id": 3,
-            "name": "Quizmo",
-            "pace": "8:34",
-            "city": "Olney",
-            "state": "West Virginia",
-            "zipcode": 54158,
-            "phone": "(992) 422-3725"
-        }
-    ]
+    "id": 57,
+    "first_name": "asdf",
+    "last_name": "asdf",
+    "email": "asdf",
+    "password": "asdf",
+    "age": 10,
+    "desired_pace": "adf",
+    "city": "asdf",
+    "state": "ads",
+    "zipcode": "adsf",
+    "phone": "asdf",
+    "admin": 0,
+    "races": [],
+    "running_groups": []
 }

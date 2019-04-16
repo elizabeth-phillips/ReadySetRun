@@ -25,7 +25,7 @@ function UserInfo(id, login){
                     FROM user u
                     WHERE u.id = ?`, id)
         .then(user => {
-            knex.schema.raw(`SELECT r.id, r.name, r.date, r.distance, r.email, r.phone, r.city, r.state, r.zipcode, rh.pace, rh.ranking
+            knex.schema.raw(`SELECT r.id, r.name, rh.date, r.distance, r.url, r.phone, r.city, r.state, r.zipcode, rh.pace, rh.ranking
             FROM race_history rh, race r
             WHERE ? = rh.user_id AND r.id = rh.race_id`, user[0].id).then(races => {
             user[0]['races'] = races

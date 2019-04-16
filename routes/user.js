@@ -9,7 +9,8 @@ create = (req, res) => {
     .then(async User => {
         await UserInfo(User.id, true)
         user = await getUserLoggedIn();
-        res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn() });
+        res.redirect('back');
+        // res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn() });
       })
       .catch(err => {
         console.log(err);
