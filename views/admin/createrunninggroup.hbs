@@ -1,29 +1,12 @@
 <h1>Create Running Group</h1>
-<form action="../running_group/create" method="post">
+<form action="../running_group/create" method="post" id="profile_update" class="col-md-6">         
     <div class="text-input-container">
-        <input type="text" id="name" name="name" title="Name" value={{@name}}>
-        <label for="name">Name</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="pace" name="pace" value={{@pace}}>
-        <label for="pace">Pace</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="phone" name="phone" value={{@phone}}>
-        <label for="phone">Phone Number</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="city" name="city" value={{@city}}>
-        <label for="city">City</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="state" name="state" value={{@state}}>
-        <label for="state">State</label>
-    </div>
-    <div class="text-input-container">
-        <input type="text" id="zipcode" name="zipcode" value={{@zipcode}}>
-        <label for="zipcode">Zipcode</label>
-    </div>
-    <button class="button primary" type="submit" onclick=alert("Created!")>Create</button>
-    <button title="Large Button" type="reset" class="button primary">Reset</button>
+        <input name= "name" type="text" class="form-control" placeholder="Running Group Name" value={{@name}}>
+        <input name= "pace" type="text" class="form-control" placeholder="Pace"  value={{@pace}}>
+        <input name= "phone" type="text" class="form-control" placeholder="Phone Number"  value={{@phone}}>
+        <input name= "city" type="text" class="form-control" placeholder="City"  value={{@city}}>
+        <input name= "state" type="text" class="form-control" placeholder="State"  value={{@state}}>
+        <input name= "zipcode" type="text" class="form-control" placeholder="Zipcode"  value={{@zipcode}}>
+    </div><br>
+    <button type="submit" class="btn btn-primary">Create</button>
 </form>

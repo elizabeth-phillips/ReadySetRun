@@ -16,9 +16,8 @@ exports.up = function(knex, Promise) {
       }).createTable("race", table => {
         table.increments("id").primary();
         table.string("name");
-        table.datetime("date");
-        table.float("distance");
-        table.string("email");
+        table.string("distance");
+        table.string("url");
         table.string("phone");
         table.string("city");
         table.string("state");
@@ -36,6 +35,7 @@ exports.up = function(knex, Promise) {
         table.string("pace");
         table.integer("ranking");
         table.datetime("date");
+        table.boolean("future");
         table.integer("user_id").references("user.id").onUpdate("CASCADE"); 
         table.integer("race_id").references("race.id").onUpdate("CASCADE"); 
       }).createTable("running_group_member", table => {

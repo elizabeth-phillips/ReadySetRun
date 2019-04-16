@@ -1,4 +1,5 @@
 const axios = require('axios');
+const knex = require('knex')(require('../../knexfile')[process.env.NODE_ENV]);
 
 function getDateTime() {
     var date = new Date();
@@ -91,7 +92,7 @@ async function getRaceDetails(state){
         for(let i = 0; i < response.data.results.length; i++){
             temp = resultFormat(response.data.results[i])
             if(Object.entries(temp).length !== 0){
-                console.log(temp)
+                // console.log(temp)
                 responses.push(temp);
             }
         }
@@ -103,7 +104,46 @@ async function getRaceDetails(state){
 }
 
 
+async function RaceSignUpInfo(user, r){
+    await knex.schema.raw(`SELECT COUNT(*) FROM RACE`).then(count => {
+        knex.schema.raw(`INSERT INTO race
+        VALUES (:id, :name, :distance, :url, :phone, :city, :state, :zipcode)`, {
+            id: count,
+            name: r.name, 
+            distance: JSON.stringify(r.distances), 
+            url: r.url, 
+            phone: r.phone, 
+            city: r.city, 
+            state: r.state, 
+            zipcode: r.zipcode})
+            .catch(output => {
+                console.log(output)
+                return false;
+            })
+        return true;
+    }).catch(()=>{console.log()})
+    
+    console.log("===========")
+    await knex.schema.raw(`SELECT COUNT(*) FROM RACE`).then(count => { 
+        knex.schema.raw(`INSERT INTO race_history
+            VALUES (:id, :pace, :ranking, :date, :future, :user_id, :race_id)`, {
+                id: count,
+                pace: race.pace, 
+                ranking: race.ranking,  
+                date: new Date(race.date),
+                future: true,
+                user_id: user.user_id, 
+                race_id: race.id})
+                .catch(output => {
+                    console.log(output)
+                    return false
+                })
+                return true;
+            }).catch(()=>{console.log()})
+} 
+
 module.exports = {
     RaceDetails: getRaceDetails,
-    SingleRace: getSingleRaceDetail
+    SingleRace: getSingleRaceDetail,
+    SignUp: RaceSignUpInfo
 }

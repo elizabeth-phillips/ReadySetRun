@@ -1,28 +1,22 @@
-<div class="main">
-
-<div class="container">
+<div class="jumbotron">
+    <h1>{{@name}} Info</h1> 
     <div class="row">
-        {{!-- <div class="col-md-6 mb-5">
-            
-        </div> --}}
-        <div class="col-md-12">
-            
-        </div>  
-    <div class="col-md-12">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <h1>{{@name}} Info</h1> 
-            <table class="standard-table alternating-rows" style="width:50%">
-                <tr><td>Pace       </td><td>:   {{@pace}}</td></tr>
-                <tr><td>Location        </td><td>: {{@city}}, {{@state}} {{@zipcode}}</td></tr>
-                <tr><td>Phone      </td><td>: {{@phone}}</td></tr>
-            </table>
-                <br>
-                <a href="/running_group/"><button class="btn btn-primary">View All Running Groups</button></a>
+        <div class="container">
+            <div class="col-md-12">
+                <b>Pace:</b> {{@pace}}<br>
+                <b>Location:</b>  {{@city}}, {{@state}} {{@zipcode}}</br>
+                <b>Phone:</b>  {{@phone}}<br>
+                {{#if isPart}}
+                    <b>Already Signed Up</b>
+                {{/if}}
+            </div>
+            {{#if user.first_name}}
+                {{#unless isPart}}
+                    <a href="/running_group/sign_up/{{@id}}"><button class="btn btn-primary">Sign Up</button></a>
+                {{/unless}}
+            {{/if}}
+            <br><br>
+            <a href="/running_group/"><button class="btn btn-primary">View All Running Groups</button></a>
         </div>
-        
-        <div class="col-md-2"></div>
-        
-    </div>
     </div>
 </div>

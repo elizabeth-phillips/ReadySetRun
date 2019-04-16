@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const {Race} = require("../db/ready_race_run");
 const {getStates, getFiltered} = require("../views/public/javascript/searchResults")
-const {RaceDetails, SingleRace} = require("./data/raceData");
+const {SignUp, RaceDetails, SingleRace} = require("./data/raceData");
 const {getUserLoggedIn} = require("./data/userData");
 
 router.get("/", async (req, res) => {
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
     user = getUserLoggedIn();
     let result = RaceDetails(req.body.selectpicker);
-    console.log("GETTING FILTER", getFiltered(result, req.body.query, req.body.selectpicker))
+    // console.log("GETTING FILTER", getFiltered(result, req.body.query, req.body.selectpicker))
     res.status(200).render('viewraces', { query: req.body.query, 
       state: req.body.selectpicker, 
       data: getFiltered(result, req.body.query, req.body.selectpicker), 
@@ -24,8 +24,14 @@ router.post("/", async (req, res) => {
 router.get("/upcoming/:name", async (req, res) => {
   user = await getUserLoggedIn();
   race = await SingleRace(req.params.name);
-  console.log(race)
   res.status(200).render('race', {  data: JSON.parse(JSON.stringify(race)), user:user });
+});
+
+router.get("/signup/:name", async (req, res) => {
+  user = await getUserLoggedIn();
+  race = await SingleRace(req.params.name);
+  await SignUp(user, race)
+  res.redirect(200, '../profile');
 });
 
 router.get("/:id", (req, res) => {
