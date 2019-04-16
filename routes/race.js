@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
     user = getUserLoggedIn();
     let result = RaceDetails(req.body.selectpicker);
-    console.log("GETTING FILTER", getFiltered(result, req.body.query, req.body.selectpicker))
+    // console.log("GETTING FILTER", getFiltered(result, req.body.query, req.body.selectpicker))
     res.status(200).render('viewraces', { query: req.body.query, 
       state: req.body.selectpicker, 
       data: getFiltered(result, req.body.query, req.body.selectpicker), 

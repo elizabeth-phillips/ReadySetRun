@@ -34,6 +34,21 @@ router.post("/", (req, res) => {
   });
 });
 
+router.post("/create", (req, res) => {
+  RunningGroup.forge( req.body )
+    .save(req.body)
+    .then(async RunningGroup => {
+        user = await getUserLoggedIn();
+        console.log(RunningGroup.name)
+        var fullUrl = req.protocol + '://' + req.get('host');
+        res.redirect(fullUrl);
+      })
+      .catch(err => {
+        console.log(err);
+        res.redirect('back')
+    });
+});
+
 router.get("/:id", (req, res) => {
      RunningGroup.where({ id: req.params.id })
       .fetch()

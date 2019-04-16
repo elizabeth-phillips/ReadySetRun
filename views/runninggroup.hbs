@@ -6,6 +6,9 @@
                 <b>Pace:</b> {{@pace}}<br>
                 <b>Location:</b>  {{@city}}, {{@state}} {{@zipcode}}</br>
                 <b>Phone:</b>  {{@phone}}<br>
+                {{#if isPart}}
+                    <b>Already Signed Up</b>
+                {{/if}}
             </div>
             {{#if user.first_name}}
                 {{#unless isPart}}

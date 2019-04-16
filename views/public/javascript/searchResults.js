@@ -1,7 +1,7 @@
 function getUnique(list){
   newList = []
   for (let i = 0; i < list.length; i++){
-    if(!(list[i] in newList)){
+    if(newList.indexOf(list[i]) == -1){
       newList.push(list[i])
     }
   }
@@ -25,12 +25,15 @@ function getStates(races){
     } 
     output = []
     for (let i = 0; i < results.length; i++){
-      if ((state.includes("All") && (results[i].state == state) )||
-          (query != "" && results[i].name.toUpperCase().includes(query.toUpperCase()))){
-          output.push(results[i])
+      if (state != "All" && results[i].state == state){
+        output.push(results[i])
+      }
+      if (query != "" && results[i].name.toUpperCase().includes(query.toUpperCase())){
+        output.push(results[i])
       }
     }
-    return output
+    console.log(output)
+    return getUnique(output)
   }
   
   module.exports = {

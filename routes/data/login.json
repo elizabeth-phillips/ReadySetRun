@@ -1,16 +1,66 @@
 {
-    "id": 58,
-    "first_name": "a",
-    "last_name": "a",
-    "email": "a",
-    "password": "a",
-    "age": 76,
-    "desired_pace": "12",
-    "city": "a",
-    "state": "a",
-    "zipcode": 678,
-    "phone": "a",
-    "admin": 0,
-    "races": [],
-    "running_groups": []
+    "id": 1,
+    "first_name": "Alice",
+    "last_name": "Melendez",
+    "email": "test@test.com",
+    "password": "test",
+    "age": 20,
+    "desired_pace": "14:16",
+    "city": "Choctaw",
+    "state": "Utah",
+    "zipcode": 14893,
+    "phone": "(837)463-2366",
+    "admin": 1,
+    "races": [
+        {
+            "id": 27,
+            "name": "Bolax",
+            "date": "Wed Jan 02 2013 18:37:01 GMT+0000 (UTC)",
+            "distance": "41.7661",
+            "url": "ea@Typhonica.com",
+            "phone": "(836) 600-2903",
+            "city": "Winchester",
+            "state": "Marshall Islands",
+            "zipcode": 20626,
+            "pace": "8:84",
+            "ranking": 191
+        },
+        {
+            "id": 29,
+            "name": "Lunchpad",
+            "date": "Thu Jul 14 2011 23:38:57 GMT+0000 (UTC)",
+            "distance": "86.1568",
+            "url": "veniam@Panzent.com",
+            "phone": "(976) 475-3958",
+            "city": "Salunga",
+            "state": "Iowa",
+            "zipcode": 65113,
+            "pace": "7:43",
+            "ranking": 481
+        },
+        {
+            "id": 5,
+            "name": "Kaggle",
+            "date": "Sun Nov 14 2010 17:08:02 GMT+0000 (UTC)",
+            "distance": "1.2631",
+            "url": "cupidatat@Cubicide.com",
+            "phone": "(923) 497-3800",
+            "city": "Shrewsbury",
+            "state": "Puerto Rico",
+            "zipcode": 96525,
+            "pace": "13:82",
+            "ranking": 468
+        }
+    ],
+    "running_groups": [
+        {
+            "id": 11,
+            "name": "Freakin",
+            "pace": "11:53",
+            "city": "Fillmore",
+            "state": "Wisconsin",
+            "zipcode": 95005,
+            "phone": "(885) 407-2660"
+        }
+    ]
 }

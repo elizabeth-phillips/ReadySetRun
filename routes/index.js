@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
 
 router.get("/admin/createrunninggroup", async(req, res) => {
   user = await getUserLoggedIn();
-  res.render('admin/createrunninggroup', { data: user, user:user});
+  res.render('admin/createrunninggroup', {  data: {}, user:user});
 });
 
 router.get("/admin/createrace/", (req, res) => {
