@@ -47,6 +47,7 @@ describe('Test the paths for Race', () => {
     })
 });
 
+
 describe("Test a 404", ()=>{
     test("It shoudl respond with a 404 Status", async()=>{
         request(app)
