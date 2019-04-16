@@ -9,8 +9,8 @@ create = (req, res) => {
     .then(async User => {
         await UserInfo(User.id, true)
         user = await getUserLoggedIn();
-        res.redirect('back');
-        // res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:getUserLoggedIn() });
+        var fullUrl = req.protocol + '://' + req.get('host') + '/user/' + User.id;
+        res.redirect(fullUrl);
       })
       .catch(err => {
         console.log(err);
@@ -39,8 +39,9 @@ login = (req, res) => {
         if (!User) {
             res.redirect('back')
         } else {
-            await UserInfo(User.id, true)
-            res.redirect(`../user/${User.id}`)
+            await UserInfo(User.id, true);
+            var fullUrl = req.protocol + '://' + req.get('host') + '/user/' + User.id;
+            res.redirect(fullUrl);
         }
     })
     .catch(err => {
@@ -69,7 +70,8 @@ findById = (req, res) => {
 
 logout = async (req, res) => {
     user = await clearUserLoggedIn();
-    res.redirect("../")
+    var fullUrl = req.protocol + '://' + req.get('host');
+    res.redirect(fullUrl)
 };
 
 deleteUser = (req, res) => {
