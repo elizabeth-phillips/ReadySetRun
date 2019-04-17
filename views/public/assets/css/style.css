@@ -346,3 +346,9 @@ body {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
 }
+
+/* user profile */
+#user_update{
+    display: none;
+}
+

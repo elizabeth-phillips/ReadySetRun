@@ -62,7 +62,6 @@ describe('Test the paths for Race', () => {
         .expect('Content-Type', /json/)
         .expect(200);
     });
-
 });
 
 
