@@ -51,8 +51,6 @@ describe('Test the paths for Running Group', () => {
         .expect(500)
         
     });
-
-
 });
 
 describe('Test the paths for Running Group', () => {

@@ -46,3 +46,12 @@ describe('Test the paths for Race', () => {
         .expect(302)
     })
 });
+
+
+describe("Test a 404", ()=>{
+    test("It shoudl respond with a 404 Status", async()=>{
+        request(app)
+        .get("/nowhere")
+        .expect(404);
+    });
+});

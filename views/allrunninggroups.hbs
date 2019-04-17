@@ -1,14 +1,16 @@
 <div class="container">
     <div class="row">
+        <div class="col-md-4">
         <form action="../running_group/" method="post">
-            <input name="query" type="text" class="form-control" placeholder="Keywords" value={{@query}}>
-            <select name="selectpicker" class="custom-select my-1 mr-sm-2">
+            <input name="query" type="text" class="form-control" style="width: 20rem;" placeholder="Keywords" value={{@query}} >
+            </div>
+            <div class="col-md-4"><select name="selectpicker" class="custom-select my-1 mr-sm-2">
                 <option value="All">All States</option>
                 {{#each states}}
                     <option value="{{this}}">{{this}}</option>
                 {{/each}}
-            </select>
-            <button type="submit" class="btn btn-primary">Search</button>
+            </select></div>
+            <div class="col-md-3"><button type="submit" class="btn btn-primary">Search</button></div>
         </form>
     </div>
     <br><br>
