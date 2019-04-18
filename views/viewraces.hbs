@@ -28,17 +28,19 @@
     <div class="row">
         {{#each data }}
             <div class="card col-md-4" >
-                <div class="card-header">
-                    <b>{{name}}</b>
-                </div>
+                <img class="card-img-top d-flex align-items-center justify-content-center" src="{{logo}}" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">{{format_date date}}</h5>
+                    <h5 class="card-title">{{name}}</h5>
+                    <hr>
+                    <h6>{{format_date date}}</h6>
                     <p class="card-text">
                         {{distances}}<br>
                         <b>Location:</b> {{city}}, {{state}} {{zipcode}}<br>
                         <b>Phone:</b> {{phone}}<br>
                         <b>URL:</b> <a href="{{url}}">{{url}}</a>
                     </p>
+                </div>
+                <div class="card-footer">
                     <a href="../race/upcoming/{{name}}" class="btn btn-primary">View Details</a>
                 </div>
             </div>

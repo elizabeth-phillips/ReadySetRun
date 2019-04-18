@@ -22,6 +22,7 @@ function getDistances(raceData){
     output = []
     for(let i = 0; i < raceData.length; i++){
         res = raceData[i].tag;
+
         if(res.tagDescription.includes('Distance') && !res.tagName.includes('Other')){
             output.push(res.tagName);
         }
@@ -78,68 +79,78 @@ async function getSingleRaceDetail(name){
     }
 }
 
-async function getRaceDetails(state){
+async function getRaceDetails(state, query){
     try{
         var API_KEYV2 = 'esdnh7utmgwp82uj9qwgktyp';
-        let response;
+        let response = '';
+        let results = '';
+        
+        if (state === '' &&  query === ''){
+            console.log("No filter")
+            response = await axios.get(`http://api.amp.active.com/v2/search?query=running&category=event&country=United%20States&start_date=${getDateTime()}..2019-12-31&api_key=${API_KEYV2}&exists=asset.assetName&per_page=50`);
+        } 
+        else if(!state.includes("All") && query === ''){
+            console.log("Search by state")
+            response = await axios.get(`http://api.amp.active.com/v2/search?query=running&category=event&country=United%20States&start_date=${getDateTime()}..2019-12-31&api_key=${API_KEYV2}&exists=asset.assetName&per_page=50&state=${state}`);
+        } 
+        else if(state === '' && query !== ''){
+            console.log("Search by query")
+            response = await axios.get(`http://api.amp.active.com/v2/search?query=running%20AND%20${query}&category=event&country=United%20States&start_date=${getDateTime()}..2019-12-31&api_key=${API_KEYV2}&exists=asset.assetName&per_page=50`);
+        } 
+        // else {
+        //     console.log("Search by all")
+        //     response = await axios.get(`http://api.amp.active.com/v2/search?topic=running&category=event&sort=date_asc&country=United%20States&state=${state}&start_date=${getDateTime()}..&api_key=${API_KEYV2}&query=${query}&exists=asset.assetName`);
+        // }
+        results = response.data.results;
 
-        if(state !== ''){
-            response = await axios.get(`http://api.amp.active.com/v2/search?query=running&category=event&country=United%20States&start_date=${getDateTime()}..&api_key=${API_KEYV2}&exists=asset.assetName`);
-        } else {
-            response = await axios.get(`http://api.amp.active.com/v2/search?query=running&category=event&country=United%20States&state=${state}&start_date=${getDateTime()}..&api_key=${API_KEYV2}&exists=asset.assetName`);
-        }
         let responses = []
-        for(let i = 0; i < response.data.results.length; i++){
-            temp = resultFormat(response.data.results[i])
+        for(let i = 0; i < results.length; i++){
+            temp = resultFormat(results[i])
+
             if(Object.entries(temp).length !== 0){
-                // console.log(temp)
                 responses.push(temp);
             }
         }
-        
+        responses = sortDates(responses)
         return responses;
     } catch (error){
         console.log(error);
     }
 }
 
+function sortDates(results){
+    for(let i = 0; i < results.length; i++){
+        for(let j = i+1; j < results.length; j++){
+            if(results[i].date > results[j].date){
+                let temp = results[i].date;
+                results[i].date = results[j].date;
+                results[j].date = temp;
+            }
+        }
+    }
+    
+    return results;
+}
+
 
 async function RaceSignUpInfo(user, r){
-    await knex.schema.raw(`SELECT COUNT(*) FROM RACE`).then(count => {
-        knex.schema.raw(`INSERT INTO race
-        VALUES (:id, :name, :distance, :url, :phone, :city, :state, :zipcode)`, {
-            id: count,
-            name: r.name, 
-            distance: JSON.stringify(r.distances), 
-            url: r.url, 
-            phone: r.phone, 
-            city: r.city, 
-            state: r.state, 
-            zipcode: r.zipcode})
-            .catch(output => {
-                console.log(output)
-                return false;
-            })
-        return true;
-    }).catch(()=>{console.log()})
+    count = await knex.schema.raw(`SELECT COUNT(*) AS COUNT FROM RACE`);
+    count = count[0].COUNT+1
+    race = await knex.schema.raw(`INSERT INTO race
+            VALUES (:id, :name, :distance, :url, :phone, :city, :state, :zipcode)`, {
+                id: parseInt(count),
+                name: r.name, 
+                distance: JSON.stringify(r.distances), 
+                url: r.url, 
+                phone: r.phone, 
+                city: r.city, 
+                state: r.state, 
+                zipcode: r.zipcode})
     
-    console.log("===========")
-    await knex.schema.raw(`SELECT COUNT(*) FROM RACE`).then(count => { 
-        knex.schema.raw(`INSERT INTO race_history
-            VALUES (:id, :pace, :ranking, :date, :future, :user_id, :race_id)`, {
-                id: count,
-                pace: race.pace, 
-                ranking: race.ranking,  
-                date: new Date(race.date),
-                future: true,
-                user_id: user.user_id, 
-                race_id: race.id})
-                .catch(output => {
-                    console.log(output)
-                    return false
-                })
-                return true;
-            }).catch(()=>{console.log()})
+    race_count = await knex.schema.raw(`SELECT COUNT(*) AS COUNT FROM RACE`);
+    race_count = race_count[0].COUNT+1;
+    await knex.schema.raw(`INSERT INTO race_history VALUES (?, ?, ?, ?, ?, ?);`,
+                            [parseInt(race_count), race.pace, race.ranking, new Date(race.date), true, user.user_id]);
 } 
 
 module.exports = {
