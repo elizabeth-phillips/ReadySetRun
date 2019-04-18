@@ -1,8 +1,10 @@
 <div class="container">
     <div class = "row">
     <div class="input-group col-md-8">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary">Search</button>
+        <form action="../admin/Users" method="post">
+            <input name="query" class="form-control" type="text" placeholder="Search" aria-label="Search" value={{@query}} >
+            <button class="btn btn-primary">Search</button>
+        </form>
     </div>
     </div>
     <br><br>

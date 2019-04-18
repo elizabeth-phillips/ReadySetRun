@@ -6,32 +6,47 @@ const {SignUp, RaceDetails, SingleRace} = require("./data/raceData");
 const {getUserLoggedIn} = require("./data/userData");
 
 router.get("/", async (req, res) => {
-  let user = getUserLoggedIn();
-  let responses = await RaceDetails('');
-  res.status(200).render('viewraces', { query: "", state: "", data: getFiltered(responses, "", "All"), states: getStates(responses), races: user.races, running_groups: user.running_groups, user:user });
+  let user = await getUserLoggedIn();
+  let responses = await RaceDetails('', '');
+  
+  res.status(200).render('viewraces', { query: "", state: "", data: responses, states: getStates(responses), races: user.races, running_groups: user.running_groups, user:user });
 });
 
 router.post("/", async (req, res) => {
-    user = getUserLoggedIn();
-    let result = RaceDetails(req.body.selectpicker);
-    // console.log("GETTING FILTER", getFiltered(result, req.body.query, req.body.selectpicker))
+    user = await getUserLoggedIn();
+    let result = await RaceDetails(req.body.selectpicker, req.body.query);
+
+    console.log("POST FILTER", req.body.query, req.body.selectpicker);
+
     res.status(200).render('viewraces', { query: req.body.query, 
       state: req.body.selectpicker, 
-      data: getFiltered(result, req.body.query, req.body.selectpicker), 
+      data: result, 
       states: getStates(result) , user:user });
 });
 
 router.get("/upcoming/:name", async (req, res) => {
   user = await getUserLoggedIn();
   race = await SingleRace(req.params.name);
-  res.status(200).render('race', {  data: JSON.parse(JSON.stringify(race)), user:user });
+  res.status(200).render('race', {  data: JSON.parse(JSON.stringify(race)), user:user, distances: race.distances, num_choices: race.distances.length });
 });
 
-router.get("/signup/:name", async (req, res) => {
+router.post("/signup/:name", async (req, res) => {
   user = await getUserLoggedIn();
   race = await SingleRace(req.params.name);
-  await SignUp(user, race)
-  res.redirect(200, '../profile');
+  console.log(race.distances.indexOf("5K"), req.body.race, req.body)
+  race = race.distances[race.distances.indexOf(req.body.race)]
+  Race.forge( race )
+    .save(req.body)
+    .then(async race => {
+        result = JSON.parse(JSON.stringify( race))
+        console.log(result)
+        var fullUrl = req.protocol + '://' + req.get('host');
+        // res.redirect(fullUrl);
+      })
+      .catch(err => {
+        console.log(err);
+        res.redirect('back')
+    });
 });
 
 router.get("/:id", (req, res) => {

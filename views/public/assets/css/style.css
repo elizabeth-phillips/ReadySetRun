@@ -20,6 +20,13 @@
     letter-spacing: 0.1rem;
 }
 
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
 /* registration.hbs */
 #image {
     background-image: url("/assets/images/running-banner.jpg");
@@ -352,3 +359,7 @@ body {
     display: none;
 }
 
+/*race sign up*/
+#race_signup{
+    display: none;
+}
