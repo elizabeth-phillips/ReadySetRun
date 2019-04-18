@@ -20,3 +20,9 @@ Make sure to use: `node v11.10.0 (npm v6.7.0)`. To get it, use: `nvm install sta
 *  knex seed:run --env development
 *  npm start
 ```
+
+## Tests
+Make sure to have jest and puppeteer installed: 
+
+* `npm jest` runs all jest files 
+* node testing/puppeteer/`filename.js` to run puppeteer 
