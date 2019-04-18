@@ -1,7 +1,7 @@
 {
     "id": 1,
     "first_name": "Alice",
-    "last_name": "Melendez",
+    "last_name": "sMelendez",
     "email": "test@test.com",
     "password": "test",
     "age": 20,
@@ -61,6 +61,15 @@
             "state": "Wisconsin",
             "zipcode": 95005,
             "phone": "(885) 407-2660"
+        },
+        {
+            "id": 61,
+            "name": "Best",
+            "pace": "10",
+            "city": "asdfs",
+            "state": "as",
+            "zipcode": 2345,
+            "phone": 123454
         }
     ]
 }

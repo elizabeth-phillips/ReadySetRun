@@ -1,19 +1,19 @@
 <div class="container">
-    <div class="row">
-        <form action="../race/" method="post" id="search_results" class="col-sm-10 col-md-8 col-lg-6 mx-20">
-            <div class="text-input-container">
-                <input name="query" type="text" class="form-control" placeholder="Keywords" value={{@query}}>
-            </div>
-            
-            <select name="selectpicker" class="selectpicker col-sm-2 mx-3" form="search_results">
-                <option value="All">All States</option>
-                {{#each states}}
-                    <option value="{{this}}">{{this}}</option>
-                {{/each}}
-            </select>
-            <button type="submit" class="btn btn-primary">Search</button>
-        </form>
-    </div>
+      <div class="row">
+    <form class = "form-inline" action="../race/" method="post" id="search_results">
+
+      <input name="query" type="text" class="form-control raceInput" placeholder="Keywords" value={{@query}}>
+
+      <select name="selectpicker" class="selectpicker dropDownRace" form="search_results">
+        <option value="All">All States</option>
+        {{#each states}}
+          <option value="{{this}}">{{this}}</option>
+        {{/each}}
+      </select>
+      <button type="submit" class="btn btn-primary searchRace">Search</button>
+    </form>
+  </div>
+
     <br><br>
     <h2>
     {{#if query}}
@@ -28,7 +28,7 @@
     <div class="row">
         {{#each data }}
             <div class="card col-md-4" >
-                <img class="card-img-top d-flex align-items-center justify-content-center" src="{{logo}}" alt="Card image cap">
+                <img class="card-img-top d-flex align-items-center justify-content-center" src="{{logo}}" alt="Race Logo">
                 <div class="card-body">
                     <h5 class="card-title">{{name}}</h5>
                     <hr>
@@ -46,5 +46,6 @@
             </div>
         {{/each}}
     </div>
-    <p VALUE="Back" onClick="history.go(-1);"><i class="fas fa-arrow-left" ></i> Back</p>
+    <br>
+    <p VALUE="Back" onClick="history.go(-1);"><i class="fas fa-arrow-left goBack" ></i> Back</p>
 </div>
