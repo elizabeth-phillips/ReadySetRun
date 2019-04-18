@@ -363,3 +363,26 @@ body {
 #race_signup{
     display: none;
 }
+
+/* Style the form - display items horizontally */
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .raceInput{
+    padding-right: 10px;
+    margin-right: 10px;
+  
+  }
+  .dropDownRace{
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  .searchRace{
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  
