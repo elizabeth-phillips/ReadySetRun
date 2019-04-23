@@ -1,20 +1,28 @@
 <div class="container">
     <div class="row">
-        <form class="form-inline" action="../race/" method="post" id="search_results">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <form action="../race/" method="post" id="search_results">
+                <input name="query" type="text" class="form-control raceInput" placeholder="Keywords" value={{@query}}>
+        </div>
 
-            <input name="query" type="text" class="form-control raceInput" placeholder="Keywords" value={{@query}}>
-
-            <select name="selectpicker" class="selectpicker dropDownRace" form="search_results">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <select name="selectpicker" class="custom-select selectpicker dropDownRace" form="search_results">
                 <option value="All">All States</option>
                 {{#each states}}
                 <option value="{{this}}">{{this}}</option>
                 {{/each}}
             </select>
-            <button type="submit" class="btn btn-primary searchRace">Search</button>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3"><button type="submit" class="btn btn-primary searchRace" style="width:80%;height:80%">Search</button>
+        </div>
         </form>
     </div>
 
-    <br><br>
+
+    <br>
+    <a href="#" VALUE="Back" onClick="history.go(-1);">
+        <i class="fas fa-chevron-left goBack"></i> Back
+        </a>
     <h2>
         {{#if query}}
         Search Results for: {{query}}
@@ -25,11 +33,11 @@
             in {{state}}
             {{/if}}
         </h2>
+        <hr>
         <div class="row">
             {{#each data }}
             <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
-                <img class="card-img-top center-image" src="{{logo}}"
-                    alt="Race Logo" >
+                <img class="card-img-top center-image" src="{{logo}}" alt="Race Logo">
                 <div class="card-body scroll">
                     <h5 class="card-title">{{name}}</h5>
                     <hr>
@@ -48,5 +56,7 @@
             {{/each}}
         </div>
         <br>
-        <p VALUE="Back" onClick="history.go(-1);"><i class="fas fa-arrow-left goBack"></i> Back</p>
+        <a href="#" VALUE="Back" onClick="history.go(-1);">
+        <i class="fas fa-chevron-left goBack"></i> Back
+        </a>
 </div>

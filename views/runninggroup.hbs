@@ -1,22 +1,30 @@
-<div class="jumbotron">
-    <h1>{{@name}} Info</h1> 
+<div class="container jumbotron">
+    <h1>{{@name}} Info</h1>
+    <hr>
     <div class="row">
         <div class="container">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <b>Pace:</b> {{@pace}}<br>
-                <b>Location:</b>  {{@city}}, {{@state}} {{@zipcode}}</br>
-                <b>Phone:</b>  {{@phone}}<br>
+                <b>Location:</b> {{@city}}, {{@state}} {{@zipcode}}</br>
+                <b>Phone:</b> {{@phone}}<br>
                 {{#if isPart}}
-                    <b>Already Signed Up</b>
+                <b>Already Signed Up</b>
                 {{/if}}
             </div>
+            <br>
+            <div class="col-md-6">
             {{#if user.first_name}}
-                {{#unless isPart}}
-                    <a href="/running_group/sign_up/{{@id}}"><button class="btn btn-primary">Sign Up</button></a>
-                {{/unless}}
+            {{#unless isPart}}
+            <a href="/running_group/sign_up/{{@id}}"><button class="btn btn-primary">Sign Up</button></a>
+            {{/unless}}
             {{/if}}
             <br><br>
             <a href="/running_group/"><button class="btn btn-primary">View All Running Groups</button></a>
+            <br>
+            </div>
         </div>
-    </div>
+    </div><br>
+    <a href="#" VALUE="Back" onClick="history.go(-1);">
+        <i class="fas fa-chevron-left goBack"></i> Back to Profile
+    </a>
 </div>

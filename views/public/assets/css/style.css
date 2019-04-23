@@ -21,19 +21,20 @@
 }
 
 .card{
-    margin-right: 10px;
+    margin-right: 25px;
+    margin-left: 10px;
     /* margin-bottom: 5px; */
 }
 
 .card-body{
-    height: 20rem;
+    height: 18rem;
 }
 
 .scroll {
     overflow-y: auto;
 }
 .card-title{
-    height: 40px;
+    height: auto;
 }
 .center-image {
     display: block;
@@ -236,34 +237,7 @@ em {
     display: none;
 }
 
-/* For responsive screens */
-@media screen and (max-width: 767px) and (min-width: 576px) {
-    #myModal {
-        margin-left: 20%;
-        margin-right: 20%;
-    }
 
-    #forgot-password {
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-}
-
-@media screen and (min-width: 768px) {
-
-    #myModal .modal-dialog {
-        width: 500px;
-    }
-
-    #forgot-password .modal-dialog {
-        width: 500px;
-    }
-
-    .modal-body {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-}
 
 /* -------------------------------------- */
 /* ------------Footer ---------------------- */
@@ -346,12 +320,6 @@ em {
     color: #00aced;
 }
 
-@media screen and (max-width: 767px) {
-    #myFooter {
-        text-align: center;
-    }
-}
-
 
 html {
     height: 100% !important;
@@ -387,12 +355,9 @@ body {
 }
 
 /* Style the form - display items horizontally */
-.form-inline {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    width: 100%;
-  }
+.form-control{
+    margin-bottom:10px;
+}
   
   .raceInput{
     padding-right: 10px;
@@ -402,6 +367,7 @@ body {
   .dropDownRace{
     padding-right: 10px;
     margin-right: 10px;
+    width : 300px;
   }
   .searchRace{
     padding-right: 10px;
@@ -412,3 +378,39 @@ body {
   .footnote{
     text-align: center;
   }
+
+  /* For responsive screens */
+@media screen and (max-width: 767px) and (min-width: 576px) {
+    #myModal {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    #forgot-password {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #myModal .modal-dialog {
+        width: 500px;
+    }
+
+    #forgot-password .modal-dialog {
+        width: 500px;
+    }
+
+    .modal-body {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+}

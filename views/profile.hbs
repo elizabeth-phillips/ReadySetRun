@@ -4,10 +4,11 @@
     <hr>
     
     <div class="row">
-        <section class="col-md-6">
+        <section class="col-md-4">
             
 
-            <h2> User Info</h2>
+            <h3> User Information</h3>
+            <hr>
             <table style="width:80%">
                 <tr>
                     <td>Name  </td>
@@ -58,11 +59,11 @@
     </div>
     <br>
     <hr>
-    <h2 class="row mx-10">Your Running Groups</h2>
+    <h2 class="row">Your Running Groups</h2><br>
     {{#if running_groups}}
     <div class="row">
         {{#each running_groups }}
-            <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
                 <div class="card-header">
                     <b>{{name}}</b>
                 </div>
@@ -81,12 +82,12 @@
     <h4>Currently you are not a part of any running groups!</h4>
     <h5>Let's change that by looking at all of the options <a href="../../running_group">here</a>!</h5>
     {{/if}}
-    <hr>
-    <h2 class="row mx-10">Your Previous Races</h2>
+    <hr><br>
+    <h2 class="row">Your Previous Races</h2><br>
     {{#if races}}
     <div class="row">
         {{#each races }}
-            <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
                 <div class="card-header">
                     <b>{{name}}</b>
                 </div>
