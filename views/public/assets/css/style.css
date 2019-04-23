@@ -20,12 +20,34 @@
     letter-spacing: 0.1rem;
 }
 
+.card{
+    margin-right: 10px;
+    /* margin-bottom: 5px; */
+}
 
-.card-img-top {
+.card-body{
+    height: 20rem;
+}
+
+.scroll {
+    overflow-y: auto;
+}
+.card-title{
+    height: 40px;
+}
+.center-image {
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 30%;
+  }
+/* .card-img-top {
     width: 100%;
     height: 15vw;
     object-fit: cover;
-}
+} */
 
 /* registration.hbs */
 #image {
