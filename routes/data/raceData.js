@@ -1,5 +1,6 @@
 const axios = require('axios');
 const knex = require('knex')(require('../../knexfile')[process.env.NODE_ENV]);
+const fs = require('fs');
 
 function getDateTime() {
     var date = new Date();
@@ -133,6 +134,28 @@ function sortDates(results){
 }
 
 
+async function signUp(user_id, race_name){
+    console.log("Signing Up")
+    exists = await isPartOf(user_id, race_name)
+    console.log("Already exists", exists)
+    if(!exists){
+        count = await knex.schema.raw(`SELECT COUNT(*) AS COUNT FROM future_races`);
+        console.log("Total races", count[0].COUNT)
+        await knex.schema.raw(`INSERT INTO future_races VALUES (?, ?, ?);`, [parseInt(count[0].COUNT+1), parseInt(user_id), race_name])
+    }
+}
+
+async function isPartOf(user_id, race_id){
+    exists = await knex.schema.raw(`SELECT COUNT(*) AS COUNT
+    FROM running_group_member
+    WHERE user_id = ? AND running_group_id = ?`, [parseInt(user_id), parseInt(race_id)]);
+    return exists[0].COUNT > 0;
+}
+
+module.exports = {
+    SignUp: signUp,
+    IsPartOf: isPartOf
+}
 async function RaceSignUpInfo(user, r){
     count = await knex.schema.raw(`SELECT COUNT(*) AS COUNT FROM RACE`);
     count = count[0].COUNT+1
