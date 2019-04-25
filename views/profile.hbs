@@ -1,47 +1,46 @@
 
-<div class="container">
+<div class="container ">
+  <br></br>
     <h1>{{@first_name}} {{@last_name}} Profile</h1>
     <hr>
-    
+
     <div class="row">
         <section class="col-md-6">
-            
 
-            <h3> User Information</h3>
-            <hr>
             <table style="width:80%">
                 <tr>
-                    <td>Name  </td>
-                    <td>: {{@first_name}} {{@last_name}}</td>
+                    <td><h5></h>Name  </h5></td>
+                    <td><h5><b>: {{@first_name}} {{@last_name}}</b></h5></td>
                 </tr>
                 <tr>
-                    <td>Email </td>
-                    <td>: {{@email}}</td>
+                    <td><h5>Email </h5></td>
+                    <td><h5><b>: {{@email}}</b></h5></td>
                 </tr>
                 <tr>
-                    <td>Phone </td>
-                    <td>: {{@phone}}</td>
+                    <td><h5>Phone </h5></td>
+                    <td><h5><b>: {{@phone}}</b></h5></td>
                 </tr>
                 <tr>
-                    <td>Address </td>
-                    <td>: {{@city}} {{@state}} {{@zipcode}}</td>
+                    <td><h5>Address </h5></td>
+                    <td><h5><b>: {{@city}} {{@state}} {{@zipcode}}</b></h5></td>
                 </tr>
                 <tr>
-                    <td>Desired Pace </td>
-                    <td>: {{@desired_pace}}</td>
+                    <td><h5>Desired Pace </h5></td>
+                    <td><h5><b>: {{@desired_pace}}</b></h5></td>
                 </tr>
             </table>
             <br>
-                    
+
             <button  onClick= "updateUser()" type="submit" class="btn btn-secondary updateInfo" data-toggle="tooltip" data-placement="right" title="Double click to update your Information">
  Update </button></span>
         </section>
 
         <section class="col-md-6">
         <form action="/user/{{@id}}" method="post" id="user_update" class="col-md-8">
-            
+
             <div class="text-input-container">
-                <p><b>Update your information: </b></p>
+                <h5><b>Update your information: </b></h5>
+                <hr></hr>
                 <input name= "first_name" type="text" class="form-control" placeholder="First name" value={{@first_name}}>
                 <input name= "last_name" type="text" class="form-control" placeholder="Last Name"  value={{@last_name}}>
                 <input name= "email" type="text" class="form-control" placeholder="Email"  value={{@email}}>
@@ -53,17 +52,18 @@
                 <input name= "age" type="text" class="form-control" placeholder="Age"  value={{@age}}>
                 <input name= "desired_pace" type="text" class="form-control" placeholder="Desired Pace"  value={{@desired_pace}}>
             </div><br>
-            <button  type="submit" class="btn btn-primary done">Done</button>
+            <button  type="submit" class="btn btn-danger done">Done</button>
         </form>
         </section>
     </div>
     <br>
+    <br>
+    <h2 class="row">Your Running Groups</h2>
     <hr>
-    <h2 class="row">Your Running Groups</h2><br>
     {{#if running_groups}}
     <div class="row">
         {{#each running_groups }}
-            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
+            <div class="card shadow p-3 mb-5 bg-white rounded card-profile" style="width: 30%;">
                 <div class="card-header">
                     <b>{{name}}</b>
                 </div>
@@ -73,8 +73,11 @@
                         <b>Pace:</b> {{pace}}<br>
                         <b>Phone:</b> {{phone}}<br>
                     </p>
-                    <a href="../../running_group/{{id}}" class="btn btn-primary">View Details</a>
+
                 </div>
+                <div class="card-footer">
+                <a href="../../running_group/{{id}}" class="btn btn-primary">View Details</a>
+            </div>
             </div>
         {{/each}}
     </div>
@@ -87,7 +90,7 @@
     {{#if races}}
     <div class="row">
         {{#each races }}
-            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
+            <div class="card shadow p-3 mb-5 bg-white rounded card-profile" style="width: 30%;">
                 <div class="card-header">
                     <b>{{name}}</b>
                 </div>
@@ -98,8 +101,11 @@
                         <b>Ranking:</b> {{ranking}}<br>
                         <b>Location:</b> {{city}}, {{state}} {{zipcode}}
                     </p>
-                    <a href="../../race/{{id}}" class="btn btn-primary">View Details</a>
+
                 </div>
+                <div class="card-footer">
+                <a href="../../race/{{id}}" class="btn btn-primary">View Details</a>
+              </div>
             </div>
         {{/each}}
     </div>
