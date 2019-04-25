@@ -1,4 +1,5 @@
 <div class="container">
+    <br>
     <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3">
             <form action="../admin/Users" method="post">
@@ -20,11 +21,11 @@
     <h2>All Registered Users</h2><hr>
     <div class="row">
         {{#each data }}
-        <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="width: 21%;">
+        <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="width: 30%;">
             <div class="card-header">
                 <b>{{id}}: {{first_name}} {{last_name}}</b>
             </div>
-            <div class="card-body card-allusers scroll">
+            <div class="card-body card-allusers scrollbar scrollbar-primary">
                 <p class="card-text">
                     <b>Phone:</b>
                     <td>{{phone}}</td><br>
