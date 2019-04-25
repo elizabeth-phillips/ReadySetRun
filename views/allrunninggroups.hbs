@@ -4,7 +4,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3">
             <form action="../running_group/" method="post">
                 <input name="query" type="text" class="form-control" style="width:100%;" placeholder="Keywords"
-                    value={{@query}} >
+                    value={{@query}}>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
             <select name="selectpicker" class="custom-select selectpicker">
@@ -16,13 +16,13 @@
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
             <button type="submit" class="btn btn-primary searchGroup" style="width:80%;height:80%">Search</button>
-            </div>
+        </div>
         </form>
     </div>
     <br>
     <a href="#" VALUE="Back" onClick="history.go(-1);">
         <i class="fas fa-chevron-left goBack"></i> Back
-        </a>
+    </a>
     <h2>
         {{#if query}}
         Search Results for: {{query}}
@@ -34,24 +34,26 @@
             {{/if}}
         </h2>
         <hr>
-        <div class="row">
-            {{#each data }}
-            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
-                <div class="card-header">
-                    <b>{{id}}. {{name}}</b>
+        <section class="container-body-run-grp scroll">
+            <div class="row ">
+                {{#each data }}
+                <div class="card shadow p-3 mb-5 bg-light rounded" style="width: 30%;">
+                    <div class="card-header">
+                        <b>{{id}}. {{name}}</b>
+                    </div>
+                    <div class="card-body-run-grp scroll">
+                        <p class="card-text">
+                            <b>Average Pace:</b> <br>{{pace}}<br>
+                            <b>Location:</b> <br>{{city}}, {{state}} {{zipcode}}<br>
+                            <b>Phone:</b> <br>{{phone}}<br>
+                        </p>
+                        <a href="../running_group/{{id}}" class="btn btn-primary">View Details</a>
+                    </div>
                 </div>
-                <div class="card-body scroll">
-                    <p class="card-text">
-                        <b>Average Pace:</b> <br>{{pace}}<br>
-                        <b>Location:</b> <br>{{city}}, {{state}} {{zipcode}}<br>
-                        <b>Phone:</b> <br>{{phone}}<br>
-                    </p>
-                    <a href="../running_group/{{id}}" class="btn btn-primary">View Details</a>
-                </div>
+                {{/each}}
             </div>
-            {{/each}}
-        </div>
+        </section>
         <a href="#" VALUE="Back" onClick="history.go(-1);">
-        <i class="fas fa-chevron-left goBack"></i> Back
+            <i class="fas fa-chevron-left goBack"></i> Back
         </a>
 </div>
