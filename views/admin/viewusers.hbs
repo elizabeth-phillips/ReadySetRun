@@ -1,33 +1,44 @@
 <div class="container">
-    <div class = "row">
-    <div class="input-group col-md-8">
-        <form action="../admin/Users" method="post">
-            <input name="query" class="form-control" type="text" placeholder="Search" aria-label="Search" value={{@query}} >
-            <button class="btn btn-primary">Search</button>
-        </form>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <form action="../admin/Users" method="post">
+                <input name="query" class="form-control" type="text" placeholder="Search" aria-label="Search"
+                    value={{@query}}>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <button class="btn btn-primary">Search</button></div>
     </div>
-    </div>
-    <br><br>
+    </form>
+    <br> <a href="#" VALUE="Back" onClick="history.go(-1);">
+        <i class="fas fa-chevron-left goBack"></i> Back
+    </a><br><br>
+
+    <h2>All Registered Users</h2><hr>
     <div class="row">
         {{#each data }}
-            <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
-                <div class="card-header">
-                    <b>{{id}}: {{first_name}} {{last_name}}</b>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">
-                        <b>Phone:</b><td>{{phone}}</td><br>
-                        <b>Email:</b><td>{{email}}</td><br>
-                        <b>Address:</b><td>{{city}}, {{state}} {{zipcode}}</td><br>
-                        <b>Age:</b><td>{{age}}</td><br>
-                        <b>Desired Pace:</b><td>{{desired_pace}}</td><br>
-                        {{#if admin}}
-                            <td>Admin</td>
-                        {{/if}}
-                    </p>
-                    <a href="../user/{{id}}" class="btn btn-primary">View Profile</a>
-                </div>
+        <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="width: 21%;">
+            <div class="card-header">
+                <b>{{id}}: {{first_name}} {{last_name}}</b>
             </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <b>Phone:</b>
+                    <td>{{phone}}</td><br>
+                    <b>Email:</b>
+                    <td>{{email}}</td><br>
+                    <b>Address:</b>
+                    <td>{{city}}, {{state}} {{zipcode}}</td><br>
+                    <b>Age:</b>
+                    <td>{{age}}</td><br>
+                    <b>Desired Pace:</b>
+                    <td>{{desired_pace}}</td><br>
+                    {{#if admin}}
+                    <td>Admin</td>
+                    {{/if}}
+                </p>
+                <a href="../user/{{id}}" class="btn btn-primary">View Profile</a>
+            </div>
+        </div>
         {{/each}}
     </div>
 </div>

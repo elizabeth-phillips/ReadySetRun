@@ -1,0 +1,51 @@
+<div class="container">
+      <div class="row">
+    <form class = "form-inline" action="../race/" method="post" id="search_results">
+
+      <input name="query" type="text" class="form-control raceInput" placeholder="Keywords" value={{@query}}>
+
+      <select name="selectpicker" class="selectpicker dropDownRace" form="search_results">
+        <option value="All">All States</option>
+        {{#each states}}
+          <option value="{{this}}">{{this}}</option>
+        {{/each}}
+      </select>
+      <button type="submit" class="btn btn-primary searchRace">Search</button>
+    </form>
+  </div>
+
+    <br><br>
+    <h2>
+    {{#if query}}
+        Search Results for: {{query}}
+    {{else}}
+        <h2>All races
+    {{/if}}
+    {{#if state}}
+        in {{state}}
+    {{/if}}
+    </h2>
+    <div class="row">
+        {{#each data }}
+            <div class="card col-md-4" >
+                <img class="card-img-top d-flex align-items-center justify-content-center" src="{{logo}}" alt="Race Logo">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <hr>
+                    <h6>{{format_date date}}</h6>
+                    <p class="card-text">
+                        {{distances}}<br>
+                        <b>Location:</b> {{city}}, {{state}} {{zipcode}}<br>
+                        <b>Phone:</b> {{phone}}<br>
+                        <b>URL:</b> <a href="{{url}}">{{url}}</a>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="../race/upcoming/{{name}}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    <br>
+    <p VALUE="Back" onClick="history.go(-1);"><i class="fas fa-arrow-left goBack" ></i> Back</p>
+</div>

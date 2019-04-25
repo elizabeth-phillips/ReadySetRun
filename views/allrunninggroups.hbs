@@ -1,44 +1,56 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
-        <form action="../running_group/" method="post">
-            <input name="query" type="text" class="form-control" style="width: 20rem;" placeholder="Keywords" value={{@query}} >
-            </div>
-            <div class="col-md-4"><select name="selectpicker" class="custom-select my-1 mr-sm-2">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <form action="../running_group/" method="post">
+                <input name="query" type="text" class="form-control" style="width:100%;" placeholder="Keywords"
+                    value={{@query}} >
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <select name="selectpicker" class="custom-select selectpicker">
                 <option value="All">All States</option>
                 {{#each states}}
-                    <option value="{{this}}">{{this}}</option>
+                <option value="{{this}}">{{this}}</option>
                 {{/each}}
-            </select></div>
-            <div class="col-md-3"><button type="submit" class="btn btn-primary searchGroup">Search</button></div>
+            </select>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <button type="submit" class="btn btn-primary searchGroup" style="width:80%;height:80%">Search</button>
+            </div>
         </form>
     </div>
-    <br><br>
+    <br>
+    <a href="#" VALUE="Back" onClick="history.go(-1);">
+        <i class="fas fa-chevron-left goBack"></i> Back
+        </a>
     <h2>
-    {{#if query}}
+        {{#if query}}
         Search Results for: {{query}}
-    {{else}}
+        {{else}}
         <h2>All running groups
-    {{/if}}
-    {{#if state}}
-        in {{state}}
-    {{/if}}
-    </h2>
-    <div class="row">
-    {{#each data }}
-        <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
-            <div class="card-header">
-                <b>{{id}}. {{name}}</b>
+            {{/if}}
+            {{#if state}}
+            in {{state}}
+            {{/if}}
+        </h2>
+        <hr>
+        <div class="row">
+            {{#each data }}
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
+                <div class="card-header">
+                    <b>{{id}}. {{name}}</b>
+                </div>
+                <div class="card-body scroll">
+                    <p class="card-text">
+                        <b>Average Pace:</b> <br>{{pace}}<br>
+                        <b>Location:</b> <br>{{city}}, {{state}} {{zipcode}}<br>
+                        <b>Phone:</b> <br>{{phone}}<br>
+                    </p>
+                    <a href="../running_group/{{id}}" class="btn btn-primary">View Details</a>
+                </div>
             </div>
-            <div class="card-body">
-                <p class="card-text">
-                    <b>Average Pace:</b> <br>{{pace}}<br>
-                    <b>Location:</b> <br>{{city}}, {{state}} {{zipcode}}<br>
-                    <b>Phone:</b> <br>{{phone}}<br>
-                </p>
-                 <a href="../running_group/{{id}}" class="btn btn-primary">View Details</a>
-            </div>
+            {{/each}}
         </div>
-    {{/each}}
-    </div>
+        <a href="#" VALUE="Back" onClick="history.go(-1);">
+        <i class="fas fa-chevron-left goBack"></i> Back
+        </a>
 </div>
