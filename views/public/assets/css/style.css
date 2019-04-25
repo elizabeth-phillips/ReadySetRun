@@ -1,9 +1,14 @@
 /* main.hbs */
+body{
+    background: #00467F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}    
 
 .navbar-custom {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .navbar-custom .navbar-brand {
@@ -27,7 +32,7 @@
 }
 
 .card-body{
-    height: 18rem;
+    height: 15rem;
 }
 
 .scroll {
@@ -53,7 +58,7 @@
 /* registration.hbs */
 #image {
     background-image: url("/assets/images/running-banner.jpg");
-    height: 40vh;
+    height: 60vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -242,7 +247,7 @@ em {
 /* -------------------------------------- */
 /* ------------Footer ---------------------- */
 #myFooter {
-    background-color: #373a48;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
 }
 
@@ -288,22 +293,22 @@ em {
     margin-left: 90px;
 }
 
-#myFooter .social-networks {
+/* #myFooter .social-networks {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 38px;
-}
+} */
 
-#myFooter .social-networks a {
+/* #myFooter .social-networks a {
     font-size: 32px;
     margin-right: 5px;
     margin-left: 5px;
     color: #f9f9f9;
     padding: 10px;
     transition: 0.2s;
-}
+} */
 
-#myFooter .social-networks a:hover {
+/* #myFooter .social-networks a:hover {
     text-decoration: none;
 
 }
@@ -318,7 +323,7 @@ em {
 
 #myFooter .twitter:hover {
     color: #00aced;
-}
+} */
 
 
 html {
@@ -379,8 +384,13 @@ body {
     text-align: center;
   }
 
+
+
   /* For responsive screens */
-@media screen and (max-width: 767px) and (min-width: 576px) {
+/* @media screen and (max-width: 767px) and (min-width: 576px) {
+    body{
+        background: 100%;
+    } 
     #myModal {
         margin-left: 20%;
         margin-right: 20%;
@@ -390,9 +400,10 @@ body {
         margin-left: 20%;
         margin-right: 20%;
     }
-}
+}*/
 
 @media screen and (min-width: 768px) {
+
 
     #myModal .modal-dialog {
         width: 500px;

@@ -1,14 +1,14 @@
 {
     "id": 1,
     "first_name": "Alice",
-    "last_name": "sMelendez",
+    "last_name": "SMelendez",
     "email": "test@test.com",
     "password": "test",
     "age": 20,
     "desired_pace": "14:16",
     "city": "Choctaw",
     "state": "Utah",
-    "zipcode": 14893,
+    "zipcode": 14897,
     "phone": "(837)463-2366",
     "admin": 1,
     "races": [
@@ -70,6 +70,33 @@
             "state": "as",
             "zipcode": 2345,
             "phone": 123454
+        },
+        {
+            "id": 1,
+            "name": "Farmage",
+            "pace": "10:14",
+            "city": "Bagtown",
+            "state": "Delaware",
+            "zipcode": 37187,
+            "phone": "(841) 521-3564"
+        },
+        {
+            "id": 5,
+            "name": "Solaren",
+            "pace": "12:6",
+            "city": "Richford",
+            "state": "New Hampshire",
+            "zipcode": 78330,
+            "phone": "(859) 566-2642"
+        },
+        {
+            "id": 4,
+            "name": "Zorromop",
+            "pace": "9:41",
+            "city": "Fairlee",
+            "state": "Wyoming",
+            "zipcode": 56228,
+            "phone": "(865) 515-3533"
         }
     ]
 }

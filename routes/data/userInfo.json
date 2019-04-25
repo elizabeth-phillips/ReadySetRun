@@ -8,7 +8,7 @@
     "desired_pace": "14:16",
     "city": "Choctaw",
     "state": "Utah",
-    "zipcode": 14893,
+    "zipcode": 14897,
     "phone": "(837)463-2366",
     "admin": 1,
     "races": [
@@ -88,6 +88,15 @@
             "state": "New Hampshire",
             "zipcode": 78330,
             "phone": "(859) 566-2642"
+        },
+        {
+            "id": 4,
+            "name": "Zorromop",
+            "pace": "9:41",
+            "city": "Fairlee",
+            "state": "Wyoming",
+            "zipcode": 56228,
+            "phone": "(865) 515-3533"
         }
     ]
 }
