@@ -42,11 +42,16 @@ exports.up = function(knex, Promise) {
         table.increments("id").primary();
         table.integer("user_id").references('user.id').notNull().onDelete('cascade');
         table.integer("running_group_id").references('running_group.id').notNull().onDelete('cascade');
-    });
+    }).createTable("future_races", table => {
+      table.increments("id").primary();
+      table.integer("user_id").references('user.id').notNull().onDelete('cascade');
+      table.integer("race_name").notNull().onDelete('cascade');
+  });
 };
 
 exports.down = function(knex, Promise) {
-    knex.schema.dropTableIfExists("running_group_member")
+    knex.schema.dropTableIfExists("future_races")
+    .dropTableIfExists("running_group_member")
     .dropTableIfExists("race_history")
     .dropTableIfExists("running_group")
     .dropTableIfExists("race")
