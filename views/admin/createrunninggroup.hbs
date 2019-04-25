@@ -1,5 +1,12 @@
+<div class= "container">
+
+<section class=" row">
+<form action="../running_group/create" method="post" id="profile_update" class="col-md-4">  
+   <a href="#" VALUE="Back" onClick="history.go(-1);">
+        <i class="fas fa-chevron-left goBack"></i> Back
+        </a>    
 <h1>Create Running Group</h1>
-<form action="../running_group/create" method="post" id="profile_update" class="col-md-6">         
+<hr>   
     <div class="text-input-container">
         <input name= "name" type="text" class="form-control" placeholder="Running Group Name" value={{@name}}>
         <input name= "pace" type="text" class="form-control" placeholder="Pace"  value={{@pace}}>
@@ -10,3 +17,11 @@
     </div><br>
     <button type="submit" class="btn btn-primary">Create</button>
 </form>
+<section class= "col-md-1">
+
+</section>
+<section class= "col-md-7">
+<img src="https://s27690.pcdn.co/wp-content/uploads/2017/08/group-run.jpg" alt="" style="width:100%; height:100%">
+</section>
+</section>
+</div>

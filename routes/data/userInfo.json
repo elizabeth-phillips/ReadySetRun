@@ -1,7 +1,7 @@
 {
     "id": 1,
     "first_name": "Alice",
-    "last_name": "sMelendez",
+    "last_name": "SMelendez",
     "email": "test@test.com",
     "password": "test",
     "age": 20,
@@ -70,6 +70,24 @@
             "state": "as",
             "zipcode": 2345,
             "phone": 123454
+        },
+        {
+            "id": 1,
+            "name": "Farmage",
+            "pace": "10:14",
+            "city": "Bagtown",
+            "state": "Delaware",
+            "zipcode": 37187,
+            "phone": "(841) 521-3564"
+        },
+        {
+            "id": 5,
+            "name": "Solaren",
+            "pace": "12:6",
+            "city": "Richford",
+            "state": "New Hampshire",
+            "zipcode": 78330,
+            "phone": "(859) 566-2642"
         }
     ]
 }
