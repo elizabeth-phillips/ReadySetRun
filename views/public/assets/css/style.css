@@ -61,7 +61,13 @@ body {
 }
 
 .card-body-run-grp {
-    height: 13rem;
+    height: 14rem;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.card-allusers{
+    height:15rem;
 }
 
 .card-profile {
@@ -294,17 +300,6 @@ em {
     color: white;
 }
 
-#myFooter .footer-copyright {
-    background-color: #383737;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    text-align: center;
-}
-
-#myFooter .footer-copyright p {
-    margin: 10px;
-    color: #ccc;
-}
 
 #myFooter ul {
     list-style-type: none;
@@ -404,6 +399,11 @@ body {
 
 /* Style the form - display items horizontally */
 .user-form {
+    width:100%;
+    margin-bottom: 2%;
+}
+
+.admin-form{
     width:100%;
     margin-bottom: 2%;
 }
