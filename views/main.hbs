@@ -69,8 +69,8 @@
                         <div class="tab-pane fade active in" id="login">
                             <form action="user/login" method="post">
                                 <div class="text-input-container">
-                                    <input type="text" class="form-control" placeholder="Email" id="email" name="email" value={{@email}}>
-                                    <input type="password" class="form-control" placeholder="Password" id="password" name="password" value={{@password}}>
+                                    <input type="text" class="form-control user-form" placeholder="Email" id="email" name="email" value={{@email}}>
+                                    <input type="password" class="form-control user-form" placeholder="Password" id="password" name="password" value={{@password}}>
                                 </div>
                                 <button class="btn btn-secondary userLogsin" type="submit">Login</button>
                             </form>
@@ -79,16 +79,16 @@
                         <div class="tab-pane fade" id="signup">
                             <form action="/user/" method="post">
                                 <div class="text-input-container">
-                                    <input type="text" class="form-control" placeholder="First name" id="first_name" name="first_name" title="First Name" value={{@first_name}}>
-                                    <input type="text" class="form-control" placeholder="Last Name" id="last_name" name="last_name" value={{@last_name}}>
-                                    <input type="text" class="form-control" placeholder="Email" id="email" name="email" value={{@email}}>
-                                    <input type="password" class="form-control" placeholder="Password" id="password" name="password" value={{@password}}>
-                                    <input type="text" class="form-control" placeholder="Phone Number" id="phone" name="phone" value={{@phone}}>
-                                    <input type="text" class="form-control" placeholder="City" id="city" name="city" value={{@city}}>
-                                    <input type="text" class="form-control" placeholder="State" id="state" name="state" value={{@state}}>
-                                    <input type="text" class="form-control" placeholder="Zipcode" id="zipcode" name="zipcode" value={{@zipcode}}>
-                                    <input type="text" class="form-control" placeholder="Age" id="age" name="age" value={{@age}}>
-                                    <input type="text" class="form-control" placeholder="Desired Pace" id="desired_pace" name="desired_pace" value={{@desired_pace}}>
+                                    <input type="text" class="form-control user-form" placeholder="First name" id="first_name" name="first_name" title="First Name" value={{@first_name}}>
+                                    <input type="text" class="form-control user-form" placeholder="Last Name" id="last_name" name="last_name" value={{@last_name}}>
+                                    <input type="text" class="form-control user-form" placeholder="Email" id="email" name="email" value={{@email}}>
+                                    <input type="password" class="form-control user-form" placeholder="Password" id="password" name="password" value={{@password}}>
+                                    <input type="text" class="form-control user-form" placeholder="Phone Number" id="phone" name="phone" value={{@phone}}>
+                                    <input type="text" class="form-control user-form" placeholder="City" id="city" name="city" value={{@city}}>
+                                    <input type="text" class="form-control user-form" placeholder="State" id="state" name="state" value={{@state}}>
+                                    <input type="text" class="form-control user-form" placeholder="Zipcode" id="zipcode" name="zipcode" value={{@zipcode}}>
+                                    <input type="text" class="form-control user-form" placeholder="Age" id="age" name="age" value={{@age}}>
+                                    <input type="text" class="form-control user-form" placeholder="Desired Pace" id="desired_pace" name="desired_pace" value={{@desired_pace}}>
                                 </div>
                                 <button class="btn btn-secondary" type="submit">Create</button>
                             </form>
@@ -120,7 +120,7 @@
                         <fieldset>
                             <div class="group">
                                 <input required="" class="input" type="text"><span class="highlight"></span><span
-                                    class="bar"></span>
+                                    class="bar" ></span>
                                 <label class="label" for="date">Email address</label>
                             </div>
                             <div class="control-group">

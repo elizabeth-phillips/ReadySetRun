@@ -1,10 +1,28 @@
 <div class="container">
     <br>
-    <div class="row">
+    <nav class="navbar bg-transparent justify-content-between">
+        {{!-- <a class="navbar-brand">Search for Running Groups</a> --}}
+        <form class="form-inline" action="../running_group/" method="post">
+
+            <input name="query" type="text" class="form-control" style="width:25rem;" placeholder="Keywords"
+                value={{@query}}>
+
+            <select name="selectpicker" class="custom-select selectpicker">
+                <option value="All">All States</option>
+                {{#each states}}
+                <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+
+            <button class="btn btn-success my-2 my-sm-0 searchGroup" type="submit">Search</button>
+        </form>
+    </nav>
+    <br>
+
+    {{!-- <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3">
             <form action="../running_group/" method="post">
-                <input name="query" type="text" class="form-control" style="width:100%;" placeholder="Keywords"
-                    value={{@query}}>
+                <input name="query" type="text" class="form-control" placeholder="Keywords" value={{@query}}>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
             <select name="selectpicker" class="custom-select selectpicker">
@@ -18,11 +36,12 @@
             <button type="submit" class="btn btn-primary searchGroup" style="width:80%;height:80%">Search</button>
         </div>
         </form>
-    </div>
+    </div> --}}
     <br>
-    <a href="#" VALUE="Back" onClick="history.go(-1);">
-        <i class="fas fa-chevron-left goBack"></i> Back
-    </a>
+    <h4><a href="#" VALUE="Back" onClick="history.go(-1);">
+            <i class="fas fa-chevron-left goBack"></i> Back
+        </a>
+    </h4>
     <h2>
         {{#if query}}
         Search Results for: {{query}}
@@ -53,7 +72,8 @@
                 {{/each}}
             </div>
         </section>
-        <a href="#" VALUE="Back" onClick="history.go(-1);">
-            <i class="fas fa-chevron-left goBack"></i> Back
-        </a>
+        <br>
+        <h4><a href="#" VALUE="Back" onClick="history.go(-1);">
+                <i class="fas fa-chevron-left goBack"></i> Back
+            </a></h4>
 </div>

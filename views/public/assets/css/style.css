@@ -281,6 +281,10 @@ em {
     display: none;
 }
 
+.selectpicker{
+    margin-left:2rem;
+    margin-right:2rem;
+}
 
 
 /* -------------------------------------- */
@@ -399,20 +403,13 @@ body {
 }
 
 /* Style the form - display items horizontally */
-.form-control {
-    margin-bottom: 10px;
+.user-form {
+    width:100%;
+    margin-bottom: 2%;
 }
-
-.raceInput {
-    padding-right: 10px;
-    margin-right: 10px;
-
-}
-
-.dropDownRace {
-    padding-right: 10px;
-    margin-right: 10px;
-    width: 300px;
+.searchRace,
+.searchGroup{
+    width:10rem;
 }
 
 .searchRace {
