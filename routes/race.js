@@ -2,15 +2,17 @@ const express = require("express");
 const router = express.Router();
 const {Race, FutureRaces} = require("../db/ready_race_run");
 const {getStates, getFiltered} = require("../views/public/javascript/searchResults")
-const {RaceDetails, SingleRace, IsPartOf} = require("./data/raceData");
+const {RaceDetails, SingleRace, IsPartOf, Recommendation} = require("./data/raceData");
 const {getUserLoggedIn} = require("./data/userData");
 const knex = require('knex')(require('../knexfile')[process.env.NODE_ENV]);
 
 router.get("/", async (req, res) => {
   let user = await getUserLoggedIn();
   let responses = await RaceDetails('', '');
+  recommends = await Recommendation(user)
+  console.log("RECOMMENDATIONS")
   
-  res.status(200).render('viewraces', { query: "", state: "", data: responses, states: getStates(responses), races: user.races, running_groups: user.running_groups, user:user });
+  res.status(200).render('viewraces', { query: "", state: "", data: responses, states: getStates(responses), races: user.races, running_groups: user.running_groups, user:user , recommends: recommends });
 });
 
 router.post("/", async (req, res) => {
@@ -18,11 +20,13 @@ router.post("/", async (req, res) => {
     let result = await RaceDetails(req.body.selectpicker, req.body.query);
 
     console.log("POST FILTER", req.body.query, req.body.selectpicker);
+    recommends = await Recommendation(user)
+    console.log("RECOMMENDATIONS")
 
     res.status(200).render('viewraces', { query: req.body.query, 
       state: req.body.selectpicker, 
       data: result, 
-      states: getStates(result) , user:user });
+      states: getStates(result) , user:user , recommends: recommends});
 });
 
 router.get("/upcoming/:name", async (req, res) => {
@@ -49,7 +53,6 @@ router.post("/signup/:name", async (req, res) => {
     .save(new_race)
     .then(async race => {
         result = JSON.parse(JSON.stringify( race))
-        console.log(result)
         var fullUrl = req.protocol + '://' + req.get('host');
         res.redirect(fullUrl);
       })
@@ -65,7 +68,7 @@ router.get("/:id", (req, res) => {
       .fetch()
       .then( async races => {
         user = await getUserLoggedIn();
-        res.status(200).render('race', {  data: JSON.parse(JSON.stringify(races)), user:getUserLoggedIn() });
+        res.status(200).render('race', {  data: JSON.parse(JSON.stringify(races)), user:getUserLoggedIn()});
       })
       .catch(err => {
         console.log(err);
