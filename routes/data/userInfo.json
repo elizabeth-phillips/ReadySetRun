@@ -1,7 +1,7 @@
 {
     "id": 1,
     "first_name": "Alice",
-    "last_name": "SMelendez",
+    "last_name": "Melendez",
     "email": "test@test.com",
     "password": "test",
     "age": 20,
@@ -61,33 +61,30 @@
             "state": "Wisconsin",
             "zipcode": 95005,
             "phone": "(885) 407-2660"
-        },
-        {
-            "id": 61,
-            "name": "Best",
-            "pace": "10",
-            "city": "asdfs",
-            "state": "as",
-            "zipcode": 2345,
-            "phone": 123454
-        },
+        }
+    ],
+    "future_races": [
         {
             "id": 1,
-            "name": "Farmage",
-            "pace": "10:14",
-            "city": "Bagtown",
-            "state": "Delaware",
-            "zipcode": 37187,
-            "phone": "(841) 521-3564"
+            "user_id": 1,
+            "race_name": "RiMaConn Relay",
+            "distance": "Ultra",
+            "city": "Lincoln",
+            "state": "RI",
+            "zipcode": 2865,
+            "phone": 8604269991,
+            "url": "http://www.hartfordmarathon.com"
         },
         {
-            "id": 5,
-            "name": "Solaren",
-            "pace": "12:6",
-            "city": "Richford",
-            "state": "New Hampshire",
-            "zipcode": 78330,
-            "phone": "(859) 566-2642"
+            "id": 2,
+            "user_id": 1,
+            "race_name": "Great Bison Shuffle",
+            "distance": "5K",
+            "city": "Cheyenne",
+            "state": "WY",
+            "zipcode": 82007,
+            "phone": "(307) 996-4510",
+            "url": "https://www.cheyenneregional.org/location/cheyenne-regional-foundation/"
         }
     ]
 }

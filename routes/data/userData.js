@@ -27,7 +27,8 @@ function UserInfo(id, login){
         .then(user => {
             knex.schema.raw(`SELECT r.id, r.name, rh.date, r.distance, r.url, r.phone, r.city, r.state, r.zipcode, rh.pace, rh.ranking
             FROM race_history rh, race r
-            WHERE ? = rh.user_id AND r.id = rh.race_id`, user[0].id).then(races => {
+            WHERE ? = rh.user_id AND r.id = rh.race_id`, user[0].id)
+        .then(races => {
             user[0]['races'] = races
             return user[0]
         })
@@ -37,14 +38,22 @@ function UserInfo(id, login){
             WHERE ? = rgm.user_id AND rg.id = rgm.running_group_id`, user.id)
         .then(rgs => {
             user['running_groups'] = rgs
-            fs.writeFileSync(userFile, JSON.stringify(user, null, 4)); 
-            if (login){
-                loginFile = './routes/data/login.json';
-                fs.writeFileSync(loginFile, JSON.stringify(user, null, 4)); 
-            }
+            return user;
+        }).then(user => {
+            knex.schema.raw(`SELECT *
+                            FROM future_races f
+                            WHERE f.user_id = ?`, id)
+                .then(ft_race => {
+                    user['future_races'] = ft_race
+                fs.writeFileSync(userFile, JSON.stringify(user, null, 4)); 
+                if (login){
+                    loginFile = './routes/data/login.json';
+                    fs.writeFileSync(loginFile, JSON.stringify(user, null, 4)); 
+                }
             })
         })
     })
+})
 } 
 
 module.exports = {

@@ -28,26 +28,30 @@
             </table>
             <br>
             {{#if user.first_name}}
-                <button onClick= "signUpRace()" type="submit" class="btn btn-primary">Sign Up</button>
+                {{#unless isPart}}
+                    <button onClick= "signUpRace()" type="submit" class="btn btn-primary">Sign Up</button>
+                {{/unless}}
             {{/if}}
             <br><br>
             <a href="/race/"><button class="btn btn-primary">View All Races</button></a>
         </section>
-        <section class="col-md-6">
-        <form action="/race/signup/{{@name}}" method="post" id="race_signup" class="col-md-8">
+        {{#if user.first_name}}
+            {{#unless isPart}}
+                <section class="col-md-6">
+                
+                <form action="/race/signup/{{@name}}" method="post" id="search_results">
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <select name="selectpicker" class="selectpicker col-sm-2 mx-3" form="search_results">
+                            {{#each distances}}
+                                <option value="{{this}}">{{this}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:80%;height:80%">Done</button>
+                </form>
             
-            <div class="text-input-container">
-                {{!-- <p><b>Choose the distance: </b></p> --}}
-
-                <select name="selectpicker" class="selectpicker col-sm-2 mx-3" form="search_results"  style="max-width:90%;" value={{race}} >
-                    <option hidden>Choose Distance</option>
-                    {{#each distances}}
-                        <option value="{{this}}">{{this}}</option>
-                    {{/each}}
-                </select>
-            </div><br>
-            <button  type="submit" class="btn btn-primary">Done</button>
-        </form>
-        </section>
+                </section>
+            {{/unless}}
+        {{/if}}
     </div>
 </div>
