@@ -24,6 +24,9 @@ const RunningGroup = Bookshelf.Model.extend({
 const RaceHistory = Bookshelf.Model.extend({
     tableName: "race_history"
 });
+const FutureRaces = Bookshelf.Model.extend({
+  tableName: "future_races"
+});
 const RunningGroupMember = Bookshelf.Model.extend({
     tableName: "running_group_member",
     running_groups: function() {
@@ -31,6 +34,7 @@ const RunningGroupMember = Bookshelf.Model.extend({
     }
 });
 module.exports = {
+    FutureRaces: Bookshelf.model("future_races", FutureRaces),
     RunningGroupMember: Bookshelf.model("running_group_member", RunningGroupMember),
     RaceHistory: Bookshelf.model("race_history", RaceHistory),
     RunningGroup: Bookshelf.model("running_group", RunningGroup),

@@ -59,7 +59,7 @@ findById = (req, res) => {
         } else {
             await UserInfo(User.id, false)
             user = await getUserInfo();
-            res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:user });
+            res.status(200).render('profile', { data: JSON.parse(JSON.stringify(User)), races: user.races, running_groups: user.running_groups, user:user, future_races: user.future_races });
         }
     })
     .catch(err => {
