@@ -133,51 +133,15 @@ function sortDates(results){
     return results;
 }
 
-
-async function signUp(user_id, race_name){
-    console.log("Signing Up")
-    exists = await isPartOf(user_id, race_name)
-    console.log("Already exists", exists)
-    if(!exists){
-        count = await knex.schema.raw(`SELECT COUNT(*) AS COUNT FROM future_races`);
-        console.log("Total races", count[0].COUNT)
-        await knex.schema.raw(`INSERT INTO future_races VALUES (?, ?, ?);`, [parseInt(count[0].COUNT+1), parseInt(user_id), race_name])
-    }
-}
-
-async function isPartOf(user_id, race_id){
+async function isPartOf(user_id, race_name){
     exists = await knex.schema.raw(`SELECT COUNT(*) AS COUNT
-    FROM running_group_member
-    WHERE user_id = ? AND running_group_id = ?`, [parseInt(user_id), parseInt(race_id)]);
+    FROM future_races
+    WHERE user_id = ? AND race_name = ?`, [parseInt(user_id), race_name]);
     return exists[0].COUNT > 0;
 }
 
 module.exports = {
-    SignUp: signUp,
-    IsPartOf: isPartOf
-}
-async function RaceSignUpInfo(user, r){
-    count = await knex.schema.raw(`SELECT COUNT(*) AS COUNT FROM RACE`);
-    count = count[0].COUNT+1
-    race = await knex.schema.raw(`INSERT INTO race
-            VALUES (:id, :name, :distance, :url, :phone, :city, :state, :zipcode)`, {
-                id: parseInt(count),
-                name: r.name, 
-                distance: JSON.stringify(r.distances), 
-                url: r.url, 
-                phone: r.phone, 
-                city: r.city, 
-                state: r.state, 
-                zipcode: r.zipcode})
-    
-    race_count = await knex.schema.raw(`SELECT COUNT(*) AS COUNT FROM RACE`);
-    race_count = race_count[0].COUNT+1;
-    await knex.schema.raw(`INSERT INTO race_history VALUES (?, ?, ?, ?, ?, ?);`,
-                            [parseInt(race_count), race.pace, race.ranking, new Date(race.date), true, user.user_id]);
-} 
-
-module.exports = {
     RaceDetails: getRaceDetails,
     SingleRace: getSingleRaceDetail,
-    SignUp: RaceSignUpInfo
+    IsPartOf: isPartOf
 }

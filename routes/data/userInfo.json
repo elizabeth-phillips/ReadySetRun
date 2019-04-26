@@ -62,5 +62,29 @@
             "zipcode": 95005,
             "phone": "(885) 407-2660"
         }
+    ],
+    "future_races": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "race_name": "RiMaConn Relay",
+            "distance": "Ultra",
+            "city": "Lincoln",
+            "state": "RI",
+            "zipcode": 2865,
+            "phone": 8604269991,
+            "url": "http://www.hartfordmarathon.com"
+        },
+        {
+            "id": 2,
+            "user_id": 1,
+            "race_name": "Great Bison Shuffle",
+            "distance": "5K",
+            "city": "Cheyenne",
+            "state": "WY",
+            "zipcode": 82007,
+            "phone": "(307) 996-4510",
+            "url": "https://www.cheyenneregional.org/location/cheyenne-regional-foundation/"
+        }
     ]
 }

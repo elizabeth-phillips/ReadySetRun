@@ -45,7 +45,13 @@ exports.up = function(knex, Promise) {
     }).createTable("future_races", table => {
       table.increments("id").primary();
       table.integer("user_id").references('user.id').notNull().onDelete('cascade');
-      table.integer("race_name").notNull().onDelete('cascade');
+      table.string("race_name").notNull();
+      table.string("distance").notNull();
+      table.string("city");
+      table.string("state");
+      table.integer("zipcode");
+      table.integer("phone");
+      table.string("url");
   });
 };
 

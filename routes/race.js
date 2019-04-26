@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const {Race} = require("../db/ready_race_run");
+const {Race, FutureRaces} = require("../db/ready_race_run");
 const {getStates, getFiltered} = require("../views/public/javascript/searchResults")
-const {SignUp, RaceDetails, SingleRace} = require("./data/raceData");
+const {RaceDetails, SingleRace, IsPartOf} = require("./data/raceData");
 const {getUserLoggedIn} = require("./data/userData");
+const knex = require('knex')(require('../knexfile')[process.env.NODE_ENV]);
 
 router.get("/", async (req, res) => {
   let user = await getUserLoggedIn();
@@ -27,21 +28,30 @@ router.post("/", async (req, res) => {
 router.get("/upcoming/:name", async (req, res) => {
   user = await getUserLoggedIn();
   race = await SingleRace(req.params.name);
-  res.status(200).render('race', {  data: JSON.parse(JSON.stringify(race)), user:user, distances: race.distances, num_choices: race.distances.length });
+  res.status(200).render('race', {  data: JSON.parse(JSON.stringify(race)), user:user, distances: race.distances, num_choices: race.distances.length, isPart: await IsPartOf(user.id, req.params.name)  });
 });
 
 router.post("/signup/:name", async (req, res) => {
   user = await getUserLoggedIn();
   race = await SingleRace(req.params.name);
-  console.log(race.distances.indexOf("5K"), req.body.race, req.body)
-  race = race.distances[race.distances.indexOf(req.body.race)]
-  Race.forge( race )
-    .save(req.body)
+  console.log("Selected value", req.body.selectpicker)
+  
+  new_race = {user_id:user.id,
+    race_name:race.name,
+    distance:req.body.selectpicker,
+    city:race.city,
+    state:race.state,
+    zipcode:race.zipcode,
+    phone:race.phone,
+    url:race.url}
+
+  FutureRaces.forge(new_race )
+    .save(new_race)
     .then(async race => {
         result = JSON.parse(JSON.stringify( race))
         console.log(result)
         var fullUrl = req.protocol + '://' + req.get('host');
-        // res.redirect(fullUrl);
+        res.redirect(fullUrl);
       })
       .catch(err => {
         console.log(err);
