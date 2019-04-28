@@ -1,11 +1,6 @@
 /* main.hbs */
 body {
-    background: #00467F;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #A5CC82, #00467F);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #A5CC82, #00467F);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #FFFFFF;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -443,7 +438,6 @@ body {
 
 
 .scrollbar-deep-blue::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
     background-color: #F5F5F5;
     border-radius: 10px;
 }
@@ -455,9 +449,7 @@ body {
 
 .scrollbar-deep-blue::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    background-image: -webkit-linear-gradient(330deg, #e0c3fc 0%, #8ec5fc 100%);
-    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    background-color: #A9A9A9;
 }
 
 
@@ -468,22 +460,19 @@ body {
 
 .scrollbar-primary::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    background-color: #4285F4;
+    background-color: #A9A9A9;
 }
 
 .scrollbar-default::-webkit-scrollbar {
     width: 12px;
     background-color: #F5F5F5;
 }
-
+/* 
 .scrollbar-default::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
     background-color: #2BBBAD;
-}
-
-
+} */
 
 @media screen and (min-width: 768px) {
 
