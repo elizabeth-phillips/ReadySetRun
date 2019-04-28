@@ -1,4 +1,8 @@
 
+$(".userLogin").on("click", function(){
+  alert("Yaya");
+});
+
 
 function updateUser() {
     var x = document.getElementById("user_update");

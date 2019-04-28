@@ -1,5 +1,23 @@
 <div class="container">
-    <div class="row">
+    <br>
+    <nav class="navbar bg-transparent justify-content-between">
+        {{!-- <a class="navbar-brand">Search for Running Groups</a> --}}
+        <form class="form-inline" action="../race/" method="post" id="search_results">
+
+            <input name="query" type="text" class="form-control raceInput" style="width:25rem;" placeholder="Keywords" value={{@query}}>
+
+            <select name="selectpicker" class="custom-select selectpicker dropDownRace" style="width:20rem;">
+                <option value="All">All States</option>
+                {{#each states}}
+                <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+
+            <button type="submit" class="btn btn-success my-2 my-sm-0 searchRace">Search</button>
+        </form>
+    </nav>
+
+    {{!-- <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3">
             <form action="../race/" method="post" id="search_results">
                 <input name="query" type="text" class="form-control raceInput" placeholder="Keywords" value={{@query}}>
@@ -13,13 +31,17 @@
                 {{/each}}
             </select>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-3"><button type="submit" class="btn btn-primary searchRace" style="width:80%;height:80%">Search</button>
+        <div class="col-lg-3 col-md-3 col-sm-3"><button type="submit" class="btn btn-primary searchRace"
+                style="width:80%;height:80%">Search</button>
         </div>
         </form>
+
+    </div> --}}
+
     </div>
     <br>
-    <a href="#" VALUE="Back" onClick="history.go(-1);">
-        <i class="fas fa-chevron-left goBack"></i> Back
+    <h4><a href="#" VALUE="Back" onClick="history.go(-1);">
+            <i class="fas fa-chevron-left goBack"></i> Back
         </a>
 
         <h3>Recommendations</h3>
@@ -62,8 +84,9 @@
             {{/if}}
         </h2>
         <hr>
+
         <div class="row">
-            {{#each data }}
+            {{#each recommends }}
             <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
                 <img class="card-img-top center-image" src="{{logo}}" alt="Race Logo">
                 <div class="card-body scroll">
@@ -83,8 +106,49 @@
             </div>
             {{/each}}
         </div>
+    {{/if}}
+
+
+    <br>
+
+    <h2>
+        {{#if query}}
+        Search Results for: {{query}}
+        {{else}}
+        <h2>All races
+            {{/if}}
+            {{#if state}}
+            in {{state}}
+            {{/if}}
+        </h2>
+        <hr>
+        <section class="container-body-races scrollbar scrollbar-deep-blue">
+            <div class="row">
+                {{#each data }}
+                <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
+
+                    <div class="card-body scrollbar scrollbar-primary">
+                        <h5 class="card-title"><b>{{name}}</b></h5>
+                        <hr>
+                        <img class="card-img-top center-image" src="{{logo}}" alt="Race Logo">
+                        <h6>{{format_date date}}</h6>
+                        <p class="card-text ">
+                            {{distances}}<br>
+                            <b>Location:</b> {{city}}, {{state}} {{zipcode}}<br>
+                            <b>Phone:</b> {{phone}}<br>
+                            <b>URL:</b> <a href="{{url}}">{{url}}</a>
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../race/upcoming/{{name}}" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </section>
         <br>
-        <a href="#" VALUE="Back" onClick="history.go(-1);">
-        <i class="fas fa-chevron-left goBack"></i> Back
+    <h4><a href="#" VALUE="Back" onClick="history.go(-1);">
+            <i class="fas fa-chevron-left goBack"></i> Back
         </a>
+    </h4>
 </div>

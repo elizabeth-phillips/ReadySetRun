@@ -20,6 +20,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alertifyjs": "^1.11.2",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "bookshelf": "^0.13.3",

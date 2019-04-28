@@ -1,9 +1,34 @@
 /* main.hbs */
+body {
+    background: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container-body-races {
+    height: 100rem;
+    /* width : 80rem; */
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-top: 2%;
+    margin-left: 10px;
+    padding-left: 20px;
+
+}
+
+.container-body-run-grp {
+    height: 100rem;
+    /* width : 80rem; */
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-top: 2%;
+    margin-left: 10px;
+    padding-left: 20px;
+}
 
 .navbar-custom {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .navbar-custom .navbar-brand {
@@ -20,30 +45,52 @@
     letter-spacing: 0.1rem;
 }
 
-.card{
-    margin-right: 25px;
+.card {
+    margin-right: 20px;
     margin-left: 10px;
     /* margin-bottom: 5px; */
 }
 
-.card-body{
+.card-body {
+    height: 22rem;
+}
+
+.card-body-run-grp {
+    height: 14rem;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.card-allusers {
+    height: 15rem;
+}
+
+.card-profile {
     height: 18rem;
 }
 
-.scroll {
+.p-3 {
+    padding: 0.5rem !important;
+}
+
+.scrollbar {
     overflow-y: auto;
 }
-.card-title{
-    height: auto;
+
+.card-title {
+    /* height: auto; */
 }
+
 .center-image {
     display: block;
-    margin-top: 15px;
+    margin-top: 3%;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    margin-bottom: 5%;
+    width: 30%;
     height: 30%;
-  }
+}
+
 /* .card-img-top {
     width: 100%;
     height: 15vw;
@@ -53,16 +100,16 @@
 /* registration.hbs */
 #image {
     background-image: url("/assets/images/running-banner.jpg");
-    height: 40vh;
+    height: 60vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
-.row > div[class*='col-'] {
+.row>div[class*='col-'] {
     display: flex;
-    flex:1 0 auto;
+    flex: 1 0 auto;
 }
 
 .text-block {
@@ -77,9 +124,7 @@
 
 /* MODAL  */
 
-body {
-    font-family: 'Raleway', sans-serif;
-}
+
 
 .tab-style {
     font-size: 20px;
@@ -136,7 +181,7 @@ body {
     -webkit-appearance: none;
     display: block;
     background: none;
-    color:white;
+    color: white;
     width: 100%;
     border: none;
     border-radius: 0;
@@ -226,7 +271,7 @@ body {
 /* ---------active----- */
 
 .modal-body {
-    /*background-image: url('https://media.gettyimages.com/photos/athlete-running-picture-id636887598');*/
+    /*background-image: url('http://media.gettyimages.com/photos/athlete-running-picture-id636887598');*/
     background-size: cover;
     /* opacity: 0.7; */
     /* filter: alpha(opacity=40); */
@@ -237,26 +282,19 @@ em {
     display: none;
 }
 
+.selectpicker {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
 
 
 /* -------------------------------------- */
 /* ------------Footer ---------------------- */
 #myFooter {
-    background-color: #373a48;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
 }
 
-#myFooter .footer-copyright {
-    background-color: #383737;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    text-align: center;
-}
-
-#myFooter .footer-copyright p {
-    margin: 10px;
-    color: #ccc;
-}
 
 #myFooter ul {
     list-style-type: none;
@@ -288,22 +326,22 @@ em {
     margin-left: 90px;
 }
 
-#myFooter .social-networks {
+/* #myFooter .social-networks {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 38px;
-}
+} */
 
-#myFooter .social-networks a {
+/* #myFooter .social-networks a {
     font-size: 32px;
     margin-right: 5px;
     margin-left: 5px;
     color: #f9f9f9;
     padding: 10px;
     transition: 0.2s;
-}
+} */
 
-#myFooter .social-networks a:hover {
+/* #myFooter .social-networks a:hover {
     text-decoration: none;
 
 }
@@ -318,7 +356,7 @@ em {
 
 #myFooter .twitter:hover {
     color: #00aced;
-}
+} */
 
 
 html {
@@ -345,42 +383,48 @@ body {
 }
 
 /* user profile */
-#user_update{
+#user_update {
     display: none;
 }
 
 /*race sign up*/
-#race_signup{
+#race_signup {
     display: none;
 }
 
 /* Style the form - display items horizontally */
-.form-control{
-    margin-bottom:10px;
+.user-form {
+    width: 100%;
+    margin-bottom: 2%;
 }
-  
-  .raceInput{
-    padding-right: 10px;
-    margin-right: 10px;
-  
-  }
-  .dropDownRace{
-    padding-right: 10px;
-    margin-right: 10px;
-    width : 300px;
-  }
-  .searchRace{
-    padding-right: 10px;
-    margin-right: 10px;
-  }
 
-  
-  .footnote{
+.admin-form {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.searchRace,
+.searchGroup {
+    width: 10rem;
+}
+
+.searchRace {
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+
+.footnote {
     text-align: center;
-  }
+}
 
-  /* For responsive screens */
-@media screen and (max-width: 767px) and (min-width: 576px) {
+
+
+/* For responsive screens */
+/* @media screen and (max-width: 767px) and (min-width: 576px) {
+    body{
+        background: 100%;
+    }
     #myModal {
         margin-left: 20%;
         margin-right: 20%;
@@ -390,9 +434,48 @@ body {
         margin-left: 20%;
         margin-right: 20%;
     }
+}*/
+
+
+.scrollbar-deep-blue::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    border-radius: 10px;
 }
 
+.scrollbar-deep-blue::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-deep-blue::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #A9A9A9;
+}
+
+
+.scrollbar-primary::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #A9A9A9;
+}
+
+.scrollbar-default::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+/* 
+.scrollbar-default::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #2BBBAD;
+} */
+
 @media screen and (min-width: 768px) {
+
 
     #myModal .modal-dialog {
         width: 500px;
