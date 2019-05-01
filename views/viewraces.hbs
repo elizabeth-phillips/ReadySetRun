@@ -21,9 +21,9 @@
 
     <br>
     <h4>
-    <a href="#" VALUE="Back" onClick="history.go(-1);">
-        <i class="fas fa-chevron-left goBack"></i> Back
-    </a>
+        <a href="#" VALUE="Back" onClick="history.go(-1);">
+            <i class="fas fa-chevron-left goBack"></i> Back
+        </a>
     </h4>
 
     <h3>Recommendations</h3>
@@ -33,8 +33,9 @@
         {{#each recommends }}
         <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
             <div class="card-body scrollbar scrollbar-primary">
-                <h5 class="card-title">{{name}}</h5> <hr>
-               <img class="card-img-top center-image" src="{{logo}}" alt="Race Logo">
+                <h5 class="card-title">{{name}}</h5>
+                <hr>
+                <img class="card-img-top center-image" src="{{logo}}" alt="Race Logo">
                 <h6>{{format_date date}}</h6>
                 <p class="card-text ">
                     {{distances}}<br>
@@ -65,28 +66,31 @@
             {{/if}}
         </h2>
         <hr>
-        <div class="row">
-            {{#each data }}
-            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
-                
-                <div class="card-body scrollbar scrollbar-primary">
-                    <h5 class="card-title">{{name}}</h5>
-                    <hr>
-                    <img class="card-img-top center-image" src="{{logo}}" alt="Race Logo">
-                    <h6>{{format_date date}}</h6>
-                    <p class="card-text ">
-                        {{distances}}<br>
-                        <b>Location:</b> {{city}}, {{state}} {{zipcode}}<br>
-                        <b>Phone:</b> {{phone}}<br>
-                        <b>URL:</b> <a href="{{url}}">{{url}}</a>
-                    </p>
+
+        <section class="container-body-run-grp scrollbar scrollbar-deep-blue">
+            <div class="row">
+                {{#each data }}
+                <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 30%;">
+
+                    <div class="card-body scrollbar scrollbar-primary">
+                        <h5 class="card-title">{{name}}</h5>
+                        <hr>
+                        <img class="card-img-top center-image" src="{{logo}}" alt="Race Logo">
+                        <h6>{{format_date date}}</h6>
+                        <p class="card-text ">
+                            {{distances}}<br>
+                            <b>Location:</b> {{city}}, {{state}} {{zipcode}}<br>
+                            <b>Phone:</b> {{phone}}<br>
+                            <b>URL:</b> <a href="{{url}}">{{url}}</a>
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../race/upcoming/{{name}}" class="btn btn-primary">View Details</a>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <a href="../race/upcoming/{{name}}" class="btn btn-primary">View Details</a>
-                </div>
+                {{/each}}
             </div>
-            {{/each}}
-        </div>
+        </section>
         <br>
         <a href="#" VALUE="Back" onClick="history.go(-1);">
             <i class="fas fa-chevron-left goBack"></i> Back

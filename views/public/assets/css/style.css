@@ -68,6 +68,9 @@ body {
 .card-profile {
     height: 18rem;
 }
+.card-recommendations{
+    height: 20rem;
+}
 
 .p-3 {
     padding: 0.5rem !important;
@@ -75,10 +78,6 @@ body {
 
 .scrollbar {
     overflow-y: auto;
-}
-
-.card-title {
-    /* height: auto; */
 }
 
 .center-image {
@@ -89,6 +88,10 @@ body {
     margin-bottom: 5%;
     width: 30%;
     height: 30%;
+}
+
+.updateI{
+    margin-bottom: 0.5rem;
 }
 
 /* .card-img-top {
